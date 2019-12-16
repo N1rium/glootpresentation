@@ -19,6 +19,12 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
   }
+
+  #app-content {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
 `;
 
 export default ({ children }) => {

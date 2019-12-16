@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import StickyVideo from '../sticky-video';
 import ImageWithText from '../image-with-text';
 import './style.scss';
 
@@ -11,7 +12,7 @@ export default ({}) => {
   };
 
   return (
-    <div id="app-content">
+    <div id="app-content" onScroll={onScroll}>
       <div className="hero-frame-top" />
       <div className="hero-frame">
         <section className="intro">
@@ -25,11 +26,8 @@ export default ({}) => {
         <ImageWithText header="Mobile" description="Worlds first online real money esports platform on mobile." />
         <ImageWithText header="Mobile" description="Worlds first online real money esports platform on mobile." />
         <ImageWithText header="Mobile" description="Worlds first online real money esports platform on mobile." />
-        {/* <section className="esports-platform">
-          <div className="hero-frame-top" />
-          <h2>The online real money esports platform</h2>
-        </section> */}
       </div>
+      <StickyVideo scroll={scroll} />
     </div>
   );
 };
