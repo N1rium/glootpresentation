@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const ImageWithText = styled.div`
   display: flex;
@@ -12,10 +12,6 @@ const ImageWithText = styled.div`
   background: #000;
   border: 30px solid rgb(17, 17, 17);
   box-shadow: 0px -9px 28px -8px rgba(0, 0, 0, 1);
-
-  h3 {
-    font-size: 30px;
-  }
 
   .phone {
     width: 1000px;
