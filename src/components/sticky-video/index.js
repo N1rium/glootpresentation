@@ -19,8 +19,6 @@ const VideoContainer = styled.div.attrs(props => ({
 `;
 
 const Video = styled.video.attrs(props => ({
-  playIsInline: true,
-  autoPlay: true,
   src:
     'https://www.apple.com/105/media/us/iphone-11-pro/2019/3bd902e4-0752-4ac1-95f8-6225c32aec6d/anim/hero/small_2x.mp4',
 }))`
@@ -54,7 +52,7 @@ export default ({ scroll: parentScroll, debug = true }) => {
           </div>
         )}
         <VideoContainer scroll={scroll.topPercentage}>
-          <Video />
+          <Video playsInline autoPlay muted />
         </VideoContainer>
       </StickyVideo>
     </>

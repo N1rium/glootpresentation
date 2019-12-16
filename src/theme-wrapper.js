@@ -11,8 +11,12 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     color: #fff;
-    background: #000;
+    background: #fff;
     font-family: roboto;
+  }
+
+  body {
+    overflow: hidden;
   }
 
   #app-container {

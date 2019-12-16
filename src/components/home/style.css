@@ -19,6 +19,7 @@ h2 {
 .hero-frame {
   border-left: var(--frame-thickness) solid #111;
   border-right: var(--frame-thickness) solid #111;
+  background: #000;
 }
 .hero-frame section {
   width: 100%;
