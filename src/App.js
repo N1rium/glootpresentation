@@ -1,6 +1,5 @@
 import React from 'react';
-import Home from './containers/home';
-import Wrapper from './components/wrapper';
+import Home from './components/home';
 
 import ThemeWrapper from './theme-wrapper';
 
@@ -10,7 +9,7 @@ import 'whatwg-fetch';
 export default () => {
   return (
     <ThemeWrapper>
-      <Wrapper></Wrapper>
+      <Home />
     </ThemeWrapper>
   );
 };

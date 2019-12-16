@@ -2,6 +2,9 @@ import React from 'react';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+  }
   html, body {
     width: 100%;
     height: 100%;
@@ -9,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     color: #fff;
     background: #000;
+    font-family: roboto;
   }
 
   #app-container {
