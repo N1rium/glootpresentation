@@ -19,6 +19,14 @@ const GlobalStyle = createGlobalStyle`
     overflow: hidden;
   }
 
+  h2 {
+    font-size: 3em;
+  }
+
+  p {
+    font-size: 2em;
+  }
+
   #app-container {
     width: 100%;
     height: 100%;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ImageWithText from '../image-with-text';
 import StickyVideo from '../sticky-video';
+import MarketOverview from '../market-overview';
 import './style.scss';
 
 export default ({}) => {
@@ -44,6 +45,7 @@ export default ({}) => {
         </section> */}
       </div>
       <StickyVideo scroll={scroll} />
+      <MarketOverview />
     </div>
   );
 };
