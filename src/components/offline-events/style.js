@@ -23,12 +23,12 @@ const PlayerContainer = styled.div`
   & > div {
     & > div {
       background: rgb(222, 222, 222);
-      width: 25vw;
+      width: 100px;
       height: 32px;
       border-radius: 6px;
       &:last-child {
         margin-top: 15px;
-        width: 8vw;
+        width: 25px;
       }
     }
   }
