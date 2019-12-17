@@ -9,6 +9,7 @@ const StickyVideo = styled.div`
 const VideoContainer = styled.div.attrs(props => ({
   style: {
     transform: `scale(${props.scroll <= 50 ? '1' : `${50 / props.scroll}`})`,
+    borderWidth: `${props.scroll > 50 ? '10px' : '0px'}`,
   },
 }))`
   position: sticky;
@@ -16,6 +17,9 @@ const VideoContainer = styled.div.attrs(props => ({
   width: 100vw;
   height: 100vh;
   will-change: transform;
+  box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.3);
+  border: 0px solid #fff;
+  border-radius: 6px;
 `;
 
 const Video = styled.video.attrs(props => ({
