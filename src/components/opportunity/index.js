@@ -55,8 +55,8 @@ export default ({ scroll, debug }) => {
         <p>Top 300 esports professionals earn more than the rest of the 2.3 billion players combined.</p>
       </RightTextContainer>
       <LeftTextContainer>
-        <h2>Opportunity</h2>
-        <p>Top 300 esports professionals earn more than the rest of the 2.3 billion players combined.</p>
+        <h2>G-Loot is the missing component</h2>
+        <p>Anyone, anywhere in the world can now earn money from playing the games they already play & love.</p>
       </LeftTextContainer>
       <GrayBall style={grayBallStyle}>
         <div></div>
