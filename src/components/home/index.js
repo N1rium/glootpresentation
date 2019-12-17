@@ -17,12 +17,7 @@ export default ({}) => {
       <div className="hero-frame-top" />
       <div className="hero-frame">
         <section className="intro">
-          <video
-            playsInline
-            autoPlay
-            muted
-            src="https://www.apple.com/105/media/us/iphone-11-pro/2019/3bd902e4-0752-4ac1-95f8-6225c32aec6d/anim/hero/small_2x.mp4"
-          />
+          <video playsInline autoPlay muted src="src/assets/video/intro.mp4" />
         </section>
         <ImageWithText
           image={'../src/assets/phone.png'}
