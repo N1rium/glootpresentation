@@ -18,10 +18,18 @@ const Description = styled.p`
 const IconGroup = styled.div`
   display: flex;
   justify-content: center;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const IconContainer = styled.div`
   margin: 0 40px;
+  @media only screen and (max-width: 768px) {
+    &.games {
+      order: 1;
+    }
+  }
 `;
 
 const PlayersContainer = styled.div`

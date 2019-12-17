@@ -16,7 +16,7 @@ export default () => {
           <img src={MusicIcon} />
           <p>$17B</p>
         </IconContainer>
-        <IconContainer>
+        <IconContainer className="games">
           <img src={GamingIcon} />
           <p>$116B</p>
         </IconContainer>
