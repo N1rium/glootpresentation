@@ -31,7 +31,7 @@ const Video = styled.video.attrs(props => ({
   height: 100%;
 `;
 
-export default ({ scroll: parentScroll, debug = true }) => {
+export default ({ scroll: parentScroll, debug = false }) => {
   const ref = useRef(null);
 
   const [scroll, setScroll] = useState({

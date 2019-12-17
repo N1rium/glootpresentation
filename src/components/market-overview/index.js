@@ -13,16 +13,16 @@ export default () => {
       <Description>The gaming industry generates double the revenue than music & film do combined.</Description>
       <IconGroup>
         <IconContainer>
-          <p>$17B</p>
           <img src={MusicIcon} />
+          <p>$17B</p>
         </IconContainer>
         <IconContainer>
-          <p>$116B</p>
           <img src={GamingIcon} />
+          <p>$116B</p>
         </IconContainer>
         <IconContainer>
-          <p>$41B</p>
           <img src={VideoIcon} />
+          <p>$41B</p>
         </IconContainer>
       </IconGroup>
       <PlayersContainer>

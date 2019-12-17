@@ -10,8 +10,12 @@ const ImageWithText = styled.div`
   top: 0;
   min-height: 50vh;
   background: #000;
-  border: 30px solid rgb(17, 17, 17);
+  border: 15px solid rgb(17, 17, 17);
   box-shadow: 0px -9px 28px -8px rgba(0, 0, 0, 1);
+
+  @media only screen and (min-width: 768px) {
+    border-width: 30px;
+  }
 
   .phone {
     width: 1000px;

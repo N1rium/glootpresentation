@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
+
   html, body {
     width: 100%;
     height: 100%;
@@ -20,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
-    font-size: 3em;
+    font-size: 5em;
   }
 
   h3 {
