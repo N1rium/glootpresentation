@@ -25,7 +25,9 @@ const ImageWithText = styled.div`
   }
 
   @media (orientation: portrait) {
-    background-position: bottom !important;
+    align-items: flex-start;
+    background-position: 50% 75%;
+    background-attachment: initial;
   }
 
   img {
