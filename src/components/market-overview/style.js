@@ -30,7 +30,7 @@ const IconGroup = styled.div`
 `;
 
 const IconContainer = styled.div`
-  margin: 0 40px;
+  margin: 0 80px;
   @media only screen and (max-width: 768px) {
     &.games {
       order: 1;
