@@ -17,22 +17,24 @@ export default ({}) => {
 
   return (
     <div id="app-content" onScroll={onScroll}>
-      <IntroVideo />
-      <ImageWithText
-        image={'../src/assets/phone.png'}
-        header="Mobile"
-        description="Worlds first online real money esports platform on mobile."
-      />
-      <ImageWithText
-        image={'../src/assets/dator.png'}
-        header="Mobile"
-        description="Worlds first online real money esports platform on mobile."
-      />
-      <ImageWithText
-        image={'../src/assets/tv.png'}
-        header="Mobile"
-        description="Worlds first online real money esports platform on mobile."
-      />
+      <div>
+        <IntroVideo />
+        <ImageWithText
+          image={'../src/assets/phone.png'}
+          header="Mobile"
+          description="Worlds first online real money esports platform on mobile."
+        />
+        <ImageWithText
+          image={'../src/assets/dator.png'}
+          header="Mobile"
+          description="Worlds first online real money esports platform on mobile."
+        />
+        <ImageWithText
+          image={'../src/assets/tv.png'}
+          header="Mobile"
+          description="Worlds first online real money esports platform on mobile."
+        />
+      </div>
       <StickyVideo scroll={scroll} />
       <MarketOverview />
       <OfflineEvents />
