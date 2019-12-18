@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 const ImageWithText = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 100%;
   height: 100vh;
   position: sticky;
@@ -12,19 +9,39 @@ const ImageWithText = styled.div`
   background: #000;
   border: 15px solid rgb(17, 17, 17);
   box-shadow: 0px -9px 28px -8px rgba(0, 0, 0, 1);
+  padding: 40px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: ${props => (props.isLeft ? 'flex-end' : 'flex-start')}
+  background-color: #000;
+  background-image: ${props => `url(${props.src})`};
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: ${props => (props.isLeft ? '-50vw center' : '50vw center')};
+  background-repeat: no-repeat;
 
   @media only screen and (min-width: 769px) {
     border-width: 30px;
   }
 
-  .phone {
-    width: 1000px;
+  @media (orientation: portrait) {
+    background-position: bottom !important;
   }
 
-  header {
-    display: flex;
-    align-items: center;
+  img {
+    width: 0;
   }
 `;
 
-export { ImageWithText };
+const Header = styled.div`
+  max-width: 100%;
+  p {
+    color: rgb(170, 170, 170);
+  }
+
+  @media (orientation: landscape) {
+    max-width: 40vw;
+  }
+`;
+
+export { ImageWithText, Header };

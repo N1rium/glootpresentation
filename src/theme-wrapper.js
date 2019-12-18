@@ -18,11 +18,27 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     overflow: hidden;
+    font-size: 1em;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    body {
+      font-size: 1.5em;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+    body {
+      font-size: 2em;
+    }
+  }
+
+  h2, h3 {
+    margin: 0;
   }
 
   h2 {
     font-size: 2.5em;
-    margin: 0;
   }
 
   h3 {
@@ -42,6 +58,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     overflow: auto;
+    overflow-x: hidden;
   }
 `;
 

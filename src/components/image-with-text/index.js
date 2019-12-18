@@ -1,19 +1,13 @@
-import React from "react";
-import { ImageWithText } from "./style";
+import React from 'react';
+import { ImageWithText, Header } from './style';
 
-export default ({ header, description, icon, image }) => {
+export default ({ header, description, isLeft, image }) => {
   return (
-    <ImageWithText>
-      <div>
-        <header>
-          <img src="../src/assets/icons/smartphone@3x.png" />
-          <h3>{header}</h3>
-        </header>
+    <ImageWithText isLeft={isLeft} src={image}>
+      <Header>
+        <h3>{header}</h3>
         <p>{description}</p>
-      </div>
-      <div>
-        <img className="phone" src={image} />
-      </div>
+      </Header>
     </ImageWithText>
   );
 };

@@ -26,13 +26,14 @@ export default ({}) => {
         />
         <ImageWithText
           image={'../src/assets/dator.png'}
-          header="Mobile"
-          description="Worlds first online real money esports platform on mobile."
+          header="PC"
+          isLeft
+          description="Worlds first online real money esports platform on PC."
         />
         <ImageWithText
           image={'../src/assets/tv.png'}
-          header="Mobile"
-          description="Worlds first online real money esports platform on mobile."
+          header="Console"
+          description="Worlds first online real money esports platform on console."
         />
       </div>
       <StickyVideo scroll={scroll} />
