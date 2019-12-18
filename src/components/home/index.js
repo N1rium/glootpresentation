@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import IntroVideo from '../intro-video';
 import ImageWithText from '../image-with-text';
 import StickyVideo from '../sticky-video';
 import MarketOverview from '../market-overview';
@@ -18,9 +19,7 @@ export default ({}) => {
   return (
     <div id="app-content" onScroll={onScroll}>
       <div className="hero-frame">
-        <section className="intro">
-          <video playsInline autoPlay muted src="src/assets/video/intro.mp4" />
-        </section>
+        <IntroVideo />
         <ImageWithText
           image={'../src/assets/phone.png'}
           header="Mobile"
