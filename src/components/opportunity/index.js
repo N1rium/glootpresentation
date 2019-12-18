@@ -19,7 +19,7 @@ export default ({ scroll, debug }) => {
       width: offsetWidth,
       height: offsetHeight,
       scrollPx: scroll - offsetTop,
-      scrollPercentage: ((scroll - offsetTop) / scrollHeight) * 100 * 2,
+      scrollPercentage: ((scroll - offsetTop) / offsetHeight) * 100 * 2,
     });
     console.log(scrollPercentage);
   }, [scroll]);

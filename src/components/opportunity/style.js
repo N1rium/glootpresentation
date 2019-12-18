@@ -4,8 +4,7 @@ import GlootLogo from 'assets/gloot-logo.png';
 const Opportunity = styled.div`
   width: 100vw;
   height: 200vh;
-  position: sticky;
-  top: 0;
+  position: relative;
   color: #000;
 `;
 
