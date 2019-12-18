@@ -7,6 +7,7 @@ const MarketOverview = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0px 25px;
   footer {
     & > div {
       display: inline-block;
@@ -18,7 +19,6 @@ const MarketOverview = styled.div`
 const Title = styled.h2``;
 const Description = styled.p`
   color: rgb(114, 114, 114);
-  max-width: 50%;
 `;
 
 const IconGroup = styled.div`
@@ -31,6 +31,7 @@ const IconGroup = styled.div`
 
 const IconContainer = styled.div`
   margin: 0 80px;
+  font-weight: 900;
   @media only screen and (max-width: 768px) {
     &.games {
       order: 1;

@@ -28,6 +28,7 @@ export default () => {
         <Player />
         <Player />
       </RightSegment>
+      <p>Total prize money and active players 2019</p>
     </OfflineEvents>
   );
 };

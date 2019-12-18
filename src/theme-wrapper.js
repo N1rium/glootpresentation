@@ -21,7 +21,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
-    font-size: 5em;
+    font-size: 2.5em;
+    margin: 0;
   }
 
   h3 {
@@ -29,7 +30,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p {
-    font-size: 2em;
+    font-size: 1.2em;
   }
 
   #app-container {

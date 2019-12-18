@@ -13,7 +13,7 @@ const ImageWithText = styled.div`
   border: 15px solid rgb(17, 17, 17);
   box-shadow: 0px -9px 28px -8px rgba(0, 0, 0, 1);
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 769px) {
     border-width: 30px;
   }
 

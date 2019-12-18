@@ -16,6 +16,7 @@ export default () => {
   return (
     <RevenueDrivers>
       <h2>Multiple revenue drivers</h2>
+      <p>The gaming industry generates double the revenue than music & film do combined.</p>
       <Drivers>
         <Driver icon={PayToEnterIcon} header="Pay to enter" desc="10% service fee & surplus from contests" />
         <Driver icon={PayToEnterIcon} header="Subscription" desc="$10 / month in advance" />
