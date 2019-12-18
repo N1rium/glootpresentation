@@ -10,16 +10,21 @@ const VideoContainer = styled.div.attrs(props => ({
   style: {
     transform: `scale(${props.scroll <= 50 ? '1' : `${50 / props.scroll}`})`,
     borderWidth: `${props.scroll > 50 ? '10px' : '0px'}`,
+    width: `${props.scroll > 50 ? '250vw' : '100vw'}`,
+    marginLeft: `${props.scroll > 50 ? '-75vw' : '0'}`,
   },
 }))`
   position: sticky;
   top: 0;
-  width: 100vw;
   height: 100vh;
   will-change: transform;
   box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.3);
   border: 0px solid #fff;
   border-radius: 6px;
+  @media only screen and (min-width: 769px) {
+    max-width: 100vw;
+    margin-left: 0 !important;
+  }
 `;
 
 const Video = styled.video.attrs(props => ({
