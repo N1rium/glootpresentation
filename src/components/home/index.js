@@ -6,7 +6,6 @@ import MarketOverview from '../market-overview';
 import OfflineEvents from '../offline-events';
 import Opportunity from '../opportunity';
 import RevenueDrivers from '../revenue-drivers';
-import './style.scss';
 
 export default ({}) => {
   const [scroll, setScroll] = useState(0);
@@ -18,28 +17,22 @@ export default ({}) => {
 
   return (
     <div id="app-content" onScroll={onScroll}>
-      <div className="hero-frame">
-        <IntroVideo />
-        <ImageWithText
-          image={'../src/assets/phone.png'}
-          header="Mobile"
-          description="Worlds first online real money esports platform on mobile."
-        />
-        <ImageWithText
-          image={'../src/assets/dator.png'}
-          header="Mobile"
-          description="Worlds first online real money esports platform on mobile."
-        />
-        <ImageWithText
-          image={'../src/assets/tv.png'}
-          header="Mobile"
-          description="Worlds first online real money esports platform on mobile."
-        />
-        {/* <section className="esports-platform">
-          <div className="hero-frame-top" />
-          <h2>The online real money esports platform</h2>
-        </section> */}
-      </div>
+      <IntroVideo />
+      <ImageWithText
+        image={'../src/assets/phone.png'}
+        header="Mobile"
+        description="Worlds first online real money esports platform on mobile."
+      />
+      <ImageWithText
+        image={'../src/assets/dator.png'}
+        header="Mobile"
+        description="Worlds first online real money esports platform on mobile."
+      />
+      <ImageWithText
+        image={'../src/assets/tv.png'}
+        header="Mobile"
+        description="Worlds first online real money esports platform on mobile."
+      />
       <StickyVideo scroll={scroll} />
       <MarketOverview />
       <OfflineEvents />
