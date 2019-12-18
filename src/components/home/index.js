@@ -4,6 +4,7 @@ import StickyVideo from '../sticky-video';
 import MarketOverview from '../market-overview';
 import OfflineEvents from '../offline-events';
 import Opportunity from '../opportunity';
+import RevenueDrivers from '../revenue-drivers';
 import './style.scss';
 
 export default ({}) => {
@@ -44,6 +45,7 @@ export default ({}) => {
       <MarketOverview />
       <OfflineEvents />
       <Opportunity scroll={scroll} />
+      <RevenueDrivers />
     </div>
   );
 };

@@ -7,6 +7,12 @@ const MarketOverview = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  footer {
+    & > div {
+      display: inline-block;
+      margin: 0px 10px;
+    }
+  }
 `;
 
 const Title = styled.h2``;
@@ -28,6 +34,14 @@ const IconContainer = styled.div`
   @media only screen and (max-width: 768px) {
     &.games {
       order: 1;
+      img {
+        transform: scale(1.5);
+      }
+    }
+    &.music {
+      img {
+        transform: scale(0.8);
+      }
     }
   }
 `;

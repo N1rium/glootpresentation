@@ -12,7 +12,7 @@ export default () => {
       <Title>Market overview</Title>
       <Description>The gaming industry generates double the revenue than music & film do combined.</Description>
       <IconGroup>
-        <IconContainer>
+        <IconContainer className="music">
           <img src={MusicIcon} />
           <p>$17B</p>
         </IconContainer>
@@ -20,7 +20,7 @@ export default () => {
           <img src={GamingIcon} />
           <p>$116B</p>
         </IconContainer>
-        <IconContainer>
+        <IconContainer className="video">
           <img src={VideoIcon} />
           <p>$41B</p>
         </IconContainer>
@@ -30,6 +30,10 @@ export default () => {
         <p>$2.3B</p>
         <p>Players</p>
       </PlayersContainer>
+      <footer>
+        <div>Industry revenue 2018</div>
+        <div>Active gamers worldwide</div>
+      </footer>
     </MarketOverview>
   );
 };
