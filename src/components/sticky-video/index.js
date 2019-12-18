@@ -25,6 +25,11 @@ const VideoContainer = styled.div.attrs(props => ({
     max-width: 100vw;
     margin-left: 0 !important;
   }
+
+  @media (orientation: landscape) {
+    max-width: 100vw;
+    margin-left: 0 !important;
+  }
 `;
 
 const Video = styled.video.attrs(props => ({
