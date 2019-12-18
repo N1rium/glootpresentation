@@ -57,15 +57,21 @@ const LastInfoContainer = styled.div`
 
 const RightTextContainer = styled.div`
   position: absolute;
-  right: 0;
+  right: 25px;
   top: 25vh;
   max-width: 50vw;
+  p {
+    color: rgb(114, 114, 114);
+  }
 `;
 const LeftTextContainer = styled.div`
   position: absolute;
-  left: 0;
+  left: 25px;
   top: 100vh;
   max-width: 50vw;
+  p {
+    color: rgb(114, 114, 114);
+  }
 `;
 
 export { Opportunity, GrayBall, GreenBall, Icon, LastInfoContainer, RightTextContainer, LeftTextContainer };

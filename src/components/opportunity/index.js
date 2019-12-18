@@ -34,7 +34,6 @@ export default ({ scroll, debug }) => {
   };
 
   const grayBallStyle = {
-    // transform: `scale(${scrollPercentage >= 25 ? '1' : '25'})`,
     left: `${Math.min(62.5, 13 + Math.max(0, scrollPercentage))}vw`,
     transform: `scale(${Math.max(1, Math.min(25, 25 - Math.max(0, scrollPercentage / 2)))})`,
     zIndex: `${scrollPercentage >= 25 ? '1' : '0'}`,

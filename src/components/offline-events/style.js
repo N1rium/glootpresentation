@@ -3,6 +3,9 @@ import styled from 'styled-components';
 const OfflineEvents = styled.div`
   color: #000;
   padding: 0px 25px;
+  footer {
+    font-size: 0.8em;
+  }
 `;
 
 const LeftSegment = styled.div`
@@ -11,25 +14,30 @@ const LeftSegment = styled.div`
   }
 `;
 const RightSegment = styled.div`
+  h3 {
+    color: rgb(114, 114, 114);
+    font-weight: 900;
+  }
   h2 {
     color: rgb(69, 71, 255);
+    font-weight: 900;
   }
 `;
 
 const PlayerContainer = styled.div`
   display: flex;
   align-items: center;
-  margin: 20px 0px;
+  margin: 60px 0px;
   img {
     margin-right: 20px;
-    width: 64px;
+    width: 48px;
   }
   & > div {
     width: 100%;
     & > div {
       width: 75%;
       background: rgb(222, 222, 222);
-      height: 16px;
+      height: 12px;
       border-radius: 6px;
       &:last-child {
         margin-top: 8px;

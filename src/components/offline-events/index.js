@@ -23,12 +23,12 @@ export default () => {
       </LeftSegment>
       <RightSegment>
         <h2>$211M</h2>
-        <p>300 players</p>
+        <h3>300 players</h3>
         <Player />
         <Player />
         <Player />
       </RightSegment>
-      <p>Total prize money and active players 2019</p>
+      <footer>Total prize money and active players 2019</footer>
     </OfflineEvents>
   );
 };

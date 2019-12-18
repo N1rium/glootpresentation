@@ -27,7 +27,7 @@ export default () => {
       </IconGroup>
       <PlayersContainer>
         <img src={PlayersIcon} />
-        <p>$2.3B</p>
+        <h2>$2.3B</h2>
         <p>Players</p>
       </PlayersContainer>
       <footer>

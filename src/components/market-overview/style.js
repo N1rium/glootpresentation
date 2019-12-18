@@ -9,6 +9,8 @@ const MarketOverview = styled.div`
   align-items: center;
   padding: 0px 25px;
   footer {
+    font-size: 0.8em;
+    color: rgb(114, 114, 114);
     & > div {
       display: inline-block;
       margin: 0px 10px;
@@ -50,6 +52,9 @@ const IconContainer = styled.div`
 const PlayersContainer = styled.div`
   img {
     width: 128px;
+  }
+  p {
+    color: rgb(114, 114, 114);
   }
 `;
 
