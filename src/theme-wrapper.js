@@ -1,10 +1,13 @@
-import React from 'react';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import React from "react";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  * {
-    box-sizing: border-box;
-  }
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
   html, body {
     width: 100%;

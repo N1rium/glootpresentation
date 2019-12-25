@@ -1,19 +1,30 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const OfflineEvents = styled.div`
   color: #000;
-  padding: 0px 25px;
+  padding: 250px 25px;
+  display: flex;
   footer {
     font-size: 0.8em;
   }
 `;
 
 const LeftSegment = styled.div`
+  width: 100%;
+  h2 {
+    font-weight: 900;
+    line-height: 0.9em;
+  }
   p {
+    color: rgb(114, 114, 114);
+  }
+  footer {
+    font-size: 0.6em;
     color: rgb(114, 114, 114);
   }
 `;
 const RightSegment = styled.div`
+  width: 80%;
   h3 {
     color: rgb(114, 114, 114);
     font-weight: 900;
