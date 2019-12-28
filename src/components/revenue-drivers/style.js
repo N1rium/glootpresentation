@@ -4,7 +4,6 @@ const RevenueDrivers = styled.div`
   color: #000;
   padding: 0px 25px;
   p {
-    max-width: 50%;
     color: rgb(114, 114, 114);
   }
   @media only screen and (min-width: 769px) {

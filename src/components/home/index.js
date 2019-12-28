@@ -5,6 +5,7 @@ import StickyVideo from '../sticky-video';
 import MarketOverview from '../market-overview';
 import OfflineEvents from '../offline-events';
 import Opportunity from '../opportunity';
+import OpportunityLite from '../opportunity-lite';
 import RevenueDrivers from '../revenue-drivers';
 
 export default ({}) => {
@@ -39,7 +40,8 @@ export default ({}) => {
       <StickyVideo scroll={scroll} />
       <MarketOverview />
       <OfflineEvents />
-      <Opportunity scroll={scroll} />
+      {/* <Opportunity scroll={scroll} /> */}
+      <OpportunityLite />
       <RevenueDrivers />
     </div>
   );

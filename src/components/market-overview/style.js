@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const MarketOverview = styled.div`
   color: #000;
@@ -68,11 +68,7 @@ const IconContainer = styled.div`
 `;
 
 const PlayersContainer = styled.div`
-  margin: 130px 0;
-  img {
-    width: 300px;
-  }
-
+  margin: 40px 0px;
   h2 {
     font-weight: 900;
   }
@@ -83,11 +79,4 @@ const PlayersContainer = styled.div`
   }
 `;
 
-export {
-  MarketOverview,
-  Title,
-  Description,
-  IconGroup,
-  IconContainer,
-  PlayersContainer
-};
+export { MarketOverview, Title, Description, IconGroup, IconContainer, PlayersContainer };

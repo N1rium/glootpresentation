@@ -1,20 +1,13 @@
-import React from "react";
-import {
-  MarketOverview,
-  Title,
-  Description,
-  IconGroup,
-  IconContainer,
-  PlayersContainer
-} from "./style";
-import Reveal from "react-reveal/Reveal";
-import Slide from "react-reveal/Slide";
-import Zoom from "react-reveal/Zoom";
+import React from 'react';
+import { MarketOverview, Title, Description, IconGroup, IconContainer, PlayersContainer } from './style';
+import Reveal from 'react-reveal/Reveal';
+import Slide from 'react-reveal/Slide';
+import Zoom from 'react-reveal/Zoom';
 
-import MusicIcon from "../../assets/icons/musicicon.svg";
-import GamingIcon from "../../assets/icons/gamesicon.svg";
-import VideoIcon from "../../assets/icons/cameraicon.svg";
-import PlayersIcon from "../../assets/icons/players.svg";
+import MusicIcon from '../../assets/icons/musicicon.svg';
+import GamingIcon from '../../assets/icons/gamesicon.svg';
+import VideoIcon from '../../assets/icons/cameraicon.svg';
+import PlayersIcon from '../../assets/icons/players.svg';
 
 export default () => {
   return (
@@ -54,8 +47,8 @@ export default () => {
         <Zoom>
           <PlayersContainer>
             <img src={PlayersIcon} />
-              <h2>$2.3B</h2>
-              <p>Players</p>
+            <h2>$2.3B</h2>
+            <p>Players</p>
           </PlayersContainer>
         </Zoom>
         <Slide bottom>

@@ -1,16 +1,21 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const OfflineEvents = styled.div`
   color: #000;
   padding: 250px 25px;
   display: flex;
+  flex-direction: column;
   footer {
     font-size: 0.8em;
+  }
+
+  @media only screen and (min-width: 769px) {
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 `;
 
 const LeftSegment = styled.div`
-  width: 100%;
   h2 {
     font-weight: 900;
     line-height: 0.9em;
@@ -24,7 +29,7 @@ const LeftSegment = styled.div`
   }
 `;
 const RightSegment = styled.div`
-  width: 80%;
+  margin-top: 40px;
   h3 {
     color: rgb(114, 114, 114);
     font-weight: 900;
@@ -32,6 +37,11 @@ const RightSegment = styled.div`
   h2 {
     color: rgb(69, 71, 255);
     font-weight: 900;
+  }
+
+  @media only screen and (min-width: 769px) {
+    flex-direction: row;
+    margin-top: 0;
   }
 `;
 
