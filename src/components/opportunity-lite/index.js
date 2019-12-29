@@ -7,6 +7,11 @@ const Wrapper = styled.div`
   p {
     color: rgb(114, 114, 114);
   }
+  .opportunity,
+  .missing {
+    display: flex;
+    flex-direction: column;
+  }
   .opportunity {
     text-align: right;
     margin-bottom: 40px;
@@ -77,14 +82,16 @@ export default () => {
           </div>
         </div>
       </div>
-      <Appendix>
-        <TinyBall blue />
-        <div>esports offline events</div>
-      </Appendix>
-      <Appendix>
-        <TinyBall />
-        <div>G-Loot estimated revenue</div>
-      </Appendix>
+      <div>
+        <Appendix>
+          <TinyBall blue />
+          <div>esports offline events</div>
+        </Appendix>
+        <Appendix>
+          <TinyBall />
+          <div>G-Loot estimated revenue</div>
+        </Appendix>
+      </div>
     </Wrapper>
   );
 };
