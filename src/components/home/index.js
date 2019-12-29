@@ -7,6 +7,7 @@ import OfflineEvents from '../offline-events';
 import Opportunity from '../opportunity';
 import OpportunityLite from '../opportunity-lite';
 import RevenueDrivers from '../revenue-drivers';
+import AnyGameInTheWorld from '../any-game-in-the-world';
 
 export default ({}) => {
   const [scroll, setScroll] = useState(0);
@@ -43,6 +44,7 @@ export default ({}) => {
       {/* <Opportunity scroll={scroll} /> */}
       <OpportunityLite />
       <RevenueDrivers />
+      <AnyGameInTheWorld scroll={scroll} />
     </div>
   );
 };
