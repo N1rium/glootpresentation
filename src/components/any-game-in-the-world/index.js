@@ -17,6 +17,7 @@ const ImageContainer = styled.div.attrs(props => ({
   position: sticky;
   top: 0px;
   height: 100vh;
+  width: 100vw;
 `;
 
 const Image = styled.div.attrs(props => ({
@@ -24,7 +25,7 @@ const Image = styled.div.attrs(props => ({
     backgroundImage: `url(${props.scroll <= 100 ? StickyBg1 : StickyBg2})`,
   },
 }))`
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   transition: background-image 0.25s ease-in-out;
