@@ -4,6 +4,10 @@ import styled from 'styled-components';
 const RevenueModel = styled.div`
   color: #000;
   padding: 0px 25px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
 `;
 
 const TableContainer = styled.div`
@@ -26,11 +30,17 @@ const TD = styled.td`
   text-align: center;
 `;
 
+const Titles = styled.div`
+  max-width: 720px;
+`;
+
 export default () => {
   return (
     <RevenueModel>
-      <h2>Pay to enter revenue model</h2>
-      <p>Example: G-Loot hosts a $800 prize pool re-playable contest for 1000 players</p>
+      <Titles>
+        <h2>Pay to enter revenue model</h2>
+        <p>Example: G-Loot hosts a $800 prize pool re-playable contest for 1000 players</p>
+      </Titles>
       <TableContainer>
         <Table>
           <tr>

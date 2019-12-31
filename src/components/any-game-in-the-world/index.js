@@ -41,6 +41,7 @@ const TextSegment = styled.div`
   max-width: 992px;
   color: #fffffe;
   opacity: 0.8;
+  margin: 0px 20px;
   h2 {
     margin-bottom: 20px;
   }
@@ -49,6 +50,9 @@ const TextSegment = styled.div`
   }
   &.second {
     bottom: 80vh;
+  }
+  @media only screen and (min-width: 769px) {
+    margin: 0px 80px;
   }
 `;
 

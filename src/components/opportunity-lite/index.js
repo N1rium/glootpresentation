@@ -24,6 +24,23 @@ const Wrapper = styled.div`
     }
     margin: 20px 0px;
   }
+
+  @media only screen and (min-width: 769px) {
+    .opportunity,
+    .missing {
+      flex-direction: row;
+      justify-content: space-evenly;
+      p {
+        max-width: 50vw;
+      }
+    }
+
+    .opportunity {
+      & > :first-child {
+        order: 1;
+      }
+    }
+  }
 `;
 
 const Ball = styled.div`
@@ -43,22 +60,6 @@ const BlackBall = styled(Ball)`
   margin-left: ${props => (props.small ? '-8px' : '0px')};
 `;
 
-const Appendix = styled.div`
-  & > * {
-    display: inline-block;
-    vertical-align: middle;
-  }
-  color: rgb(19, 23, 29);
-`;
-
-const TinyBall = styled.div`
-  border-radius: 50%;
-  background: ${props => (props.blue ? 'rgb(67, 79, 255)' : '#000')};
-  width: 10px;
-  height: 10px;
-  margin-right: 10px;
-`;
-
 export default () => {
   return (
     <Wrapper>
@@ -76,21 +77,11 @@ export default () => {
         <div>
           <h2>G-Loot is the missing component</h2>
           <p>Anyone, anywhere in the world can now earn money from playing the games they already play & love.</p>
-          <div className="ball-container">
-            <BlueBall small />
-            <BlackBall />
-          </div>
         </div>
-      </div>
-      <div>
-        <Appendix>
-          <TinyBall blue />
-          <div>esports offline events</div>
-        </Appendix>
-        <Appendix>
-          <TinyBall />
-          <div>G-Loot estimated revenue</div>
-        </Appendix>
+        <div className="ball-container">
+          <BlueBall small />
+          <BlackBall />
+        </div>
       </div>
     </Wrapper>
   );

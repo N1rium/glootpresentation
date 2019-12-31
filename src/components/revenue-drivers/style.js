@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
 const RevenueDrivers = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   color: #000;
   padding: 0px 25px;
   p {
