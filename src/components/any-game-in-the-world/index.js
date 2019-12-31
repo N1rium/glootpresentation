@@ -7,6 +7,7 @@ import StickyBg2 from '../../assets/stickybg2.jpg';
 const AnyGameInTheWorld = styled.div`
   width: 100vw;
   height: 400vh;
+  position: relative;
 `;
 
 const ImageContainer = styled.div.attrs(props => ({
@@ -35,14 +36,19 @@ const Image = styled.div.attrs(props => ({
 `;
 
 const TextSegment = styled.div`
-  position: relative;
+  position: absolute;
   z-index: 1;
   max-width: 992px;
-  margin: ${props => (props.first ? '100vh 80px' : '0px 80px')};
   color: #fffffe;
   opacity: 0.8;
   h2 {
     margin-bottom: 20px;
+  }
+  &.first {
+    top: 120vh;
+  }
+  &.second {
+    bottom: 80vh;
   }
 `;
 
@@ -72,11 +78,12 @@ export default ({ scroll: parentScroll, debug = false }) => {
       <ImageContainer scroll={scroll.topPercentage}>
         <Image scroll={scroll.topPercentage} />
       </ImageContainer>
-      <TextSegment first>
+
+      <TextSegment className="first">
         <h2>Connects any game in the world</h2>
         <h3>with unique tech, we can connect games without relying on API availability</h3>
       </TextSegment>
-      <TextSegment>
+      <TextSegment className="second">
         <h2>Connects any game in the world</h2>
         <h3>with unique tech, we can connect games without relying on API availability</h3>
       </TextSegment>
