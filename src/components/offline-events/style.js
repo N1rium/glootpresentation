@@ -3,11 +3,18 @@ import styled from 'styled-components';
 const OfflineEvents = styled.div`
   color: #000;
   padding: 250px 25px;
+  min-height: 100vh;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   footer {
     font-size: 0.8em;
   }
+`;
+
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
 
   @media only screen and (min-width: 769px) {
     flex-direction: row;
@@ -68,4 +75,4 @@ const PlayerContainer = styled.div`
   }
 `;
 
-export { OfflineEvents, LeftSegment, RightSegment, PlayerContainer };
+export { OfflineEvents, Content, LeftSegment, RightSegment, PlayerContainer };
