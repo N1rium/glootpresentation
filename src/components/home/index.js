@@ -9,6 +9,7 @@ import OpportunityLite from '../opportunity-lite';
 import RevenueDrivers from '../revenue-drivers';
 import AnyGameInTheWorld from '../any-game-in-the-world';
 import RevenueModel from '../revenue-model';
+import Footer from '../footer';
 
 export default ({}) => {
   const [scroll, setScroll] = useState(0);
@@ -47,6 +48,7 @@ export default ({}) => {
       <AnyGameInTheWorld scroll={scroll} />
       <RevenueDrivers />
       <RevenueModel />
+      <Footer />
     </div>
   );
 };
