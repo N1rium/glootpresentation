@@ -6,6 +6,7 @@ import MarketOverview from '../market-overview';
 import OfflineEvents from '../offline-events';
 import Opportunity from '../opportunity';
 import OpportunityLite from '../opportunity-lite';
+import Balls from '../balls';
 import RevenueDrivers from '../revenue-drivers';
 import AnyGameInTheWorld from '../any-game-in-the-world';
 import RevenueModel from '../revenue-model';
@@ -45,6 +46,7 @@ export default ({}) => {
       <OfflineEvents />
       {/* <Opportunity scroll={scroll} /> */}
       <OpportunityLite />
+      <Balls />
       <AnyGameInTheWorld scroll={scroll} />
       <RevenueDrivers />
       <RevenueModel />
