@@ -33,8 +33,8 @@ const VideoContainer = styled.div.attrs(props => ({
 `;
 
 const Video = styled.video.attrs(props => ({
-  src:
-    'https://www.apple.com/105/media/us/iphone-11-pro/2019/3bd902e4-0752-4ac1-95f8-6225c32aec6d/anim/hero/small_2x.mp4',
+  id: 'mainvideo',
+  src: 'https://res.cloudinary.com/gloot/video/upload/v1538466873/Video/G-Loot_-_The_future_of_esport_1080p_HQ.mp4',
 }))`
   object-fit: cover;
   width: 100%;
@@ -55,6 +55,9 @@ export default ({ scroll: parentScroll, debug = false }) => {
       topPx: parentScroll - offsetTop,
       topPercentage: ((parentScroll - offsetTop) / scrollHeight) * 100 * 2,
     });
+    if (parentScroll - offsetTop > 20) {
+      document.getElementById('mainvideo').muted = false;
+    }
   }, [parentScroll]);
 
   return (
