@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const RevenueDrivers = styled.div`
-  min-height: 100vh;
+  margin: 250px 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,6 +38,9 @@ const Drivers = styled.div`
     & > div {
       display: inline-block;
       width: 33%;
+    }
+    img {
+      width: 140px;
     }
   }
 `;

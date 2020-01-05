@@ -19,20 +19,35 @@ const ImageContainer = styled.div.attrs(props => ({
   top: 0px;
   height: 100vh;
   width: 100vw;
+  @media (orientation: portrait) {
+    transform: scale(1) !important;
+  }
 `;
 
-const Image = styled.div.attrs(props => ({
-  style: {
-    backgroundImage: `url(${props.scroll <= 100 ? StickyBg1 : StickyBg2})`,
-  },
-}))`
+const Image = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  transition: background-image 0.25s ease-in-out;
+  background-color: #000;
   width: 100%;
   height: 100%;
   z-index: 0;
+  position: absolute;
+  top: 0;
+  will-change: opacity;
+  transition: opacity 0.25s ease-in-out;
+`;
+
+const Image1 = styled(Image)`
+  background-image: url(${StickyBg1});
+`;
+
+const Image2 = styled(Image).attrs(props => ({
+  style: {
+    opacity: `${props.scroll > 100 ? 1 : 0}`,
+  },
+}))`
+  background-image: url(${StickyBg2});
 `;
 
 const TextSegment = styled.div`
@@ -80,7 +95,8 @@ export default ({ scroll: parentScroll, debug = false }) => {
         </div>
       )}
       <ImageContainer scroll={scroll.topPercentage}>
-        <Image scroll={scroll.topPercentage} />
+        <Image1 />
+        <Image2 scroll={scroll.topPercentage} />
       </ImageContainer>
 
       <TextSegment className="first">

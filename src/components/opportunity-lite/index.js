@@ -25,7 +25,7 @@ const Wrapper = styled.div`
     margin: 20px 0px;
   }
 
-  @media only screen and (min-width: 769px) {
+  @media (orientation: landscape) {
     .opportunity,
     .missing {
       flex-direction: row;

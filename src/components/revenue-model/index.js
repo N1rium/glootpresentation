@@ -6,7 +6,7 @@ const RevenueModel = styled.div`
   padding: 0px 25px;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  margin: 250px 0px;
   justify-content: center;
 `;
 

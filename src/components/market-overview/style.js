@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const MarketOverview = styled.div`
   color: #000;
   text-align: center;
-  margin-top: -120px;
   display: flex;
   flex-direction: column;
   align-items: center;
