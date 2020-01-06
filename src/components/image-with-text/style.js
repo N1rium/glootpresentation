@@ -12,13 +12,11 @@ const ImageWithText = styled.div`
   padding: 40px 25px;
   display: flex;
   align-items: center;
-  justify-content: ${props => (props.isLeft ? 'flex-end' : 'flex-start')}
-  background-color: #000;
-  background-image: ${props => `url(${props.src})`};
-  background-attachment: fixed;
-  background-size: contain;
-  background-position: ${props => (props.isLeft ? '-50vw center' : '50vw center')};
-  background-repeat: no-repeat;
+  justify-content: ${props => (props.isLeft ? 'flex-end' : 'flex-start')};
+
+  .react-reveal {
+    z-index: 1;
+  }
 
   @media only screen and (min-width: 769px) {
     border-width: 30px;
@@ -46,4 +44,15 @@ const Header = styled.div`
   }
 `;
 
-export { ImageWithText, Header };
+const Image = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-image: ${props => `url(${props.src})`};
+  background-size: contain;
+  background-position: ${props => (props.isLeft ? '-50vw center' : '50vw center')};
+  background-repeat: no-repeat;
+`;
+
+export { ImageWithText, Header, Image };

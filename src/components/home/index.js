@@ -30,6 +30,7 @@ export default ({}) => {
           description="Worlds first online real money esports platform on mobile."
         />
         <ImageWithText
+          direction="left"
           image={'../src/assets/dator.png'}
           header="PC"
           isLeft

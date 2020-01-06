@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const RevenueModel = styled.div`
   color: #000;
@@ -43,48 +44,62 @@ export default () => {
       </Titles>
       <TableContainer>
         <Table>
-          <tr>
-            <TD bg="transparent" colSpan="3"></TD>
-            <TD>Price</TD>
-            <TD>Volume</TD>
-            <TD>Total</TD>
-          </tr>
-          <tr>
-            <TD bg="rgb(71, 62, 255)" color="#fff" colSpan="3">
-              Entry revenue
-            </TD>
-            <TD>$0.30</TD>
-            <TD>1000 players</TD>
-            <TD>$300</TD>
-          </tr>
-          <tr>
-            <TD bg="rgb(71, 62, 255)" color="#fff" colSpan="3">
-              Retry revenue
-            </TD>
-            <TD>$0.30</TD>
-            <TD>2500 retries</TD>
-            <TD>$750</TD>
-          </tr>
-          <tr>
-            <TD bg="rgb(71, 62, 255)" color="#fff" colSpan="3">
-              Service revenue
-            </TD>
-            <TD></TD>
-            <TD>10% of prize pool</TD>
-            <TD>$80</TD>
-          </tr>
-          <tr>
-            <TD bg="rgb(19, 23, 29)" color="#fff" colSpan="5">
-              Player generated revenue
-            </TD>
-            <TD>$1,130</TD>
-          </tr>
-          <tr>
-            <TD bg="rgb(116, 54, 255)" color="#fff" colSpan="5">
-              Prize Pool
-            </TD>
-            <TD>-$800</TD>
-          </tr>
+          <tbody>
+            <Fade bottom>
+              <tr>
+                <TD bg="transparent" colSpan="3"></TD>
+                <TD>Price</TD>
+                <TD>Volume</TD>
+                <TD>Total</TD>
+              </tr>
+            </Fade>
+            <Fade bottom>
+              <tr>
+                <TD bg="rgb(71, 62, 255)" color="#fff" colSpan="3">
+                  Entry revenue
+                </TD>
+                <TD>$0.30</TD>
+                <TD>1000 players</TD>
+                <TD>$300</TD>
+              </tr>
+            </Fade>
+            <Fade bottom>
+              <tr>
+                <TD bg="rgb(71, 62, 255)" color="#fff" colSpan="3">
+                  Retry revenue
+                </TD>
+                <TD>$0.30</TD>
+                <TD>2500 retries</TD>
+                <TD>$750</TD>
+              </tr>
+            </Fade>
+            <Fade bottom>
+              <tr>
+                <TD bg="rgb(71, 62, 255)" color="#fff" colSpan="3">
+                  Service revenue
+                </TD>
+                <TD></TD>
+                <TD>10% of prize pool</TD>
+                <TD>$80</TD>
+              </tr>
+            </Fade>
+            <Fade bottom>
+              <tr>
+                <TD bg="rgb(19, 23, 29)" color="#fff" colSpan="5">
+                  Player generated revenue
+                </TD>
+                <TD>$1,130</TD>
+              </tr>
+            </Fade>
+            <Fade bottom>
+              <tr>
+                <TD bg="rgb(116, 54, 255)" color="#fff" colSpan="5">
+                  Prize Pool
+                </TD>
+                <TD>-$800</TD>
+              </tr>
+            </Fade>
+          </tbody>
         </Table>
       </TableContainer>
     </RevenueModel>
