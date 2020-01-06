@@ -13,6 +13,7 @@ const ImageWithText = styled.div`
   display: flex;
   align-items: center;
   justify-content: ${props => (props.isLeft ? 'flex-end' : 'flex-start')};
+  overflow: hidden;
 
   .react-reveal {
     z-index: 1;
@@ -53,6 +54,9 @@ const Image = styled.div`
   background-size: contain;
   background-position: ${props => (props.isLeft ? '-50vw center' : '50vw center')};
   background-repeat: no-repeat;
+  @media (orientation: portrait) {
+    background-position: 50% 75%;
+  }
 `;
 
 export { ImageWithText, Header, Image };

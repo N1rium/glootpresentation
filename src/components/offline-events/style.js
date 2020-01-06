@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const OfflineEvents = styled.div`
   color: #000;
-  padding: 250px 25px;
+  padding: 100px 25px;
   min-height: 100vh;
   justify-content: center;
   display: flex;
@@ -16,7 +16,7 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media only screen and (min-width: 769px) {
+  @media (orientation: landscape) {
     flex-direction: row;
     justify-content: space-evenly;
   }
@@ -46,7 +46,7 @@ const RightSegment = styled.div`
     font-weight: 900;
   }
 
-  @media only screen and (min-width: 769px) {
+  @media (orientation: landscape) {
     flex-direction: row;
     margin-top: 0;
   }

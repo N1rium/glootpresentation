@@ -27,15 +27,22 @@ const Description = styled.p`
 
 const IconGroup = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  @media only screen and (max-width: 768px) {
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 1200px;
+  @media (orientation: portrait) {
     flex-direction: column;
+    & > * {
+      margin: 25px 0px;
+    }
+    & > :nth-child(2) {
+      order: 1;
+    }
   }
 `;
 
 const IconContainer = styled.div`
-  margin: 0 120px;
   font-weight: 900;
 
   p {
@@ -46,7 +53,7 @@ const IconContainer = styled.div`
     display: block;
   }
 
-  @media only screen and (min-width: 768px) {
+  @media (orientation: portrait) {
     &.music,
     &.video {
       p {

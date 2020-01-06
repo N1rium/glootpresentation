@@ -10,9 +10,10 @@ const Balls = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-left: 25px;
-  /* @media (orientation: portrait) {
-    justify-content: flex-end;
-  } */
+  @media (orientation: portrait) {
+    flex-direction: column;
+    padding-left: 0;
+  }
 `;
 
 const Ball = styled.div`
@@ -69,14 +70,14 @@ const BigContainer = styled(Container)`
   justify-content: flex-end;
 `;
 const MediumContainer = styled(Container)`
-  /* @media (orientation: portrait) {
-    position: absolute;
-  } */
+  @media (orientation: portrait) {
+    margin-bottom: 100px;
+  }
 `;
 const SmallContainer = styled(Container)`
-  /* @media (orientation: portrait) {
-    position: absolute;
-  } */
+  @media (orientation: portrait) {
+    margin-bottom: 100px;
+  }
 `;
 
 const Title = styled.h3`
@@ -99,6 +100,15 @@ const Appendixes = styled.div`
   align-items: center;
   padding: 0px 25px;
   justify-content: space-around;
+
+  @media (orientation: portrait) {
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 25px 0px;
+    & > * {
+      margin: 10px 0px;
+    }
+  }
 `;
 
 const Appendix = styled.div`
