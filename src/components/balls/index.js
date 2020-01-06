@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
+import Reveal from 'react-reveal/Reveal';
 
 const Balls = styled.div`
   position: relative;
@@ -123,31 +125,41 @@ export default () => {
   return (
     <>
       <Balls>
-        <SmallContainer>
-          <SmallBlueBall />
-          <Title>Today</Title>
-          <SmallBlackBall />
-        </SmallContainer>
-        <MediumContainer>
-          <MediumBlackBall />
-          <MediumTitle>2021</MediumTitle>
-          <MediumBlueBall />
-        </MediumContainer>
-        <BigContainer>
-          <BigBlueBall />
-          <BigTitle>2023</BigTitle>
-          <BigBlackBall />
-        </BigContainer>
+        <Fade bottom>
+          <SmallContainer>
+            <SmallBlueBall />
+            <Title>Today</Title>
+            <SmallBlackBall />
+          </SmallContainer>
+        </Fade>
+        <Fade bottom>
+          <MediumContainer>
+            <MediumBlackBall />
+            <MediumTitle>2021</MediumTitle>
+            <MediumBlueBall />
+          </MediumContainer>
+        </Fade>
+        <Fade bottom>
+          <BigContainer>
+            <BigBlueBall />
+            <BigTitle>2023</BigTitle>
+            <BigBlackBall />
+          </BigContainer>
+        </Fade>
       </Balls>
       <Appendixes>
-        <Appendix>
-          <AppendixBlueBall />
-          <p>esports offline events</p>
-        </Appendix>
-        <Appendix>
-          <AppendixBlackBall />
-          <p>G-Loot estimated revenue</p>
-        </Appendix>
+        <Fade left>
+          <Appendix>
+            <AppendixBlueBall />
+            <p>esports offline events</p>
+          </Appendix>
+        </Fade>
+        <Fade right>
+          <Appendix>
+            <AppendixBlackBall />
+            <p>G-Loot estimated revenue</p>
+          </Appendix>
+        </Fade>
       </Appendixes>
     </>
   );

@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
+import Reveal from 'react-reveal/Reveal';
 
 const Footer = styled.div`
   min-height: 100vh;
@@ -46,15 +48,19 @@ const BigScreen = styled.div`
 export default () => {
   return (
     <Footer>
-      <Texts>
-        <h2>Q&A</h2>
-        <Contact>CONTACT</Contact>
-        <div>Patrik Nybladh, CEO</div>
-        <div>+46 739 63 21 75, </div>
-        <div>patrik@gloot.com</div>
-      </Texts>
+      <Fade left>
+        <Texts>
+          <h2>Q&A</h2>
+          <Contact>CONTACT</Contact>
+          <div>Patrik Nybladh, CEO</div>
+          <div>+46 739 63 21 75, </div>
+          <div>patrik@gloot.com</div>
+        </Texts>
+      </Fade>
       <Screens>
-        <BigScreen />
+        <Reveal effect="scaleIn" duration="500">
+          <BigScreen />
+        </Reveal>
       </Screens>
     </Footer>
   );

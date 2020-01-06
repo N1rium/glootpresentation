@@ -3,6 +3,7 @@ import { MarketOverview, Title, Description, IconGroup, IconContainer, PlayersCo
 import Reveal from 'react-reveal/Reveal';
 import Slide from 'react-reveal/Slide';
 import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 import MusicIcon from '../../assets/icons/musicicon.svg';
 import GamingIcon from '../../assets/icons/gamesicon.svg';
@@ -14,9 +15,7 @@ export default () => {
     <Reveal>
       <MarketOverview>
         <Title>
-          <Zoom right cascade>
-            Market overview
-          </Zoom>
+          <Fade top>Market overview</Fade>
         </Title>
         <Slide bottom>
           <Description>

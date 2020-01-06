@@ -38,10 +38,12 @@ const Titles = styled.div`
 export default () => {
   return (
     <RevenueModel>
-      <Titles>
-        <h2>Pay to enter revenue model</h2>
-        <p>Example: G-Loot hosts a $800 prize pool re-playable contest for 1000 players</p>
-      </Titles>
+      <Fade bottom>
+        <Titles>
+          <h2>Pay to enter revenue model</h2>
+          <p>Example: G-Loot hosts a $800 prize pool re-playable contest for 1000 players</p>
+        </Titles>
+      </Fade>
       <TableContainer>
         <Table>
           <tbody>

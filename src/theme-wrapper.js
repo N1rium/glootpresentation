@@ -1,5 +1,5 @@
-import React from "react";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import React from 'react';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -62,6 +62,21 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
     overflow: auto;
     overflow-x: hidden;
+  }
+
+  .scaleIn {
+    animation: scaleIn 1s ease-in-out;
+  }
+
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
   }
 `;
 

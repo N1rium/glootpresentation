@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Reveal from 'react-reveal/Reveal';
+import Fade from 'react-reveal/Fade';
 
 const Wrapper = styled.div`
   color: #000;
@@ -67,24 +69,32 @@ export default () => {
   return (
     <Wrapper>
       <div className="opportunity">
-        <div>
-          <h2>Opportunity</h2>
-          <p>Top 300 esports professionals earn more than the rest of the 2.3 billion players combined.</p>
-        </div>
-        <div className="ball-container right">
-          <BlueBall />
-          <BlackBall small />
-        </div>
+        <Fade right>
+          <div>
+            <h2>Opportunity</h2>
+            <p>Top 300 esports professionals earn more than the rest of the 2.3 billion players combined.</p>
+          </div>
+        </Fade>
+        <Reveal effect="scaleIn" duration="500">
+          <div className="ball-container right">
+            <BlueBall />
+            <BlackBall small />
+          </div>
+        </Reveal>
       </div>
       <div className="missing">
-        <div>
-          <h2>G-Loot is the missing component</h2>
-          <p>Anyone, anywhere in the world can now earn money from playing the games they already play & love.</p>
-        </div>
-        <div className="ball-container">
-          <BlueBall small />
-          <BlackBall />
-        </div>
+        <Fade left>
+          <div>
+            <h2>G-Loot is the missing component</h2>
+            <p>Anyone, anywhere in the world can now earn money from playing the games they already play & love.</p>
+          </div>
+        </Fade>
+        <Reveal effect="scaleIn" duration="500">
+          <div className="ball-container">
+            <BlueBall small />
+            <BlackBall />
+          </div>
+        </Reveal>
       </div>
     </Wrapper>
   );

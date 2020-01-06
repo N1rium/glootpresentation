@@ -8,6 +8,10 @@ const AnyGameInTheWorld = styled.div`
   width: 100vw;
   height: 400vh;
   position: relative;
+  & > div {
+    width: 100%;
+    height: 100%;
+  }
 `;
 
 const ImageContainer = styled.div.attrs(props => ({
@@ -89,24 +93,21 @@ export default ({ scroll: parentScroll, debug = false }) => {
 
   return (
     <AnyGameInTheWorld ref={ref}>
-      {debug && (
-        <div style={{ position: 'fixed', top: '0', left: '0', zIndex: 10 }}>
-          Scroll: {scroll.topPx} : {scroll.topPercentage}
-        </div>
-      )}
-      <ImageContainer scroll={scroll.topPercentage}>
-        <Image1 />
-        <Image2 scroll={scroll.topPercentage} />
-      </ImageContainer>
+      <div>
+        <ImageContainer scroll={scroll.topPercentage}>
+          <Image1 />
+          <Image2 scroll={scroll.topPercentage} />
+        </ImageContainer>
 
-      <TextSegment className="first">
-        <h2>Connects any game in the world</h2>
-        <h3>with unique tech, we can connect games without relying on API availability</h3>
-      </TextSegment>
-      <TextSegment className="second">
-        <h2>Connects any game in the world</h2>
-        <h3>with unique tech, we can connect games without relying on API availability</h3>
-      </TextSegment>
+        <TextSegment className="first">
+          <h2>Connects any game in the world</h2>
+          <h3>with unique tech, we can connect games without relying on API availability</h3>
+        </TextSegment>
+        <TextSegment className="second">
+          <h2>Connects any game in the world</h2>
+          <h3>with unique tech, we can connect games without relying on API availability</h3>
+        </TextSegment>
+      </div>
     </AnyGameInTheWorld>
   );
 };
