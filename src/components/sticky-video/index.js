@@ -41,7 +41,7 @@ const Video = styled.video.attrs(props => ({
   height: 100%;
 `;
 
-export default ({ scroll: parentScroll, debug = false }) => {
+export default ({ scroll: parentScroll }) => {
   const ref = useRef(null);
 
   const [scroll, setScroll] = useState({
@@ -63,11 +63,6 @@ export default ({ scroll: parentScroll, debug = false }) => {
   return (
     <>
       <StickyVideo ref={ref}>
-        {debug && (
-          <div style={{ position: 'fixed', top: '0', left: '0', zIndex: 10 }}>
-            Scroll: {scroll.topPx} : {scroll.topPercentage}
-          </div>
-        )}
         <VideoContainer scroll={scroll.topPercentage}>
           <Video playsInline autoPlay muted />
         </VideoContainer>

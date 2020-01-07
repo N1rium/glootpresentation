@@ -75,7 +75,7 @@ const TextSegment = styled.div`
   }
 `;
 
-export default ({ scroll: parentScroll, debug = false }) => {
+export default ({ scroll: parentScroll }) => {
   const ref = useRef(null);
 
   const [scroll, setScroll] = useState({
@@ -98,7 +98,6 @@ export default ({ scroll: parentScroll, debug = false }) => {
           <Image1 />
           <Image2 scroll={scroll.topPercentage} />
         </ImageContainer>
-
         <TextSegment className="first">
           <h2>Connects any game in the world</h2>
           <h3>with unique tech, we can connect games without relying on API availability</h3>

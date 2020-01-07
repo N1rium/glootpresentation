@@ -9,7 +9,7 @@ import {
   LeftTextContainer,
 } from './style';
 
-export default ({ scroll, debug }) => {
+export default ({ scroll }) => {
   const ref = useRef(null);
   const [s, setS] = useState({});
 
@@ -43,12 +43,6 @@ export default ({ scroll, debug }) => {
 
   return (
     <Opportunity ref={ref}>
-      {debug && (
-        <div style={{ position: 'sticky', top: '0', left: '0' }}>
-          <div>scroll (px): {s.scrollPx}</div>
-          <div>scroll (%): {s.scrollPercentage}</div>
-        </div>
-      )}
       <RightTextContainer>
         <h2>Opportunity</h2>
         <p>Top 300 esports professionals earn more than the rest of the 2.3 billion players combined.</p>
