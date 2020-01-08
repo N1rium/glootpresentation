@@ -10,6 +10,7 @@ import Balls from '../balls';
 import RevenueDrivers from '../revenue-drivers';
 import AnyGameInTheWorld from '../any-game-in-the-world';
 import RevenueModel from '../revenue-model';
+import OnePager from '../one-pager';
 import Footer from '../footer';
 
 export default ({}) => {
@@ -51,6 +52,7 @@ export default ({}) => {
       <AnyGameInTheWorld scroll={scroll} />
       <RevenueDrivers />
       <RevenueModel />
+      <OnePager />
       <Footer />
     </div>
   );

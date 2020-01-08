@@ -39,7 +39,6 @@ export default ({ scroll: parentScroll }) => {
       topPx: parentScroll - offsetTop,
       topPercentage: ((parentScroll - offsetTop) / scrollHeight) * 100 * 2,
     });
-    console.warn(scroll);
   }, [parentScroll]);
 
   const { topPercentage } = scroll;
@@ -79,9 +78,9 @@ export default ({ scroll: parentScroll }) => {
         <PillarContainer>
           <div>
             <Indexes>
-              <p className={topPercentage > 5 && 'show'}>$17B</p>
-              <p className={topPercentage > 25 && 'show'}>$41B</p>
-              <p className={topPercentage > 50 && 'show'} style={{ fontWeight: 'bold' }}>
+              <p className={topPercentage > 5 ? 'show' : 'false'}>$17B</p>
+              <p className={topPercentage > 25 ? 'show' : 'false'}>$41B</p>
+              <p className={topPercentage > 50 ? 'show' : 'false'} style={{ fontWeight: 'bold' }}>
                 $116B
               </p>
             </Indexes>
