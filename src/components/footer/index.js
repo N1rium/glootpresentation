@@ -58,7 +58,7 @@ export default () => {
         </Texts>
       </Fade>
       <Screens>
-        <Reveal effect="scaleIn" duration="500">
+        <Reveal effect="scaleIn" duration={500}>
           <BigScreen />
         </Reveal>
       </Screens>

@@ -1,5 +1,20 @@
-import React from 'react';
-import { MarketOverview, Title, Description, IconGroup, IconContainer, PlayersContainer } from './style';
+import React, { useRef, useState, useEffect } from 'react';
+import {
+  MarketOverview,
+  InnerContainer,
+  Title,
+  Description,
+  IconGroup,
+  IconContainer,
+  PlayersContainer,
+  PillarContainer,
+  Pillars,
+  Pillar,
+  MusicPillar,
+  VideoPillar,
+  GreenPillar,
+  Indexes,
+} from './style';
 import Reveal from 'react-reveal/Reveal';
 import Slide from 'react-reveal/Slide';
 import Zoom from 'react-reveal/Zoom';
@@ -10,10 +25,28 @@ import GamingIcon from '../../assets/icons/gamesicon.svg';
 import VideoIcon from '../../assets/icons/cameraicon.svg';
 import PlayersIcon from '../../assets/icons/players.svg';
 
-export default () => {
+export default ({ scroll: parentScroll }) => {
+  const ref = useRef(null);
+
+  const [scroll, setScroll] = useState({
+    topPx: parentScroll,
+    topPercentage: parentScroll,
+  });
+
+  useEffect(() => {
+    const { scrollHeight, offsetTop } = ref.current;
+    setScroll({
+      topPx: parentScroll - offsetTop,
+      topPercentage: ((parentScroll - offsetTop) / scrollHeight) * 100 * 2,
+    });
+    console.warn(scroll);
+  }, [parentScroll]);
+
+  const { topPercentage } = scroll;
+
   return (
-    <Reveal>
-      <MarketOverview>
+    <MarketOverview ref={ref}>
+      <InnerContainer>
         <Title>
           <Fade top>Market overview</Fade>
         </Title>
@@ -23,7 +56,7 @@ export default () => {
             <br /> the revenue than music & film do combined.
           </Description>
         </Slide>
-        <IconGroup>
+        {/* <IconGroup>
           <Slide left bottom>
             <IconContainer className="music">
               <img src={MusicIcon} />
@@ -42,8 +75,31 @@ export default () => {
               <p>$41B</p>
             </IconContainer>
           </Slide>
-        </IconGroup>
-        <Zoom>
+        </IconGroup> */}
+        <PillarContainer>
+          <div>
+            <Indexes>
+              <p className={topPercentage > 5 && 'show'}>$17B</p>
+              <p className={topPercentage > 25 && 'show'}>$41B</p>
+              <p className={topPercentage > 50 && 'show'} style={{ fontWeight: 'bold' }}>
+                $116B
+              </p>
+            </Indexes>
+            <Pillars>
+              <MusicPillar scroll={scroll.topPercentage} height="4vh" />
+              <VideoPillar scroll={scroll.topPercentage} height="15vh" />
+              <GreenPillar scroll={scroll.topPercentage} height="30vh" />
+            </Pillars>
+            <Fade>
+              <Indexes>
+                <p className="show">Music</p>
+                <p className="show">Film</p>
+                <p className="show">Games</p>
+              </Indexes>
+            </Fade>
+          </div>
+        </PillarContainer>
+        {/* <Zoom>
           <PlayersContainer>
             <img src={PlayersIcon} />
             <h2>$2.3B</h2>
@@ -55,8 +111,8 @@ export default () => {
             <div>Industry revenue 2018</div>
             <div>Active gamers worldwide</div>
           </footer>
-        </Slide>
-      </MarketOverview>
-    </Reveal>
+        </Slide> */}
+      </InnerContainer>
+    </MarketOverview>
   );
 };

@@ -75,7 +75,7 @@ export default () => {
             <p>Top 300 esports professionals earn more than the rest of the 2.3 billion players combined.</p>
           </div>
         </Fade>
-        <Reveal effect="scaleIn" duration="500">
+        <Reveal effect="scaleIn" duration={500}>
           <div className="ball-container right">
             <BlueBall />
             <BlackBall small />
@@ -89,7 +89,7 @@ export default () => {
             <p>Anyone, anywhere in the world can now earn money from playing the games they already play & love.</p>
           </div>
         </Fade>
-        <Reveal effect="scaleIn" duration="500">
+        <Reveal effect="scaleIn" duration={500}>
           <div className="ball-container">
             <BlueBall small />
             <BlackBall />

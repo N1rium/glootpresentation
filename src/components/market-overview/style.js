@@ -6,7 +6,8 @@ const MarketOverview = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 25px;
+  width: 100%;
+  height: 150vh;
   footer {
     font-size: 0.6em;
     color: rgb(114, 114, 114);
@@ -15,6 +16,11 @@ const MarketOverview = styled.div`
       margin: 0px 10px;
     }
   }
+`;
+
+const InnerContainer = styled.div`
+  position: sticky;
+  top: 10%;
 `;
 
 const Title = styled.h2`
@@ -85,4 +91,90 @@ const PlayersContainer = styled.div`
   }
 `;
 
-export { MarketOverview, Title, Description, IconGroup, IconContainer, PlayersContainer };
+const PillarContainer = styled.div`
+  opacity: 1;
+  transition: all 0.25s ease-in-out;
+  &.hide {
+    opacity: 0;
+  }
+`;
+const Pillars = styled.div`
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.33);
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+  }
+`;
+
+const Pillar = styled.div`
+  width: 140px;
+  max-width: 140px;
+  margin: 0px 20px;
+  height: ${props => props.height};
+  background: #7752f8;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transform-origin: bottom center;
+  @media only screen and (max-width: 768px) {
+    width: 20vw;
+  }
+`;
+
+const MusicPillar = styled(Pillar).attrs(props => ({
+  style: {
+    transform: `scaleY(${Math.max(0, Math.min(1, (props.scroll + 50) / 50))})`,
+  },
+}))``;
+const VideoPillar = styled(Pillar).attrs(props => ({
+  style: {
+    transform: `scaleY(${Math.max(0, Math.min(1, (props.scroll + 25) / 50))})`,
+  },
+}))``;
+
+const GreenPillar = styled(Pillar).attrs(props => ({
+  style: {
+    transform: `scaleY(${Math.max(0, Math.min(1, props.scroll / 50))})`,
+  },
+}))`
+  background: #8dfa87;
+`;
+const Indexes = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+  }
+  p {
+    margin: 20px;
+    width: 140px;
+    max-width: 140px;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+    &.show {
+      opacity: 1;
+    }
+    @media only screen and (max-width: 768px) {
+      width: 20vw;
+    }
+  }
+`;
+
+export {
+  MarketOverview,
+  InnerContainer,
+  Title,
+  Description,
+  IconGroup,
+  IconContainer,
+  PlayersContainer,
+  PillarContainer,
+  Pillars,
+  Pillar,
+  MusicPillar,
+  VideoPillar,
+  GreenPillar,
+  Indexes,
+};

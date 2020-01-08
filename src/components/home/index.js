@@ -43,7 +43,7 @@ export default ({}) => {
         />
       </div>
       <StickyVideo scroll={scroll} />
-      <MarketOverview />
+      <MarketOverview scroll={scroll} />
       <OfflineEvents />
       {/* <Opportunity scroll={scroll} /> */}
       <OpportunityLite />
