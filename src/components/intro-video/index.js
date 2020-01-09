@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import { isMobile } from 'react-device-detect';
+import GlootLogo from '../../assets/gloot-logo.png';
 
 const IntroVideo = styled.div`
   z-index: 0;
@@ -9,7 +10,6 @@ const IntroVideo = styled.div`
   height: 100vh;
   position: sticky;
   top: 0;
-  min-height: 50vh;
   video {
     width: 100%;
     height: 100%;
@@ -33,10 +33,21 @@ const Online = styled.span`
 
 const Video = styled.video.attrs({ src: 'src/assets/video/intro.mp4' })``;
 
+const ImageContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  background-image: url(${GlootLogo});
+  background-color: #000;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+`;
+
 export default () => {
   return (
     <IntroVideo>
       {!isMobile && <Video playsInline autoPlay muted />}
+      {isMobile && <ImageContainer></ImageContainer>}
       <Title>
         <Fade bottom>
           <div>

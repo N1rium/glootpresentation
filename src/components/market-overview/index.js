@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import { isMobile } from 'react-device-detect';
 import {
   MarketOverview,
   InnerContainer,
@@ -50,7 +51,7 @@ export default ({ scroll: parentScroll }) => {
           <Fade top>Market overview</Fade>
         </Title>
         <Slide bottom>
-          <Description>
+          <Description style={isMobile ? {} : { marginBottom: '80px' }}>
             The gaming industry generates double
             <br /> the revenue than music & film do combined.
           </Description>
@@ -77,7 +78,7 @@ export default ({ scroll: parentScroll }) => {
         </IconGroup> */}
         <PillarContainer>
           <div>
-            <Indexes>
+            <Indexes className="top">
               <p className={topPercentage > 5 ? 'show' : 'false'}>$17B</p>
               <p className={topPercentage > 25 ? 'show' : 'false'}>$41B</p>
               <p className={topPercentage > 50 ? 'show' : 'false'} style={{ fontWeight: 'bold' }}>

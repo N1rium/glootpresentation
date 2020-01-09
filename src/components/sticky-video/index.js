@@ -9,9 +9,6 @@ const StickyVideo = styled.div`
 const VideoContainer = styled.div.attrs(props => ({
   style: {
     transform: `scale(${Math.max(0.3, props.scroll <= 50 ? '1' : `${50 / props.scroll}`)})`,
-    borderWidth: `${props.scroll > 50 ? '10px' : '0px'}`,
-    width: `${props.scroll > 50 ? '250vw' : '100vw'}`,
-    marginLeft: `${props.scroll > 50 ? '-75vw' : '0'}`,
   },
 }))`
   position: sticky;
@@ -21,6 +18,9 @@ const VideoContainer = styled.div.attrs(props => ({
   box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.3);
   border: 0px solid #fff;
   border-radius: 6px;
+  margin-left: ${props => (props.scroll > 50 ? '-75vw' : '0')};
+  width: ${props => (props.scroll > 50 ? '250vw' : '100vw')};
+  border-width: ${props => (props.scroll > 50 ? '10px' : '0px')};
   @media only screen and (min-width: 769px) {
     max-width: 100vw;
     margin-left: 0 !important;
@@ -41,6 +41,21 @@ const Video = styled.video.attrs(props => ({
   height: 100%;
 `;
 
+const MuteButton = styled.div`
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #fff;
+  bottom: 32px;
+  right: 32px;
+  border-radius: 50%;
+`;
+
 export default ({ scroll: parentScroll }) => {
   const ref = useRef(null);
 
@@ -55,16 +70,19 @@ export default ({ scroll: parentScroll }) => {
       topPx: parentScroll - offsetTop,
       topPercentage: ((parentScroll - offsetTop) / scrollHeight) * 100 * 2,
     });
-    if (parentScroll - offsetTop > 20) {
-      document.getElementById('mainvideo').muted = false;
-    }
   }, [parentScroll]);
+
+  const mute = () => {
+    const vid = document.getElementById('mainvideo');
+    vid.muted = !vid.muted;
+  };
 
   return (
     <>
       <StickyVideo ref={ref}>
         <VideoContainer scroll={scroll.topPercentage}>
           <Video playsInline autoPlay muted />
+          <MuteButton onClick={mute} />
         </VideoContainer>
       </StickyVideo>
     </>

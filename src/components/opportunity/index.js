@@ -53,14 +53,13 @@ const Ball = styled.div`
 `;
 
 const BlueBall = styled(Ball)`
-  background: rgb(67, 79, 255);
+  background: #5f5e5f;
   margin-right: ${props => (props.small ? '-8px' : '0px')};
 `;
 
 const BlackBall = styled(Ball)`
-  background: #000;
   margin-left: ${props => (props.small ? '-8px' : '0px')};
-  background: linear-gradient(rgba(19, 23, 29, 0.9), rgba(19, 23, 29, 0.9)), url(../src/assets/blacklogo.png);
+  background: linear-gradient(rgba(168, 243, 136, 0.95), rgba(168, 243, 136, 0.95)), url(../src/assets/blacklogo.png);
   background-size: cover;
   background-position: center;
 `;

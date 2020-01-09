@@ -32,6 +32,7 @@ const Ball = styled.div`
   width: 400px;
   height: 400px;
   z-index: ${props => (props.small ? '1' : '0')};
+  will-change: transform;
   @media only screen and (max-width: 768px) {
     width: 200px;
     height: 200px;
@@ -43,7 +44,7 @@ const BlueBall = styled(Ball).attrs(props => ({
     transform: `scale(${Math.max(0.1, Math.min(1 - props.scroll / 75, 1))})`,
   },
 }))`
-  background: rgb(67, 79, 255);
+  background: #5f5e5f;
   margin-right: ${props => (props.small ? '-8px' : '0px')};
 `;
 
@@ -53,7 +54,7 @@ const BlackBall = styled(Ball).attrs(props => ({
   },
 }))`
   margin-left: ${props => (props.small ? '-8px' : '0px')};
-  background: linear-gradient(rgba(168, 243, 136, 0.9), rgba(168, 243, 136, 0.9)), url(../src/assets/blacklogo.png);
+  background: linear-gradient(rgba(168, 243, 136, 0.95), rgba(168, 243, 136, 0.95)), url(../src/assets/blacklogo.png);
   background-size: cover;
   background-position: center;
   transform: scale(0.1);
@@ -64,6 +65,7 @@ const TextSegment = styled.div`
   position: absolute;
   top: 0;
   max-width: 900px;
+  will-change: opacity;
 `;
 
 const TextSegmentRight = styled(TextSegment).attrs(props => ({

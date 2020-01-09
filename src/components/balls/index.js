@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
-import Reveal from 'react-reveal/Reveal';
 
 const Balls = styled.div`
   position: relative;
@@ -18,11 +17,13 @@ const Balls = styled.div`
 
 const Ball = styled.div`
   border-radius: 50%;
-  background: rgb(67, 79, 255);
+  background: #5f5e5f;
 `;
 
 const BlackBall = styled(Ball)`
-  background: #a8f388;
+  background: linear-gradient(rgba(168, 243, 136, 0.95), rgba(168, 243, 136, 0.95)), url(../src/assets/blacklogo.png);
+  background-size: cover;
+  background-position: center;
 `;
 
 const SmallBlackBall = styled(BlackBall)`
@@ -100,11 +101,11 @@ const Appendixes = styled.div`
   align-items: center;
   padding: 0px 25px;
   justify-content: space-around;
+  margin: 25px 0px;
 
   @media (orientation: portrait) {
     flex-direction: column;
     align-items: flex-start;
-    margin: 25px 0px;
     & > * {
       margin: 10px 0px;
     }

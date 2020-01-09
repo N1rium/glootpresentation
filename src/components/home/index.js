@@ -22,11 +22,9 @@ export default ({}) => {
     setScroll(scrollTop);
   };
 
-  console.warn(isMobile);
-
   return (
     <div id="app-content" onScroll={onScroll}>
-      <div>
+      {/* <div>
         <IntroVideo />
         <ImageWithText
           image={'../src/assets/phone.png'}
@@ -45,7 +43,7 @@ export default ({}) => {
           header="Console"
           description="Worlds first online real money esports platform on console."
         />
-      </div>
+      </div> */}
       <StickyVideo scroll={scroll} />
       <MarketOverview scroll={scroll} />
       <OfflineEvents />

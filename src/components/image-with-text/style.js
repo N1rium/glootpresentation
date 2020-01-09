@@ -15,7 +15,7 @@ const ImageWithText = styled.div`
   justify-content: ${props => (props.isLeft ? 'flex-end' : 'flex-start')};
   overflow: hidden;
 
-  .react-reveal {
+  & > :first-child {
     z-index: 1;
   }
 

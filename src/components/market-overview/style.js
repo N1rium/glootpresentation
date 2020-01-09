@@ -27,7 +27,6 @@ const Title = styled.h2`
   font-weight: 900;
 `;
 const Description = styled.p`
-  margin: 0.8em 0 3em;
   color: rgb(114, 114, 114);
 `;
 
@@ -102,7 +101,7 @@ const Pillars = styled.div`
   align-items: flex-end;
   display: flex;
   justify-content: space-evenly;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.33);
+  border-bottom: 1px solid rgb(216, 216, 216);
   @media only screen and (max-width: 812px) {
     justify-content: center;
   }
@@ -117,6 +116,7 @@ const Pillar = styled.div`
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   transform-origin: bottom center;
+  will-change: transform;
   @media only screen and (max-width: 812px) {
     width: 20vw;
     @media (orientation: landscape) {
@@ -164,6 +164,12 @@ const Indexes = styled.div`
       @media (orientation: landscape) {
         width: 10vw;
       }
+    }
+  }
+
+  &.top {
+    p {
+      margin-top: 0px;
     }
   }
 `;
