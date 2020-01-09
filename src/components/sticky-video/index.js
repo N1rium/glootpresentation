@@ -8,7 +8,7 @@ const StickyVideo = styled.div`
 
 const VideoContainer = styled.div.attrs(props => ({
   style: {
-    transform: `scale(${props.scroll <= 50 ? '1' : `${50 / props.scroll}`})`,
+    transform: `scale(${Math.max(0.3, props.scroll <= 50 ? '1' : `${50 / props.scroll}`)})`,
     borderWidth: `${props.scroll > 50 ? '10px' : '0px'}`,
     width: `${props.scroll > 50 ? '250vw' : '100vw'}`,
     marginLeft: `${props.scroll > 50 ? '-75vw' : '0'}`,

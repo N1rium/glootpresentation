@@ -1,8 +1,9 @@
 import React from 'react';
 import { OfflineEvents, Content, LeftSegment, RightSegment, PlayerContainer } from './style';
 import PlayerImage from '../../assets/icons/usericon.svg';
+import { isMobile } from 'react-device-detect';
 
-import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
 
 const Player = () => {
   return (
@@ -16,9 +17,13 @@ const Player = () => {
   );
 };
 
+const Wrapper = ({ children }) => {
+  return isMobile ? <>{children}</> : <Fade bottom>{children}</Fade>;
+};
+
 export default () => {
   return (
-    <Slide bottom>
+    <Wrapper>
       <OfflineEvents>
         <Content className="content">
           <LeftSegment>
@@ -35,18 +40,12 @@ export default () => {
           <RightSegment>
             <h2>$211M</h2>
             <h3>300 players</h3>
-            <Slide right>
-              <Player />
-            </Slide>
-            <Slide right>
-              <Player />
-            </Slide>
-            <Slide right>
-              <Player />
-            </Slide>
+            <Player />
+            <Player />
+            <Player />
           </RightSegment>
         </Content>
       </OfflineEvents>
-    </Slide>
+    </Wrapper>
   );
 };
