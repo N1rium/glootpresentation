@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { isMobile } from 'react-device-detect';
 import IntroVideo from '../intro-video';
 import ImageWithText from '../image-with-text';
 import StickyVideo from '../sticky-video';
@@ -20,6 +21,8 @@ export default ({}) => {
     const { scrollTop } = target;
     setScroll(scrollTop);
   };
+
+  console.warn(isMobile);
 
   return (
     <div id="app-content" onScroll={onScroll}>
@@ -46,8 +49,8 @@ export default ({}) => {
       <StickyVideo scroll={scroll} />
       <MarketOverview scroll={scroll} />
       <OfflineEvents />
-      {/* <Opportunity scroll={scroll} /> */}
-      <OpportunityLite scroll={scroll} />
+      {isMobile === true && <Opportunity />}
+      {isMobile === false && <OpportunityLite scroll={scroll} />}
       <Balls />
       <AnyGameInTheWorld scroll={scroll} />
       <RevenueDrivers />
