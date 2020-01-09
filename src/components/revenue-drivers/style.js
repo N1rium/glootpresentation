@@ -11,7 +11,7 @@ const RevenueDrivers = styled.div`
   p {
     color: rgb(114, 114, 114);
   }
-  @media only screen and (min-width: 769px) {
+  @media (orientation: landscape) {
     text-align: center;
     p {
       margin-left: auto;
@@ -21,9 +21,8 @@ const RevenueDrivers = styled.div`
 `;
 
 const Drivers = styled.div`
-  width: 100%;
   img {
-    width: 80px;
+    width: 45%;
   }
   & > div {
     margin-top: 40px;
@@ -34,13 +33,10 @@ const Drivers = styled.div`
       margin: 10px 0px;
     }
   }
-  @media only screen and (min-width: 769px) {
+  @media (orientation: landscape) {
     & > div {
       display: inline-block;
       width: 33%;
-    }
-    img {
-      width: 140px;
     }
   }
 `;

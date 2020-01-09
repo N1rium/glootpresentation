@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
-import Reveal from 'react-reveal/Reveal';
+import { isMobile } from 'react-device-detect';
 
 const IntroVideo = styled.div`
   z-index: 0;
@@ -36,7 +36,7 @@ const Video = styled.video.attrs({ src: 'src/assets/video/intro.mp4' })``;
 export default () => {
   return (
     <IntroVideo>
-      <Video playsInline autoPlay muted />
+      {!isMobile && <Video playsInline autoPlay muted />}
       <Title>
         <Fade bottom>
           <div>

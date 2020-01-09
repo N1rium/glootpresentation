@@ -103,7 +103,7 @@ const Pillars = styled.div`
   display: flex;
   justify-content: space-evenly;
   border-bottom: 2px solid rgba(0, 0, 0, 0.33);
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 812px) {
     justify-content: center;
   }
 `;
@@ -117,8 +117,11 @@ const Pillar = styled.div`
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   transform-origin: bottom center;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 812px) {
     width: 20vw;
+    @media (orientation: landscape) {
+      width: 10vw;
+    }
   }
 `;
 
@@ -144,7 +147,7 @@ const Indexes = styled.div`
   align-items: center;
   display: flex;
   justify-content: space-evenly;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 812px) {
     justify-content: center;
   }
   p {
@@ -156,8 +159,11 @@ const Indexes = styled.div`
     &.show {
       opacity: 1;
     }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 812px) {
       width: 20vw;
+      @media (orientation: landscape) {
+        width: 10vw;
+      }
     }
   }
 `;

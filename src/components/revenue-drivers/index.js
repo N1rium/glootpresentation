@@ -1,8 +1,8 @@
 import React from 'react';
 import { RevenueDrivers, Drivers } from './style';
-import PayToEnterIcon from '../../assets/icons/pay2enter.svg';
-import B2BIcon from '../../assets/icons/b2b.svg';
-import SubscriptionIcon from '../../assets/icons/subscription.svg';
+import PayToEnterIcon from '../../assets/paytoenter.png';
+import B2BIcon from '../../assets/sponsorship.png';
+import SubscriptionIcon from '../../assets/subscription.png';
 import Fade from 'react-reveal/Fade';
 
 const Driver = ({ icon, header, desc }) => {

@@ -32,18 +32,18 @@ export default () => {
       <Fade>
         <li className="silent">
           G-Loot has cross-platform (PC/console/mobile) technology and a scalable digital business model at an early
-          stage of monetisation  
+          stage of monetization
         </li>
       </Fade>
       <Fade>
         <li className="silent">
           G-Loot’s technology acts as an over-layer on top of PC, console and mobile games and can operate without API /
-          integration with games 
+          integration with games
         </li>
       </Fade>
       <Fade>
         <li className="silent">
-          G-Loot is the official esports partner for world leading game developers such as PUBG, EA, TENCENT etc.  
+          G-Loot is the official esports partner for world leading game developers such as PUBG, EA, TENCENT etc.
         </li>
       </Fade>
     </ul>

@@ -22,7 +22,7 @@ const Ball = styled.div`
 `;
 
 const BlackBall = styled(Ball)`
-  background: rgb(19, 22, 29);
+  background: #a8f388;
 `;
 
 const SmallBlackBall = styled(BlackBall)`

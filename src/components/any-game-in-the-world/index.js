@@ -14,18 +14,11 @@ const AnyGameInTheWorld = styled.div`
   }
 `;
 
-const ImageContainer = styled.div.attrs(props => ({
-  style: {
-    transform: `scale(${props.scroll <= 0 ? '0.5' : `${Math.min(1, 0.5 + props.scroll / 100)}`})`,
-  },
-}))`
+const ImageContainer = styled.div`
   position: sticky;
   top: 0px;
   height: 100vh;
   width: 100vw;
-  @media (orientation: portrait) {
-    transform: scale(1) !important;
-  }
 `;
 
 const Image = styled.div`
@@ -40,6 +33,14 @@ const Image = styled.div`
   top: 0;
   will-change: opacity;
   transition: opacity 0.25s ease-in-out;
+`;
+
+const Video = styled.video.attrs(props => ({
+  src: 'https://res.cloudinary.com/gloot/video/upload/v1572425780/Video/GNOG_Presentation_Short_1.3.mp4',
+}))`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 const Image1 = styled(Image)`
@@ -63,6 +64,10 @@ const TextSegment = styled.div`
   margin: 0px 20px;
   h2 {
     margin-bottom: 20px;
+  }
+  h2,
+  h3 {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.75);
   }
   &.first {
     top: 120vh;
@@ -95,8 +100,9 @@ export default ({ scroll: parentScroll }) => {
     <AnyGameInTheWorld ref={ref}>
       <div>
         <ImageContainer scroll={scroll.topPercentage}>
-          <Image1 />
-          <Image2 scroll={scroll.topPercentage} />
+          {/* <Image1 />
+          <Image2 scroll={scroll.topPercentage} /> */}
+          <Video playsInline autoPlay muted loop />
         </ImageContainer>
         <TextSegment className="first">
           <h2>Connects any game in the world</h2>

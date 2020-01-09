@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import IntroVideo from '../intro-video';
 import ImageWithText from '../image-with-text';
 import StickyVideo from '../sticky-video';
@@ -47,7 +47,7 @@ export default ({}) => {
       <MarketOverview scroll={scroll} />
       <OfflineEvents />
       {/* <Opportunity scroll={scroll} /> */}
-      <OpportunityLite />
+      <OpportunityLite scroll={scroll} />
       <Balls />
       <AnyGameInTheWorld scroll={scroll} />
       <RevenueDrivers />

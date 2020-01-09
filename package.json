@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --env local",
+    "build": "webpack --mode production --env prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -15,6 +16,7 @@
     "file-loader": "^5.0.2",
     "html-loader": "^0.5.5",
     "react": "16.8.6",
+    "react-device-detect": "^1.11.14",
     "react-dom": "16.8.6",
     "react-ga": "^2.7.0",
     "react-intl": "^2.7.1",

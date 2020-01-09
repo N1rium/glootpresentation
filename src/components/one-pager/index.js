@@ -12,6 +12,7 @@ const OnePager = styled.div`
   p.header {
     text-transform: uppercase;
     text-align: center;
+    font-weight: 900;
   }
   p:not(.header) {
     font-size: 0.8em;
@@ -74,7 +75,7 @@ export default () => {
             <GameCards />
           </SelectedGames>
           <Monetization>
-            <p className="header">MONETISATION</p>
+            <p className="header">MONETIZATION</p>
             <Divider />
             <MonetisationModel />
           </Monetization>
