@@ -6,6 +6,9 @@ import MonetisationModel from './components/monetisationmodel';
 
 const OnePager = styled.div`
   background: #000;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   & > * {
     flex: 1 1 auto;
   }

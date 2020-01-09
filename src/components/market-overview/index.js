@@ -9,6 +9,7 @@ import {
   IconContainer,
   PlayersContainer,
   PillarContainer,
+  PillarInner,
   Pillars,
   Pillar,
   MusicPillar,
@@ -77,7 +78,7 @@ export default ({ scroll: parentScroll }) => {
           </Slide>
         </IconGroup> */}
         <PillarContainer>
-          <div>
+          <PillarInner className={topPercentage > 80 ? 'hide' : 'show'}>
             <Indexes className="top">
               <p className={topPercentage > 5 ? 'show' : 'false'}>$17B</p>
               <p className={topPercentage > 25 ? 'show' : 'false'}>$41B</p>
@@ -97,21 +98,13 @@ export default ({ scroll: parentScroll }) => {
                 <p className="show">Games</p>
               </Indexes>
             </Fade>
-          </div>
-        </PillarContainer>
-        {/* <Zoom>
-          <PlayersContainer>
+          </PillarInner>
+          <PlayersContainer className={topPercentage > 80 ? 'show' : 'hide'}>
             <img src={PlayersIcon} />
             <h2>$2.3B</h2>
             <p>Players</p>
           </PlayersContainer>
-        </Zoom>
-        <Slide bottom>
-          <footer>
-            <div>Industry revenue 2018</div>
-            <div>Active gamers worldwide</div>
-          </footer>
-        </Slide> */}
+        </PillarContainer>
       </InnerContainer>
     </MarketOverview>
   );

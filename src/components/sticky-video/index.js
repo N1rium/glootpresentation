@@ -1,14 +1,22 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
+import GlootLogo from '../../assets/gloot-logo.png';
+import { isMobile } from 'react-device-detect';
 
 const StickyVideo = styled.div`
   width: 100vw;
   height: 200vh;
 `;
 
+const getScaleFromScroll = scroll => {
+  return `scale(1)`;
+};
+
 const VideoContainer = styled.div.attrs(props => ({
   style: {
-    transform: `scale(${Math.max(0.3, props.scroll <= 50 ? '1' : `${50 / props.scroll}`)})`,
+    transform: props.isMobile
+      ? getScaleFromScroll()
+      : `scale(${Math.max(0.3, props.scroll <= 50 ? '1' : `${50 / props.scroll}`)})`,
   },
 }))`
   position: sticky;
@@ -34,17 +42,25 @@ const VideoContainer = styled.div.attrs(props => ({
 
 const Video = styled.video.attrs(props => ({
   id: 'mainvideo',
-  src: 'https://res.cloudinary.com/gloot/video/upload/v1538466873/Video/G-Loot_-_The_future_of_esport_1080p_HQ.mp4',
+  // poster: GlootLogo,
 }))`
   object-fit: cover;
   width: 100%;
   height: 100%;
 `;
 
+const VideoSource = styled.source.attrs(props => ({
+  src: props.isMobile
+    ? 'https://res.cloudinary.com/gloot/video/upload/v1578603617/gloot%20presentation/mainvideo_compressed.mp4'
+    : 'https://res.cloudinary.com/gloot/video/upload/v1538466873/Video/G-Loot_-_The_future_of_esport_1080p_HQ.mp4',
+}))``;
+
 const MuteButton = styled.div`
   position: absolute;
-  width: 128px;
-  height: 128px;
+  width: 20vw;
+  height: 20vw;
+  max-width: 64px;
+  max-height: 64px;
   display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -56,8 +72,28 @@ const MuteButton = styled.div`
   border-radius: 50%;
 `;
 
+const Loader = styled.div`
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  margin: 0 auto;
+  @keyframes spin {
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+`;
+
 export default ({ scroll: parentScroll }) => {
   const ref = useRef(null);
+  const [loading, setLoading] = useState(true);
 
   const [scroll, setScroll] = useState({
     topPx: parentScroll,
@@ -72,6 +108,30 @@ export default ({ scroll: parentScroll }) => {
     });
   }, [parentScroll]);
 
+  useEffect(() => {
+    const vid = document.getElementById('mainvideo');
+    vid.addEventListener('playing', function() {
+      if (vid.readyState == 4) {
+        setLoading(false);
+        vid.play();
+      }
+    });
+    vid.addEventListener('suspend', function(e) {
+      if (vid.readyState == 4) {
+        setLoading(false);
+        vid.play();
+      }
+    });
+
+    const loadedCheck = setInterval(() => {
+      if (vid.readyState >= 3) {
+        setLoading(false);
+        vid.play();
+        clearInterval(loadedCheck);
+      }
+    }, 500);
+  }, []);
+
   const mute = () => {
     const vid = document.getElementById('mainvideo');
     vid.muted = !vid.muted;
@@ -81,8 +141,10 @@ export default ({ scroll: parentScroll }) => {
     <>
       <StickyVideo ref={ref}>
         <VideoContainer scroll={scroll.topPercentage}>
-          <Video playsInline autoPlay muted />
-          <MuteButton onClick={mute} />
+          <Video playsInline autoPlay muted>
+            <VideoSource isMobile={isMobile} />
+          </Video>
+          {loading ? <Loader /> : <MuteButton onClick={mute} />}
         </VideoContainer>
       </StickyVideo>
     </>

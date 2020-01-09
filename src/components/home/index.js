@@ -12,6 +12,7 @@ import RevenueDrivers from '../revenue-drivers';
 import AnyGameInTheWorld from '../any-game-in-the-world';
 import RevenueModel from '../revenue-model';
 import OnePager from '../one-pager';
+import Employees from '../employees';
 import Footer from '../footer';
 
 export default ({}) => {
@@ -54,6 +55,7 @@ export default ({}) => {
       <RevenueDrivers />
       <RevenueModel />
       <OnePager />
+      <Employees />
       <Footer />
     </div>
   );

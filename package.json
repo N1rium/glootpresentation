@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --env local",
+    "deploy": "rm -rf dist && npm run build && gcloud app deploy --project=gloot-presentation --quiet",
     "build": "webpack --mode production --env prod",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

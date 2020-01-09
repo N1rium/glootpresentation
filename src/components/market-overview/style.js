@@ -7,7 +7,7 @@ const MarketOverview = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 150vh;
+  height: 200vh;
   footer {
     font-size: 0.6em;
     color: rgb(114, 114, 114);
@@ -79,7 +79,28 @@ const IconContainer = styled.div`
 `;
 
 const PlayersContainer = styled.div`
-  margin: 40px 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+  will-change: transform, opacity;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &.show {
+    animation: animateIn 0.5s ease-in-out forwards;
+  }
+  &.hide {
+    animation: animateOut 0.25s ease-in-out forwards;
+  }
+  img {
+    width: 50%;
+  }
   h2 {
     font-weight: 900;
   }
@@ -88,15 +109,48 @@ const PlayersContainer = styled.div`
     margin: 0;
     color: rgb(114, 114, 114);
   }
+
+  @keyframes animateIn {
+    0% {
+      opacity: 0;
+      transform: translateY(100%) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%) scale(1);
+    }
+  }
+
+  @keyframes animateOut {
+    100% {
+      opacity: 0;
+      transform: translateY(100%) scale(0.5);
+    }
+    0% {
+      opacity: 1;
+      transform: translateY(0%) scale(1);
+    }
+  }
 `;
 
 const PillarContainer = styled.div`
   opacity: 1;
   transition: all 0.25s ease-in-out;
+  position: relative;
   &.hide {
     opacity: 0;
   }
 `;
+
+const PillarInner = styled.div`
+  opacity: 1;
+  will-change: opacity;
+  transition: opacity 0.25s ease-in-out;
+  &.hide {
+    opacity: 0;
+  }
+`;
+
 const Pillars = styled.div`
   align-items: flex-end;
   display: flex;
@@ -156,6 +210,7 @@ const Indexes = styled.div`
     max-width: 140px;
     opacity: 0;
     transition: opacity 0.25s ease-in-out;
+    will-change: opacity;
     &.show {
       opacity: 1;
     }
@@ -183,6 +238,7 @@ export {
   IconContainer,
   PlayersContainer,
   PillarContainer,
+  PillarInner,
   Pillars,
   Pillar,
   MusicPillar,

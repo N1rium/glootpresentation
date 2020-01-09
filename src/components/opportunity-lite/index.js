@@ -10,7 +10,6 @@ const Wrapper = styled.div`
   p {
     color: rgb(114, 114, 114);
     max-width: 900px;
-    margin: 0 auto;
   }
   .opportunity {
     display: flex;
@@ -66,6 +65,10 @@ const TextSegment = styled.div`
   top: 0;
   max-width: 900px;
   will-change: opacity;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const TextSegmentRight = styled(TextSegment).attrs(props => ({
@@ -73,7 +76,7 @@ const TextSegmentRight = styled(TextSegment).attrs(props => ({
     opacity: 1 - props.scroll / 50 > 1 ? '1' : `${Math.max(0, 1 - props.scroll / 50)}`,
   },
 }))`
-  right: 25px;
+  right: 150px;
   text-align: right;
 `;
 
@@ -83,7 +86,7 @@ const TextSegmentLeft = styled(TextSegment).attrs(props => ({
   },
 }))`
   text-align: left;
-  left: 25px;
+  left: 150px;
 `;
 
 const Balls = styled.div.attrs(props => ({
