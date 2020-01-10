@@ -1,12 +1,9 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-
-import StickyBg1 from '../../assets/stickybg1.png';
-import StickyBg2 from '../../assets/stickybg2.jpg';
 
 const AnyGameInTheWorld = styled.div`
   width: 100vw;
-  height: 400vh;
+  height: 300vh;
   position: relative;
   & > div {
     width: 100%;
@@ -22,37 +19,19 @@ const ImageContainer = styled.div`
 `;
 
 const Image = styled.div`
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #000;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
   position: absolute;
   top: 0;
-  will-change: opacity;
-  transition: opacity 0.25s ease-in-out;
+  left: 0;
+  z-index: 1;
 `;
 
 const Video = styled.video.attrs(props => ({
-  src: 'https://res.cloudinary.com/gloot/video/upload/v1572425780/Video/GNOG_Presentation_Short_1.3.mp4',
+  src: 'https://res.cloudinary.com/gloot/video/upload/v1578660896/gloot%20presentation/videoloop.mp4',
 }))`
   width: 100%;
   height: 100%;
   object-fit: cover;
-`;
-
-const Image1 = styled(Image)`
-  background-image: url(${StickyBg1});
-`;
-
-const Image2 = styled(Image).attrs(props => ({
-  style: {
-    opacity: `${props.scroll > 100 ? 1 : 0}`,
-  },
-}))`
-  background-image: url(${StickyBg2});
 `;
 
 const TextSegment = styled.div`
@@ -70,38 +49,23 @@ const TextSegment = styled.div`
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.75);
   }
   &.first {
-    top: 120vh;
+    top: 100vh;
   }
   &.second {
-    bottom: 80vh;
+    bottom: 60vh;
+    right: 0;
   }
   @media only screen and (min-width: 769px) {
     margin: 0px 80px;
   }
 `;
 
-export default ({ scroll: parentScroll }) => {
-  const ref = useRef(null);
-
-  const [scroll, setScroll] = useState({
-    topPx: parentScroll,
-    topPercentage: parentScroll,
-  });
-
-  useEffect(() => {
-    const { scrollHeight, offsetTop } = ref.current;
-    setScroll({
-      topPx: parentScroll - offsetTop,
-      topPercentage: ((parentScroll - offsetTop) / scrollHeight) * 100 * 2,
-    });
-  }, [parentScroll]);
-
+export default () => {
   return (
-    <AnyGameInTheWorld ref={ref}>
+    <AnyGameInTheWorld>
+      <Image />
       <div>
-        <ImageContainer scroll={scroll.topPercentage}>
-          {/* <Image1 />
-          <Image2 scroll={scroll.topPercentage} /> */}
+        <ImageContainer>
           <Video playsInline autoPlay muted loop />
         </ImageContainer>
         <TextSegment className="first">
@@ -109,8 +73,8 @@ export default ({ scroll: parentScroll }) => {
           <h3>with unique tech, we can connect games without relying on API availability</h3>
         </TextSegment>
         <TextSegment className="second">
-          <h2>Connects any game in the world</h2>
-          <h3>with unique tech, we can connect games without relying on API availability</h3>
+          <h2>Strong partnerships</h2>
+          <h3>Official esports partner for world leading game developers</h3>
         </TextSegment>
       </div>
     </AnyGameInTheWorld>

@@ -56,7 +56,7 @@ export default () => {
             </Fade>
             <Fade bottom>
               <tr>
-                <TD bg="rgb(71, 62, 255)" color="#fff" colSpan="3">
+                <TD bg="#68FF78" color="#000" colSpan="3">
                   Entry revenue
                 </TD>
                 <TD>$0.30</TD>
@@ -66,7 +66,7 @@ export default () => {
             </Fade>
             <Fade bottom>
               <tr>
-                <TD bg="rgb(71, 62, 255)" color="#fff" colSpan="3">
+                <TD bg="#68FF78" color="#000" colSpan="3">
                   Retry revenue
                 </TD>
                 <TD>$0.30</TD>
@@ -76,7 +76,7 @@ export default () => {
             </Fade>
             <Fade bottom>
               <tr>
-                <TD bg="rgb(71, 62, 255)" color="#fff" colSpan="3">
+                <TD bg="#68FF78" color="#000" colSpan="3">
                   Service revenue
                 </TD>
                 <TD></TD>
@@ -86,7 +86,7 @@ export default () => {
             </Fade>
             <Fade bottom>
               <tr>
-                <TD bg="rgb(19, 23, 29)" color="#fff" colSpan="5">
+                <TD bg="#68FF78" color="#000" colSpan="5">
                   Player generated revenue
                 </TD>
                 <TD>$1,130</TD>
