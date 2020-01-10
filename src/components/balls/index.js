@@ -39,7 +39,7 @@ const SmallBlueBall = styled(Ball)`
 const MediumBlackBall = styled(BlackBall)`
   width: 25vh;
   height: 25vh;
-  margin-right: -12.5vh;
+  margin-left: -12.5vh;
   z-index: 1;
 `;
 const MediumBlueBall = styled(Ball)`
@@ -85,9 +85,11 @@ const Title = styled.h3`
   position: absolute;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 2;
   color: #fff;
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  font-weight: 900;
 `;
 
 const BigTitle = styled(Title)`
@@ -149,9 +151,9 @@ export default () => {
         </Fade>
         <Fade bottom>
           <MediumContainer>
-            <MediumBlackBall />
-            <MediumTitle>2021</MediumTitle>
             <MediumBlueBall />
+            <MediumTitle>2021</MediumTitle>
+            <MediumBlackBall />
           </MediumContainer>
         </Fade>
         <Fade bottom>

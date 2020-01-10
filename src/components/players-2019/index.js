@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PlayersIcon from '../../assets/icons/players.svg';
+import Fade from 'react-reveal/Fade';
 
 const Players = styled.div`
   min-height: 100vh;
@@ -58,11 +59,21 @@ const PlayersContainer = styled.div`
 export default () => {
   return (
     <Players>
-      <h2>Active players worldwide 2019</h2>
+      <Fade>
+        <h2>
+          Active players worldwide <br></br>2019
+        </h2>
+      </Fade>
       <PlayersContainer>
-        <img src={PlayersIcon} />
-        <h2>2.3B</h2>
-        <p>Players</p>
+        <Fade>
+          <img src={PlayersIcon} />
+        </Fade>
+        <Fade>
+          <h2>2.3B</h2>
+        </Fade>
+        <Fade>
+          <p>Players</p>
+        </Fade>
       </PlayersContainer>
     </Players>
   );
