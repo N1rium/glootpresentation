@@ -25,11 +25,13 @@ const Model = styled.div`
 `;
 
 const Circle = styled.img.attrs(props => ({ src: props.src }))`
-  width: 120px;
+  width: 100%;
 `;
 
 const Title = styled.div`
   margin-top: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 `;
 
 const PlusSign = styled.div`

@@ -6,11 +6,8 @@ const RevenueDrivers = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  color: #000;
+  color: #fff;
   padding: 0px 25px;
-  p {
-    color: rgb(114, 114, 114);
-  }
   @media (orientation: landscape) {
     text-align: center;
     p {
@@ -21,19 +18,21 @@ const RevenueDrivers = styled.div`
 `;
 
 const Drivers = styled.div`
+  display: flex;
+  flex-direction: column;
   img {
     width: 45%;
   }
   & > div {
     margin-top: 40px;
     text-align: center;
-    color: rgb(114, 114, 114);
     .header {
       font-weight: bold;
       margin: 10px 0px;
     }
   }
   @media (orientation: landscape) {
+    flex-direction: row;
     & > div {
       display: inline-block;
       width: 33%;
@@ -41,4 +40,14 @@ const Drivers = styled.div`
   }
 `;
 
-export { RevenueDrivers, Drivers };
+const PlusSign = styled.div`
+  font-size: 1.2em;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 480px) {
+    height: 64px;
+  }
+`;
+
+export { RevenueDrivers, Drivers, PlusSign };

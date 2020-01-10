@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { isMobile } from 'react-device-detect';
 import IntroVideo from '../intro-video';
 import ImageWithText from '../image-with-text';
+import Header from '../header';
 import StickyVideo from '../sticky-video';
 import MarketOverview from '../market-overview';
+import Players2019 from '../players-2019';
 import OfflineEvents from '../offline-events';
 import Opportunity from '../opportunity';
 import OpportunityLite from '../opportunity-lite';
@@ -45,18 +47,22 @@ export default ({}) => {
           description="Worlds first online real money esports platform on console."
         />
       </div> */}
+      {/* <Header visible={scroll > 2000} /> */}
       <StickyVideo scroll={scroll} />
       <MarketOverview scroll={scroll} />
-      <OfflineEvents />
+      <Players2019 />
+      <OfflineEvents scroll={scroll} />
       {isMobile === true && <Opportunity />}
       {isMobile === false && <OpportunityLite scroll={scroll} />}
       <Balls />
-      <AnyGameInTheWorld scroll={scroll} />
-      <RevenueDrivers />
-      <RevenueModel />
-      <OnePager />
-      <Employees />
-      <Footer />
+      <div style={{ background: '#000' }}>
+        <AnyGameInTheWorld scroll={scroll} />
+        <RevenueDrivers />
+        <RevenueModel />
+        <OnePager />
+        <Employees />
+        <Footer />
+      </div>
     </div>
   );
 };

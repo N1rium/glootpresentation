@@ -12,17 +12,13 @@ const OfflineEvents = styled.div`
   }
 `;
 
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  @media (orientation: landscape) {
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-`;
+const Content = styled.div``;
 
 const LeftSegment = styled.div`
+  div {
+    position: sticky;
+    top: 45%;
+  }
   h2 {
     font-weight: 900;
     line-height: 0.9em;
@@ -52,27 +48,4 @@ const RightSegment = styled.div`
   }
 `;
 
-const PlayerContainer = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 60px 0px;
-  img {
-    margin-right: 20px;
-    width: 48px;
-  }
-  & > div {
-    width: 100%;
-    & > div {
-      width: 75%;
-      background: rgb(222, 222, 222);
-      height: 12px;
-      border-radius: 6px;
-      &:last-child {
-        margin-top: 8px;
-        width: 33%;
-      }
-    }
-  }
-`;
-
-export { OfflineEvents, Content, LeftSegment, RightSegment, PlayerContainer };
+export { OfflineEvents, Content, LeftSegment, RightSegment };

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
-import Reveal from 'react-reveal/Reveal';
+import Zoom from 'react-reveal/Zoom';
 
 const Footer = styled.div`
   min-height: 100vh;
@@ -58,9 +58,9 @@ export default () => {
         </Texts>
       </Fade>
       <Screens>
-        <Reveal effect="scaleIn" duration={500}>
+        <Zoom duration={500}>
           <BigScreen />
-        </Reveal>
+        </Zoom>
       </Screens>
     </Footer>
   );

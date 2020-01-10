@@ -1,5 +1,5 @@
 import React from 'react';
-import { RevenueDrivers, Drivers } from './style';
+import { RevenueDrivers, Drivers, PlusSign } from './style';
 import PayToEnterIcon from '../../assets/paytoenter.png';
 import B2BIcon from '../../assets/sponsorship.png';
 import SubscriptionIcon from '../../assets/subscription.png';
@@ -18,7 +18,7 @@ const Driver = ({ icon, header, desc }) => {
 export default () => {
   return (
     <RevenueDrivers>
-      <Fade top>
+      <Fade bottom>
         <h2>Multiple revenue drivers</h2>
         <p>The gaming industry generates double the revenue than music & film do combined.</p>
       </Fade>

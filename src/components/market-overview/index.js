@@ -49,7 +49,7 @@ export default ({ scroll: parentScroll }) => {
     <MarketOverview ref={ref}>
       <InnerContainer>
         <Title>
-          <Fade top>Market overview</Fade>
+          <Fade bottom>Market overview</Fade>
         </Title>
         <Slide bottom>
           <Description style={isMobile ? {} : { marginBottom: '80px' }}>
@@ -78,7 +78,7 @@ export default ({ scroll: parentScroll }) => {
           </Slide>
         </IconGroup> */}
         <PillarContainer>
-          <PillarInner className={topPercentage > 80 ? 'hide' : 'show'}>
+          <PillarInner>
             <Indexes className="top">
               <p className={topPercentage > 5 ? 'show' : 'false'}>$17B</p>
               <p className={topPercentage > 25 ? 'show' : 'false'}>$41B</p>
@@ -99,11 +99,6 @@ export default ({ scroll: parentScroll }) => {
               </Indexes>
             </Fade>
           </PillarInner>
-          <PlayersContainer className={topPercentage > 80 ? 'show' : 'hide'}>
-            <img src={PlayersIcon} />
-            <h2>$2.3B</h2>
-            <p>Players</p>
-          </PlayersContainer>
         </PillarContainer>
       </InnerContainer>
     </MarketOverview>

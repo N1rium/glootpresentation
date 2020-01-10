@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 
 const RevenueModel = styled.div`
-  color: #000;
   padding: 0px 25px;
   display: flex;
   flex-direction: column;

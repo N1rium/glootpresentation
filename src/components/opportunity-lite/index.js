@@ -6,10 +6,10 @@ import Fade from 'react-reveal/Fade';
 const Wrapper = styled.div`
   color: #000;
   padding: 0px 25px;
-  height: 200vh;
+  height: 140vh;
   p {
     color: rgb(114, 114, 114);
-    max-width: 900px;
+    max-width: 768px;
   }
   .opportunity {
     display: flex;
@@ -96,10 +96,6 @@ const Balls = styled.div.attrs(props => ({
 }))`
   display: flex;
   margin-left: 200px;
-  @media only screen and (max-width: 1500px) {
-    transform: translateX(0%) !important;
-    margin-top: 25vh;
-  }
   @media only screen and (max-width: 768px) {
     margin-left: 100px;
   }

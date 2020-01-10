@@ -5,11 +5,12 @@ import { isMobile } from 'react-device-detect';
 import GlootLogo from '../../assets/gloot-logo.png';
 
 const IntroVideo = styled.div`
-  z-index: 0;
   width: 100%;
   height: 100vh;
   position: sticky;
   top: 0;
+  z-index: 1;
+
   video {
     width: 100%;
     height: 100%;
