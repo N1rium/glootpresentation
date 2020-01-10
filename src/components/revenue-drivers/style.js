@@ -8,6 +8,9 @@ const RevenueDrivers = styled.div`
 
   color: #fff;
   padding: 0px 25px;
+  h2 {
+    margin: 40px 0px;
+  }
   @media (orientation: landscape) {
     text-align: center;
     p {

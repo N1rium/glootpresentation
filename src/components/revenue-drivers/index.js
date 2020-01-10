@@ -20,7 +20,6 @@ export default () => {
     <RevenueDrivers>
       <Fade bottom>
         <h2>Multiple revenue drivers</h2>
-        <p>The gaming industry generates double the revenue than music & film do combined.</p>
       </Fade>
       <Fade bottom>
         <Drivers>

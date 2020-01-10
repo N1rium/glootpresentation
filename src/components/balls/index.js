@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade';
 
 const Balls = styled.div`
   position: relative;
-  margin: 100px 0px;
+  margin-bottom: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -100,7 +100,7 @@ const Appendixes = styled.div`
   display: flex;
   align-items: center;
   padding: 0px 25px;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: 25px 0px;
 
   @media (orientation: portrait) {
@@ -132,9 +132,13 @@ const AppendixBlackBall = styled(BlackBall)`
   height: 16px;
 `;
 
+const Wrapper = styled.div`
+  padding: 100px 0px;
+`;
+
 export default () => {
   return (
-    <>
+    <Wrapper>
       <Balls>
         <Fade bottom>
           <SmallContainer>
@@ -172,6 +176,6 @@ export default () => {
           </Appendix>
         </Fade>
       </Appendixes>
-    </>
+    </Wrapper>
   );
 };
