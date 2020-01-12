@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const OfflineEvents = styled.div`
   color: #000;
-  padding: 100px 25px;
+  padding: 100px 0px;
   min-height: 100vh;
   justify-content: center;
   display: flex;
@@ -12,7 +12,19 @@ const OfflineEvents = styled.div`
   }
 `;
 
-const Content = styled.div``;
+const Content = styled.div`
+  h2,
+  p {
+    text-align: center;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  p {
+    color: rgb(114, 114, 114);
+    margin: 0;
+  }
+`;
 
 const LeftSegment = styled.div`
   div {
@@ -48,4 +60,12 @@ const RightSegment = styled.div`
   }
 `;
 
-export { OfflineEvents, Content, LeftSegment, RightSegment };
+const Sticky = styled.div`
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 20px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.33);
+`;
+
+export { OfflineEvents, Content, LeftSegment, RightSegment, Sticky };

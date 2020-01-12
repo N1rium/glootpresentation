@@ -61,7 +61,7 @@ export default ({}) => {
               <TD>#</TD>
               <TD>Event</TD>
               <TD>Prize pool</TD>
-              <TD>Game</TD>
+              <TD align="center">Game</TD>
               <TD align="center">Players</TD>
             </tr>
           </Thead>
@@ -71,7 +71,7 @@ export default ({}) => {
                 <TD>{i + 1}</TD>
                 <TD>{item.name}</TD>
                 <TD>{item.prize}</TD>
-                <TD>{item.game}</TD>
+                <TD align="center">{item.game}</TD>
                 <TD align="center">{item.players}</TD>
               </tr>
             ))}

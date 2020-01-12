@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { OfflineEvents, Content, LeftSegment, RightSegment } from './style';
+import { OfflineEvents, Content, LeftSegment, RightSegment, Sticky } from './style';
 import List from './components/list';
 import { isMobile } from 'react-device-detect';
 
@@ -22,14 +22,10 @@ export default ({ scroll: parentScroll }) => {
   return (
     <OfflineEvents ref={ref}>
       <Content className="content" scroll={scroll.topPx}>
-        <h2>
-          Offline events with
-          <br /> real money prizes
-        </h2>
-        <p>
-          - limited to invited professional
-          <br /> esports teams only
-        </p>
+        <Sticky>
+          <h2>Offline events with real money prizes</h2>
+          <p>limited to invited professional esports teams only</p>
+        </Sticky>
         <List />
       </Content>
     </OfflineEvents>
