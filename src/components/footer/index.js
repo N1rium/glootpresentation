@@ -73,9 +73,6 @@ export default () => {
   return (
     <Footer>
       <Texts>
-        <Fade>
-          <h2>Contact</h2>
-        </Fade>
         <Contacts>
           <Fade>
             <Contact>
