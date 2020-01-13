@@ -154,6 +154,13 @@ const TopSegment = styled.div`
   flex-direction: column;
 `;
 
+const SideNote = styled.p`
+  font-style: italic;
+  font-size: 0.8em;
+  color: rgb(114, 114, 114);
+  padding: 0px 25px;
+`;
+
 export default () => {
   return (
     <Wrapper>
@@ -199,6 +206,7 @@ export default () => {
           </BigContainer>
         </Fade>
       </Balls>
+      <SideNote>Size of G-Loot Estimated Revenue is illustrative only and may be subject to change</SideNote>
     </Wrapper>
   );
 };
