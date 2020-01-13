@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
 import GlootLogo from '../../assets/gloot-logo.png';
 import { isMobile } from 'react-device-detect';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faVolumeMute, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
 
 const scrollThreshold = 1;
 
@@ -54,19 +56,25 @@ const VideoSource = styled.source.attrs(props => ({
 
 const MuteButton = styled.div`
   position: absolute;
-  width: 20vw;
-  height: 20vw;
-  max-width: 64px;
-  max-height: 64px;
+  width: 48px;
+  height: 48px;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  background: #fff;
-  bottom: 32px;
-  right: 32px;
+  justify-content: center;
+  border: 2px solid #fff;
+  color: #fff;
+  bottom: 20px;
+  right: 20px;
   border-radius: 50%;
+  font-size: 14px;
+  transition: opacity 0.25s ease-in-out;
+  will-change: opacity;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  &:hover {
+    opacity: 0.5;
+  }
 `;
 
 const Loader = styled.div`
@@ -90,7 +98,9 @@ const Loader = styled.div`
 
 export default ({ scroll: parentScroll }) => {
   const ref = useRef(null);
+  const videoRef = useRef(null);
   const [loading, setLoading] = useState(true);
+  const [muted, setMuted] = useState(true);
 
   const [scroll, setScroll] = useState({
     topPx: parentScroll,
@@ -132,16 +142,23 @@ export default ({ scroll: parentScroll }) => {
   const mute = () => {
     const vid = document.getElementById('mainvideo');
     vid.muted = !vid.muted;
+    setMuted(vid.muted);
   };
 
   return (
     <>
       <StickyVideo ref={ref}>
         <VideoContainer scroll={scroll.topPercentage}>
-          <Video playsInline autoPlay muted>
+          <Video ref={videoRef} playsInline autoPlay muted>
             <VideoSource isMobile={isMobile} />
           </Video>
-          {loading ? <Loader /> : <MuteButton onClick={mute} />}
+          {loading ? (
+            <Loader />
+          ) : (
+            <MuteButton onClick={mute}>
+              <FontAwesomeIcon icon={muted ? faVolumeMute : faVolumeUp} />
+            </MuteButton>
+          )}
         </VideoContainer>
       </StickyVideo>
     </>

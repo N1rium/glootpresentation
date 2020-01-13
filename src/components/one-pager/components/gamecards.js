@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Pubg from '../../../assets/gamecards/pubg.jpg';
 import Fortnite from '../../../assets/gamecards/fortnite.jpg';
 import CounterStrike from '../../../assets/gamecards/counterstrike.jpg';
+import Fade from 'react-reveal/Fade';
 
 const GameCards = styled.div`
   position: relative;
@@ -16,6 +17,7 @@ const Row = styled.div`
 
 const GameCard = styled.img.attrs(props => ({ src: props.src }))`
   flex-basis: 33.3%;
+  width: 33.3%;
   margin: 5px;
   object-fit: cover;
 `;
@@ -34,11 +36,13 @@ export default () => {
   return (
     <GameCards>
       <Overlay />
-      <Row>
-        <GameCard src={Pubg} />
-        <GameCard src={Fortnite} />
-        <GameCard src={CounterStrike} />
-      </Row>
+      <Fade>
+        <Row>
+          <GameCard src={Pubg} />
+          <GameCard src={Fortnite} />
+          <GameCard src={CounterStrike} />
+        </Row>
+      </Fade>
     </GameCards>
   );
 };

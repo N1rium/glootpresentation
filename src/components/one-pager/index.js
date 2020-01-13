@@ -43,6 +43,10 @@ const Container = styled.div`
 const Highlights = styled.div`
   margin: 0px 40px;
   flex-basis: 40%;
+  @media only screen and (max-width: 1200px) {
+    margin: 0px;
+    max-width: 100%;
+  }
 `;
 
 const RightContainer = styled.div`
@@ -50,6 +54,7 @@ const RightContainer = styled.div`
   flex-basis: 60%;
   max-width: 900px;
   @media only screen and (max-width: 1200px) {
+    margin: 0px;
     max-width: 100%;
   }
 `;

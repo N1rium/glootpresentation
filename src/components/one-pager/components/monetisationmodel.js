@@ -22,6 +22,7 @@ const Model = styled.div`
   align-items: center;
   text-align: center;
   flex-basis: 33.3%;
+  padding: 0px 10px;
 `;
 
 const Circle = styled.img.attrs(props => ({ src: props.src }))`

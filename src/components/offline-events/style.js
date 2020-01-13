@@ -66,6 +66,7 @@ const Sticky = styled.div`
   background: #fff;
   padding: 20px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.33);
+  z-index: 1;
 `;
 
 export { OfflineEvents, Content, LeftSegment, RightSegment, Sticky };

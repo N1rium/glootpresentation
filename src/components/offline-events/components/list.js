@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const list = [
   { name: 'The international 2019', prize: '$34,330,069.00', game: 'dota 2', players: '90' },
@@ -67,13 +68,15 @@ export default ({}) => {
           </Thead>
           <tbody>
             {list.map((item, i) => (
-              <tr key={i}>
-                <TD>{i + 1}</TD>
-                <TD>{item.name}</TD>
-                <TD>{item.prize}</TD>
-                <TD align="center">{item.game}</TD>
-                <TD align="center">{item.players}</TD>
-              </tr>
+              <Fade key={i} duration={250}>
+                <tr>
+                  <TD>{i + 1}</TD>
+                  <TD>{item.name}</TD>
+                  <TD>{item.prize}</TD>
+                  <TD align="center">{item.game}</TD>
+                  <TD align="center">{item.players}</TD>
+                </tr>
+              </Fade>
             ))}
           </tbody>
         </Table>
