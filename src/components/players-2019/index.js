@@ -26,6 +26,12 @@ const PlayersContainer = styled.div`
     max-width: 256px;
   }
 
+  @media only screen and (max-width: 1024px) {
+    img {
+      max-width: 180px;
+    }
+  }
+
   h2 {
     margin: 10px 0px;
   }

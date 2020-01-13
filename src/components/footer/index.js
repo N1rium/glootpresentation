@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
 
 const Footer = styled.div`
   min-height: 100vh;
@@ -29,22 +28,6 @@ const Contact = styled.div`
   margin: 20px 0px;
 `;
 
-const Screens = styled.div`
-  position: relative;
-`;
-
-const BigScreen = styled.div`
-  width: 40vw;
-  height: calc(40vw / 1.5);
-  background-image: url(../src/assets/tv.png);
-  background-size: cover;
-  background-position: center;
-  @media (orientation: portrait) {
-    width: 75vw;
-    height: calc(75vw / 1.5);
-  }
-`;
-
 export default () => {
   return (
     <Footer>
@@ -57,11 +40,6 @@ export default () => {
           <div>patrik@gloot.com</div>
         </Texts>
       </Fade>
-      <Screens>
-        <Zoom duration={500}>
-          <BigScreen />
-        </Zoom>
-      </Screens>
     </Footer>
   );
 };

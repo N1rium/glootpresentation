@@ -10,6 +10,7 @@ const GameCards = styled.div`
 `;
 const Row = styled.div`
   display: flex;
+  overflow: hidden;
   @media (orientation: portrait) {
     flex-direction: column;
   }
@@ -17,9 +18,11 @@ const Row = styled.div`
 
 const GameCard = styled.img.attrs(props => ({ src: props.src }))`
   flex-basis: 33.3%;
-  width: 33.3%;
   margin: 5px;
   object-fit: cover;
+  @media (orientation: landscape) {
+    width: 33.3%;
+  }
 `;
 
 const Overlay = styled.div`

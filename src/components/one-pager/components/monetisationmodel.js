@@ -37,7 +37,7 @@ const Title = styled.div`
 
 const PlusSign = styled.div`
   font-size: 1.2em;
-  height: 140px;
+  height: 190px;
   display: flex;
   align-items: center;
   @media screen and (max-width: 480px) {

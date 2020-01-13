@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import GlootLogo from '../../assets/gloot-logo.png';
 import { isMobile } from 'react-device-detect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faVolumeMute, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
+import { faVolumeMute, faVolumeUp, faPause, faPlay } from '@fortawesome/free-solid-svg-icons';
 
 const scrollThreshold = 1;
 
@@ -54,7 +54,7 @@ const VideoSource = styled.source.attrs(props => ({
     : 'https://res.cloudinary.com/gloot/video/upload/v1538466873/Video/G-Loot_-_The_future_of_esport_1080p_HQ.mp4',
 }))``;
 
-const MuteButton = styled.div`
+const Button = styled.div`
   position: absolute;
   width: 48px;
   height: 48px;
@@ -63,18 +63,25 @@ const MuteButton = styled.div`
   justify-content: center;
   border: 2px solid #fff;
   color: #fff;
-  bottom: 20px;
-  right: 20px;
   border-radius: 50%;
   font-size: 14px;
   transition: opacity 0.25s ease-in-out;
   will-change: opacity;
   opacity: 1;
   background: rgba(0, 0, 0, 0.5);
+  bottom: 20px;
   cursor: pointer;
   &:hover {
     opacity: 0.5;
   }
+`;
+
+const MuteButton = styled(Button)`
+  right: 20px;
+`;
+
+const PlayButton = styled(Button)`
+  right: 88px;
 `;
 
 const Loader = styled.div`
@@ -101,6 +108,7 @@ export default ({ scroll: parentScroll }) => {
   const videoRef = useRef(null);
   const [loading, setLoading] = useState(true);
   const [muted, setMuted] = useState(true);
+  const [playing, setPlaying] = useState(false);
 
   const [scroll, setScroll] = useState({
     topPx: parentScroll,
@@ -145,6 +153,16 @@ export default ({ scroll: parentScroll }) => {
     setMuted(vid.muted);
   };
 
+  const playPause = () => {
+    const vid = document.getElementById('mainvideo');
+    if (vid.paused) {
+      vid.play();
+    } else {
+      vid.pause();
+    }
+    setPlaying(!playing);
+  };
+
   return (
     <>
       <StickyVideo ref={ref}>
@@ -155,9 +173,14 @@ export default ({ scroll: parentScroll }) => {
           {loading ? (
             <Loader />
           ) : (
-            <MuteButton onClick={mute}>
-              <FontAwesomeIcon icon={muted ? faVolumeMute : faVolumeUp} />
-            </MuteButton>
+            <>
+              <PlayButton onClick={playPause}>
+                <FontAwesomeIcon icon={playing ? faPlay : faPause} />
+              </PlayButton>
+              <MuteButton onClick={mute}>
+                <FontAwesomeIcon icon={muted ? faVolumeMute : faVolumeUp} />
+              </MuteButton>
+            </>
           )}
         </VideoContainer>
       </StickyVideo>
