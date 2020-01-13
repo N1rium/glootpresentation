@@ -19,27 +19,75 @@ const Footer = styled.div`
 `;
 
 const Texts = styled.div`
+  width: 100%;
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 900;
+  }
   *:not(h2) {
     color: gray;
   }
 `;
 
+const Contacts = styled.div`
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 100%;
+  & > div {
+    flex-basis: 50%;
+  }
+`;
+
 const Contact = styled.div`
-  margin: 20px 0px;
+  margin: 0px 40px;
+  h3 {
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+`;
+
+const Email = styled.div`
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+  will-change: opacity;
+  &:hover {
+    opacity: 0.5;
+  }
 `;
 
 export default () => {
+  const email = email => {
+    window.location.href = `mailto:${email}`;
+  };
   return (
     <Footer>
-      <Fade left>
-        <Texts>
-          <h2>Q&A</h2>
-          <Contact>CONTACT</Contact>
-          <div>Patrik Nybladh, CEO</div>
-          <div>+46 739 63 21 75, </div>
-          <div>patrik@gloot.com</div>
-        </Texts>
-      </Fade>
+      <Texts>
+        <Fade>
+          <h2>Contact</h2>
+        </Fade>
+        <Contacts>
+          <Fade>
+            <Contact>
+              <h3>Goldman</h3>
+              <div>Joel Mossberg</div>
+              <div>+46 76 800 81 09</div>
+              <Email onClick={() => email('joel.mossberg@gs.com')}>joel.mossberg@gs.com</Email>
+            </Contact>
+          </Fade>
+          <Fade>
+            <Contact>
+              <h3>Carnegie</h3>
+              <div>Thomas Baekkevold</div>
+              <div>+46 73 417 87 17</div>
+              <Email onClick={() => email('tomas.baekkevold@carnegie.se')}>tomas.baekkevold@carnegie.se</Email>
+            </Contact>
+          </Fade>
+        </Contacts>
+      </Texts>
     </Footer>
   );
 };

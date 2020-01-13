@@ -64,12 +64,12 @@ const Partners = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  position: absolute;
-  bottom: 0px;
+  margin-top: 40px;
 `;
 
 const Partner = styled.img.attrs(props => ({ src: props.src }))`
-  width: 128px;
+  width: 100%;
+  max-width: 25%;
 `;
 
 export default () => {
@@ -87,12 +87,12 @@ export default () => {
         <TextSegment className="second">
           <h2>Strong partnerships</h2>
           <h3>Official esports partner for world leading game developers</h3>
+          <Partners>
+            {/* <Partner src="https://res.cloudinary.com/gloot/image/upload/v1578668075/gloot%20presentation/partner-activision.png" /> */}
+            <Partner src="https://res.cloudinary.com/gloot/image/upload/v1578668075/gloot%20presentation/partner-ea.png" />
+            <Partner src="https://res.cloudinary.com/gloot/image/upload/v1578668075/gloot%20presentation/partner-pubg.png" />
+          </Partners>
         </TextSegment>
-        <Partners>
-          <Partner src="https://res.cloudinary.com/gloot/image/upload/v1578668075/gloot%20presentation/game-apex.png" />
-          <Partner src="https://res.cloudinary.com/gloot/image/upload/v1578668075/gloot%20presentation/game-ea.png" />
-          <Partner src="https://res.cloudinary.com/gloot/image/upload/v1578668075/gloot%20presentation/game-pubg.png" />
-        </Partners>
       </div>
     </AnyGameInTheWorld>
   );

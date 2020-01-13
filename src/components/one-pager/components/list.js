@@ -25,7 +25,7 @@ export default () => {
       </Fade>
       <Fade>
         <li className="silent">
-          Digital real money e-sports platform that allows players to compete against each other across PC, console and
+          Digital real money esports platform that allows players to compete against each other across PC, console and
           mobile games they already play and love 
         </li>
       </Fade>

@@ -138,9 +138,16 @@ const Wrapper = styled.div`
   padding: 100px 0px;
 `;
 
+const Header = styled.h2`
+  color: #000;
+  text-align: center;
+  margin-bottom: 40px;
+`;
+
 export default () => {
   return (
     <Wrapper>
+      <Header>G-Loot takes esports online</Header>
       <Balls>
         <Fade bottom>
           <SmallContainer>
