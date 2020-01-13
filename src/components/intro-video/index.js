@@ -15,7 +15,7 @@ const IntroVideo = styled.div`
   top: 0;
 `;
 
-const Title = styled.h2`
+const Title = styled.h3`
   position: absolute;
   top: 100vh;
   transform: translateY(calc(-100% - 13vh));
