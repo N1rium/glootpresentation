@@ -28,7 +28,7 @@ const Image = styled.div`
 `;
 
 const Video = styled.video.attrs(props => ({
-  src: 'https://res.cloudinary.com/gloot/video/upload/v1578660896/gloot%20presentation/videoloop.mp4',
+  src: 'https://res.cloudinary.com/gloot/video/upload/v1578937065/gloot%20presentation/videoloop-1.mp4',
 }))`
   width: 100%;
   height: 100%;

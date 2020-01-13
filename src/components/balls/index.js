@@ -67,7 +67,7 @@ const Container = styled.div`
 `;
 
 const BigContainer = styled(Container)`
-  margin-right: -40vh;
+  margin-right: -66vh;
   justify-content: flex-end;
 `;
 const MediumContainer = styled(Container)`
@@ -91,6 +91,7 @@ const Title = styled.p`
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   font-weight: 900;
   margin: 0;
+  transform: scale(1.2);
 `;
 
 const BigTitle = styled(Title)`
@@ -134,7 +135,7 @@ const AppendixBlackBall = styled(BlackBall)`
 `;
 
 const Wrapper = styled.div`
-  margin: 300px 0px;
+  margin-top: 300px;
 `;
 
 const Header = styled.h2`
