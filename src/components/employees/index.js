@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import GlootLogo from '../../assets/gloot-logo.png';
+import GlootLogo from '../../assets/gloot-logo.svg';
 import Fade from 'react-reveal/Fade';
 
 const Employees = styled.div`
@@ -11,8 +11,13 @@ const Employees = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   border-top: 15px solid rgb(17, 17, 17);
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(https://res.cloudinary.com/gloot/image/upload/v1578925078/gloot%20presentation/employees.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   @media only screen and (min-width: 769px) {
     border-width: 30px;
   }

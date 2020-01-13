@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
 import styled from 'styled-components';
-import GlootLogo from '../../assets/gloot-logo.png';
 import { isMobile } from 'react-device-detect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeMute, faVolumeUp, faPause, faPlay } from '@fortawesome/free-solid-svg-icons';

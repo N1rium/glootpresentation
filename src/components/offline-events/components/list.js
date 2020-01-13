@@ -39,6 +39,9 @@ const TD = styled.td`
   font-size: 1em;
   padding: 10px 20px;
   text-align: ${props => props.align || 'left'};
+  &.bold {
+    font-weight: bold;
+  }
 `;
 
 const Thead = styled.thead`
@@ -72,9 +75,11 @@ export default ({}) => {
                 <tr>
                   <TD>{i + 1}</TD>
                   <TD>{item.name}</TD>
-                  <TD>{item.prize}</TD>
+                  <TD className="bold">{item.prize}</TD>
                   <TD align="center">{item.game}</TD>
-                  <TD align="center">{item.players}</TD>
+                  <TD className="bold" align="center">
+                    {item.players}
+                  </TD>
                 </tr>
               </Fade>
             ))}

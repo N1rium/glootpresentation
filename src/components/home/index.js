@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import IntroVideo from '../intro-video';
-import ImageWithText from '../image-with-text';
-import Header from '../header';
 import StickyVideo from '../sticky-video';
 import MarketOverview from '../market-overview';
 import Players2019 from '../players-2019';
@@ -27,27 +25,9 @@ export default ({}) => {
 
   return (
     <div id="app-content" onScroll={onScroll}>
-      {/* <div>
+      <div>
         <IntroVideo />
-        <ImageWithText
-          image={'../src/assets/phone.png'}
-          header="Mobile"
-          description="Worlds first online real money esports platform on mobile."
-        />
-        <ImageWithText
-          direction="left"
-          image={'../src/assets/dator.png'}
-          header="PC"
-          isLeft
-          description="Worlds first online real money esports platform on PC."
-        />
-        <ImageWithText
-          image={'../src/assets/tv.png'}
-          header="Console"
-          description="Worlds first online real money esports platform on console."
-        />
-      </div> */}
-      {/* <Header visible={scroll > 2000} /> */}
+      </div>
       <StickyVideo scroll={scroll} />
       <MarketOverview scroll={scroll} />
       <Players2019 />
@@ -58,7 +38,7 @@ export default ({}) => {
       <div style={{ background: '#000' }}>
         <AnyGameInTheWorld scroll={scroll} />
         <RevenueDrivers />
-        <RevenueModel />
+        {/* <RevenueModel /> */}
         <OnePager />
         <Employees />
         <Footer />

@@ -66,9 +66,7 @@ export default () => {
   return (
     <Players>
       <Fade>
-        <h2>
-          Active players worldwide <br></br>2019
-        </h2>
+        <h2>Active players worldwide 2019</h2>
       </Fade>
       <PlayersContainer>
         <Fade>

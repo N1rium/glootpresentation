@@ -1,21 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
-import { isMobile } from 'react-device-detect';
-import GlootLogo from '../../assets/gloot-logo.png';
+import GlootLogo from '../../assets/gloot-logo.svg';
 
 const IntroVideo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100vh;
+  background: #000;
+  z-index: 1;
   position: sticky;
   top: 0;
-  z-index: 1;
-
-  video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 `;
 
 const Title = styled.h2`
@@ -32,27 +29,21 @@ const Online = styled.span`
   color: #8df98e;
 `;
 
-const Video = styled.video.attrs({ src: 'src/assets/video/intro.mp4' })``;
-
-const ImageContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  background-image: url(${GlootLogo});
-  background-color: #000;
-  background-color: #000;
-  background-repeat: no-repeat;
-  background-position: center;
+const Logo = styled.img.attrs({ src: GlootLogo })`
+  width: 256px;
+  @media only screen and (max-width: 1023px) {
+    width: 128px;
+  }
 `;
 
 export default () => {
   return (
     <IntroVideo>
-      {!isMobile && <Video playsInline autoPlay muted />}
-      {isMobile && <ImageContainer></ImageContainer>}
+      <Logo />
       <Title>
         <Fade bottom>
           <div>
-            Offline goes <Online>online</Online>
+            OFFLINE GOES <Online>ONLINE</Online>
           </div>
         </Fade>
       </Title>

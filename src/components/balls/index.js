@@ -21,15 +21,15 @@ const Ball = styled.div`
 `;
 
 const BlackBall = styled(Ball)`
-  background: linear-gradient(rgba(168, 243, 136, 0.95), rgba(168, 243, 136, 0.95)), url(../src/assets/blacklogo.png);
+  background: linear-gradient(rgba(168, 243, 136, 0.95), rgba(168, 243, 136, 0.95)), url(../src/assets/blacklogo.svg);
   background-size: cover;
   background-position: center;
 `;
 
 const SmallBlackBall = styled(BlackBall)`
-  width: 2vh;
-  height: 2vh;
-  margin-left: -1vh;
+  width: 4vh;
+  height: 4vh;
+  margin-left: -2vh;
 `;
 const SmallBlueBall = styled(Ball)`
   width: 22.5vh;
@@ -43,8 +43,8 @@ const MediumBlackBall = styled(BlackBall)`
   z-index: 1;
 `;
 const MediumBlueBall = styled(Ball)`
-  width: 30vh;
-  height: 30vh;
+  width: 35vh;
+  height: 35vh;
 `;
 
 const BigBlueBall = styled(Ball)`
@@ -54,8 +54,8 @@ const BigBlueBall = styled(Ball)`
 `;
 
 const BigBlackBall = styled(BlackBall)`
-  height: 80vh;
-  width: 80vh;
+  height: 90vh;
+  width: 90vh;
 `;
 
 const Container = styled.div`
@@ -81,7 +81,7 @@ const SmallContainer = styled(Container)`
   }
 `;
 
-const Title = styled.h3`
+const Title = styled.p`
   position: absolute;
   left: 0;
   right: 0;
@@ -90,6 +90,7 @@ const Title = styled.h3`
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   font-weight: 900;
+  margin: 0;
 `;
 
 const BigTitle = styled(Title)`
@@ -101,9 +102,7 @@ const MediumTitle = styled(Title)``;
 const Appendixes = styled.div`
   display: flex;
   align-items: center;
-  padding: 0px 25px;
-  justify-content: space-evenly;
-  margin: 25px 0px;
+  justify-content: space-between;
 
   @media (orientation: portrait) {
     flex-direction: column;
@@ -135,7 +134,7 @@ const AppendixBlackBall = styled(BlackBall)`
 `;
 
 const Wrapper = styled.div`
-  padding: 100px 0px;
+  margin: 300px 0px;
 `;
 
 const Header = styled.h2`
@@ -144,10 +143,38 @@ const Header = styled.h2`
   margin-bottom: 40px;
 `;
 
+const TopSegmentContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const TopSegment = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export default () => {
   return (
     <Wrapper>
-      <Header>G-Loot takes esports online</Header>
+      <TopSegmentContainer>
+        <TopSegment>
+          <Header>G-Loot takes esports online</Header>
+          <Appendixes>
+            <Fade left>
+              <Appendix>
+                <AppendixBlueBall />
+                <p>Esports offline events</p>
+              </Appendix>
+            </Fade>
+            <Fade right>
+              <Appendix>
+                <AppendixBlackBall />
+                <p>G-Loot estimated revenue</p>
+              </Appendix>
+            </Fade>
+          </Appendixes>
+        </TopSegment>
+      </TopSegmentContainer>
       <Balls>
         <Fade bottom>
           <SmallContainer>
@@ -166,25 +193,11 @@ export default () => {
         <Fade bottom>
           <BigContainer>
             <BigBlueBall />
-            <BigTitle>2023</BigTitle>
+            <BigTitle>2024</BigTitle>
             <BigBlackBall />
           </BigContainer>
         </Fade>
       </Balls>
-      <Appendixes>
-        <Fade left>
-          <Appendix>
-            <AppendixBlueBall />
-            <p>esports offline events</p>
-          </Appendix>
-        </Fade>
-        <Fade right>
-          <Appendix>
-            <AppendixBlackBall />
-            <p>G-Loot estimated revenue</p>
-          </Appendix>
-        </Fade>
-      </Appendixes>
     </Wrapper>
   );
 };

@@ -38,6 +38,9 @@ const Contacts = styled.div`
   & > div {
     flex-basis: 50%;
   }
+  @media (orientation: portrait) {
+    flex-direction: column;
+  }
 `;
 
 const Contact = styled.div`
@@ -46,6 +49,10 @@ const Contact = styled.div`
     color: #fff;
     font-weight: 900;
     margin-bottom: 20px;
+  }
+  @media (orientation: portrait) {
+    flex-direction: column;
+    margin: 40px 0px;
   }
 `;
 
@@ -72,7 +79,7 @@ export default () => {
         <Contacts>
           <Fade>
             <Contact>
-              <h3>Goldman</h3>
+              <h3>Goldman Sachs</h3>
               <div>Joel Mossberg</div>
               <div>+46 76 800 81 09</div>
               <Email onClick={() => email('joel.mossberg@gs.com')}>joel.mossberg@gs.com</Email>

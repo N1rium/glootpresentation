@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Fade from 'react-reveal/Fade';
 
 const AnyGameInTheWorld = styled.div`
   width: 100vw;
@@ -52,8 +53,9 @@ const TextSegment = styled.div`
     top: 100vh;
   }
   &.second {
-    bottom: 60vh;
+    bottom: 20vh;
     right: 0;
+    text-align: right;
   }
   @media only screen and (min-width: 769px) {
     margin: 0px 80px;
@@ -62,7 +64,7 @@ const TextSegment = styled.div`
 
 const Partners = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
   margin-top: 40px;
 `;
@@ -70,6 +72,7 @@ const Partners = styled.div`
 const Partner = styled.img.attrs(props => ({ src: props.src }))`
   width: 100%;
   max-width: 25%;
+  margin-left: 40px;
 `;
 
 export default () => {
@@ -81,17 +84,23 @@ export default () => {
           <Video playsInline autoPlay muted loop />
         </ImageContainer>
         <TextSegment className="first">
-          <h2>Connects any game in the world</h2>
-          <h3>with unique tech, we can connect games without relying on API availability</h3>
+          <h2>
+            Connects any game
+            <br />
+            in the world
+          </h2>
+          <h3>with unique tech, G-Loot can connect games without relying on API availability</h3>
         </TextSegment>
         <TextSegment className="second">
           <h2>Strong partnerships</h2>
           <h3>Official esports partner for world leading game developers</h3>
-          <Partners>
-            {/* <Partner src="https://res.cloudinary.com/gloot/image/upload/v1578668075/gloot%20presentation/partner-activision.png" /> */}
-            <Partner src="https://res.cloudinary.com/gloot/image/upload/v1578668075/gloot%20presentation/partner-ea.png" />
-            <Partner src="https://res.cloudinary.com/gloot/image/upload/v1578668075/gloot%20presentation/partner-pubg.png" />
-          </Partners>
+          <Fade>
+            <Partners>
+              {/* <Partner src="https://res.cloudinary.com/gloot/image/upload/v1578668075/gloot%20presentation/partner-activision.png" /> */}
+              <Partner src="https://res.cloudinary.com/gloot/image/upload/v1578668075/gloot%20presentation/partner-pubg.png" />
+              <Partner src="https://res.cloudinary.com/gloot/image/upload/v1578668075/gloot%20presentation/partner-ea.png" />
+            </Partners>
+          </Fade>
         </TextSegment>
       </div>
     </AnyGameInTheWorld>

@@ -41,6 +41,7 @@ const Ball = styled.div`
 const BlueBall = styled(Ball).attrs(props => ({
   style: {
     transform: `scale(${Math.max(0.1, Math.min(1 - props.scroll / 75, 1))})`,
+    zIndex: props.scroll > 25 ? '2' : '0',
   },
 }))`
   background: #5f5e5f;
@@ -53,7 +54,7 @@ const BlackBall = styled(Ball).attrs(props => ({
   },
 }))`
   margin-left: ${props => (props.small ? '-8px' : '0px')};
-  background: linear-gradient(rgba(168, 243, 136, 0.95), rgba(168, 243, 136, 0.95)), url(../src/assets/blacklogo.png);
+  background: linear-gradient(rgba(168, 243, 136, 0.95), rgba(168, 243, 136, 0.95)), url(../src/assets/blacklogo.svg);
   background-size: cover;
   background-position: center;
   transform: scale(0.1);
