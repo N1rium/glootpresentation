@@ -50,7 +50,7 @@ const Video = styled.video.attrs(props => ({
 const VideoSource = styled.source.attrs(props => ({
   src: props.isMobile
     ? 'https://res.cloudinary.com/gloot/video/upload/v1578603617/gloot%20presentation/mainvideo_compressed.mp4'
-    : 'https://res.cloudinary.com/gloot/video/upload/v1538466873/Video/G-Loot_-_The_future_of_esport_1080p_HQ.mp4',
+    : 'https://res.cloudinary.com/gloot/video/upload/v1578990599/Video/gloot_the_future_of_esports_720p.mp4',
 }))``;
 
 const Button = styled.div`
