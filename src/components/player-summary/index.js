@@ -7,7 +7,7 @@ const PlayerSummary = styled.div`
   position: relative;
   margin: 200px 0px;
   padding: 0px 125px;
-  margin-top: 400px;
+  margin-top: 250px;
 `;
 
 const VideoContainer = styled.div`
@@ -82,15 +82,15 @@ export default ({}) => {
         <Sums>
           <Fade bottom>
             <Sum>
-              <h2>4,971,255</h2>
-              <p className="bold">Matches played</p>
-              <div>(2 matches per second)</div>
+              <h2>69,872,451</h2>
+              <p className="bold">Game events</p>
             </Sum>
           </Fade>
           <Fade bottom>
             <Sum>
               <h2>4,971,255</h2>
-              <p className="bold">Game events</p>
+              <p className="bold">Matches played</p>
+              <div>(2 matches per second)</div>
             </Sum>
           </Fade>
         </Sums>
