@@ -36,7 +36,7 @@ const TD = styled.td`
   border-radius: 6px;
   color: #000;
   margin: 0px 10px;
-  font-size: 1em;
+  font-size: 0.8em;
   padding: 10px 20px;
   text-align: ${props => props.align || 'left'};
   &.bold {

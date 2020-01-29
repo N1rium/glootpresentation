@@ -23,7 +23,10 @@ export default ({ scroll: parentScroll }) => {
     <OfflineEvents ref={ref}>
       <Content className="content" scroll={scroll.topPx}>
         <Sticky>
-          <h2>Offline events with real money prizes</h2>
+          <h2>
+            Offline events with <br />
+            real money prizes
+          </h2>
           <p>limited to invited professional esports teams only</p>
         </Sticky>
         <List />

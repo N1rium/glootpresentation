@@ -7,16 +7,14 @@ const OfflineEvents = styled.div`
   justify-content: center;
   display: flex;
   flex-direction: column;
+  padding: 0px 125px;
+  margin-bottom: 200px;
   footer {
     font-size: 0.8em;
   }
 `;
 
 const Content = styled.div`
-  h2,
-  p {
-    text-align: center;
-  }
   h2 {
     margin-bottom: 20px;
   }
@@ -65,7 +63,7 @@ const Sticky = styled.div`
   top: 0;
   background: #fff;
   padding: 20px;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.33);
+  padding-bottom: 100px;
   z-index: 1;
 `;
 

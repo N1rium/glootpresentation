@@ -8,7 +8,7 @@ const Balls = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 25px;
+  padding-left: 200px;
   @media (orientation: portrait) {
     flex-direction: column;
     padding-left: 0;
@@ -17,11 +17,11 @@ const Balls = styled.div`
 
 const Ball = styled.div`
   border-radius: 50%;
-  background: #5f5e5f;
+  background: #5753ff;
 `;
 
 const BlackBall = styled(Ball)`
-  background: linear-gradient(rgba(168, 243, 136, 0.95), rgba(168, 243, 136, 0.95)), url(../src/assets/blacklogo.svg);
+  background: url(../src/assets/glootboll.svg);
   background-size: cover;
   background-position: center;
 `;
@@ -54,8 +54,8 @@ const BigBlueBall = styled(Ball)`
 `;
 
 const BigBlackBall = styled(BlackBall)`
-  height: 90vh;
-  width: 90vh;
+  height: 100vh;
+  width: 100vh;
 `;
 
 const Container = styled.div`
@@ -88,14 +88,15 @@ const Title = styled.p`
   z-index: 2;
   color: #fff;
   text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
   font-weight: 900;
   margin: 0;
-  transform: scale(1.2);
+  transform: scale(2);
 `;
 
 const BigTitle = styled(Title)`
   margin-left: -45vh;
+  transform: scale(2.5);
 `;
 
 const MediumTitle = styled(Title)``;
@@ -187,21 +188,20 @@ export default () => {
         <Fade bottom>
           <SmallContainer>
             <SmallBlueBall />
-            <Title>Today</Title>
             <SmallBlackBall />
           </SmallContainer>
         </Fade>
         <Fade bottom>
           <MediumContainer>
             <MediumBlueBall />
-            <MediumTitle>2021</MediumTitle>
+            <MediumTitle>$100M+</MediumTitle>
             <MediumBlackBall />
           </MediumContainer>
         </Fade>
         <Fade bottom>
           <BigContainer>
             <BigBlueBall />
-            <BigTitle>2024</BigTitle>
+            <BigTitle>$1.2B+</BigTitle>
             <BigBlackBall />
           </BigContainer>
         </Fade>

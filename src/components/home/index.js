@@ -11,6 +11,7 @@ import Balls from '../balls';
 import RevenueDrivers from '../revenue-drivers';
 import AnyGameInTheWorld from '../any-game-in-the-world';
 import RevenueModel from '../revenue-model';
+import PlayerSummary from '../player-summary';
 import OnePager from '../one-pager';
 import Employees from '../employees';
 import Footer from '../footer';
@@ -34,6 +35,7 @@ export default ({}) => {
       <OfflineEvents scroll={scroll} />
       {isMobile === true && <Opportunity />}
       {isMobile === false && <OpportunityLite scroll={scroll} />}
+      <PlayerSummary />
       <Balls />
       <div style={{ background: '#000' }}>
         <AnyGameInTheWorld scroll={scroll} />

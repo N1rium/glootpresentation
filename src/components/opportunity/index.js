@@ -59,7 +59,7 @@ const BlueBall = styled(Ball)`
 
 const BlackBall = styled(Ball)`
   margin-left: ${props => (props.small ? '-8px' : '0px')};
-  background: linear-gradient(rgba(168, 243, 136, 0.95), rgba(168, 243, 136, 0.95)), url(../src/assets/blacklogo.svg);
+  background: url(../src/assets/glootboll.svg);
   background-size: cover;
   background-position: center;
 `;
