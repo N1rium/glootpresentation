@@ -24,8 +24,8 @@ const VideoContainer = styled.div.attrs(props => ({
   top: 0;
   height: 100vh;
   will-change: transform;
-  box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.3);
-  border: 0px solid #fff;
+  box-shadow: 3px 14px 46px 20px rgba(0, 0, 0, 0.3);
+  border: 0px solid #02020c;
   border-radius: 6px;
   @media only screen and (min-width: 769px) {
     max-width: 100vw;
