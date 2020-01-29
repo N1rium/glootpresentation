@@ -1,4 +1,5 @@
 import React, { useRef, useState, useEffect } from 'react';
+import Fade from 'react-reveal/Fade';
 import { OfflineEvents, Content, LeftSegment, RightSegment, Sticky } from './style';
 import List from './components/list';
 import { isMobile } from 'react-device-detect';
@@ -23,11 +24,15 @@ export default ({ scroll: parentScroll }) => {
     <OfflineEvents ref={ref}>
       <Content className="content" scroll={scroll.topPx}>
         <Sticky>
-          <h2>
-            Offline events with <br />
-            real money prizes
-          </h2>
-          <p>limited to invited professional esports teams only</p>
+          <Fade bottom>
+            <h2>
+              Offline events with <br />
+              real money prizes
+            </h2>
+          </Fade>
+          <Fade bottom>
+            <p>limited to invited professional esports teams only</p>
+          </Fade>
         </Sticky>
         <List />
       </Content>

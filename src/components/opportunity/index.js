@@ -53,7 +53,7 @@ const Ball = styled.div`
 `;
 
 const BlueBall = styled(Ball)`
-  background: #5f5e5f;
+  background: #5753ff;
   margin-right: ${props => (props.small ? '-8px' : '0px')};
 `;
 

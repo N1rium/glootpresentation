@@ -44,7 +44,7 @@ const BlueBall = styled(Ball).attrs(props => ({
     zIndex: props.scroll > 25 ? '2' : '0',
   },
 }))`
-  background: #5f5e5f;
+  background: #5753ff;
   margin-right: ${props => (props.small ? '-8px' : '0px')};
 `;
 

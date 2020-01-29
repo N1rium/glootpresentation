@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Fade from 'react-reveal/Fade';
 import useTimeout from 'use-timeout';
 import styled from 'styled-components';
 
@@ -6,6 +7,7 @@ const PlayerSummary = styled.div`
   position: relative;
   margin: 200px 0px;
   padding: 0px 125px;
+  margin-top: 400px;
 `;
 
 const VideoContainer = styled.div`
@@ -32,13 +34,17 @@ const Video = styled.video.attrs(props => ({
 `;
 
 const TopSegment = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
 `;
 
-const Title = styled.h3`
-  text-transform: uppercase;
+const Title = styled.h2`
   color: #000;
   margin: 40px 0px;
+  font-weight: 900;
 `;
 
 const Sums = styled.div`
@@ -47,9 +53,10 @@ const Sums = styled.div`
 
 const Sum = styled.div`
   color: rgb(114, 114, 114);
-  margin-right: 80px;
+  margin-left: 80px;
   h2 {
-    color: #7752f8;
+    color: #5753ff;
+    font-weight: 900;
     margin: 10px 0px;
   }
   p {
@@ -69,17 +76,23 @@ export default ({}) => {
   return (
     <PlayerSummary>
       <TopSegment>
-        <Title>December player summary</Title>
+        <Fade bottom>
+          <Title>December player summary</Title>
+        </Fade>
         <Sums>
-          <Sum>
-            <h2>4,971,255</h2>
-            <p className="bold">Matches played</p>
-            <div>(2 matches per second)</div>
-          </Sum>
-          <Sum>
-            <h2>4,971,255</h2>
-            <p className="bold">Game events</p>
-          </Sum>
+          <Fade bottom>
+            <Sum>
+              <h2>4,971,255</h2>
+              <p className="bold">Matches played</p>
+              <div>(2 matches per second)</div>
+            </Sum>
+          </Fade>
+          <Fade bottom>
+            <Sum>
+              <h2>4,971,255</h2>
+              <p className="bold">Game events</p>
+            </Sum>
+          </Fade>
         </Sums>
       </TopSegment>
       <VideoContainer>

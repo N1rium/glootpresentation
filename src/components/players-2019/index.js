@@ -12,7 +12,7 @@ const Players = styled.div`
   justify-content: center;
   h2 {
     font-weight: 900;
-    margin-bottom: 40px;
+    margin-bottom: 100px;
   }
 `;
 
