@@ -45,6 +45,9 @@ const TextSegment = styled.div`
   h2 {
     margin-bottom: 20px;
   }
+  h3 {
+    font-size: 1.5em;
+  }
   h2,
   h3 {
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.75);
