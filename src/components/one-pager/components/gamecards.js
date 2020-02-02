@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Pubg from '../../../assets/gamecards/pubg.jpg';
-import Fortnite from '../../../assets/gamecards/fortnite.jpg';
+import Apex from '../../../assets/gamecards/apex.jpg';
 import CounterStrike from '../../../assets/gamecards/counterstrike.jpg';
 import Fade from 'react-reveal/Fade';
 
@@ -42,7 +42,7 @@ export default () => {
       <Fade>
         <Row>
           <GameCard src={Pubg} />
-          <GameCard src={Fortnite} />
+          <GameCard src={Apex} />
           <GameCard src={CounterStrike} />
         </Row>
       </Fade>
