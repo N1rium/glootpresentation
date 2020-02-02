@@ -122,18 +122,42 @@ const Pillar = styled.div`
       width: 10vw;
     }
   }
+  &:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(-150%);
+    transition: opacity 0.25s ease-in-out;
+    will-change: opacity;
+    opacity: 0;
+  }
+
+  &.show {
+    &:after {
+      opacity: 1;
+    }
+  }
 `;
 
 const MusicPillar = styled(Pillar).attrs(props => ({
   style: {
     transform: `scaleY(${Math.max(0, Math.min(1, (props.scroll + 50) / 50))})`,
   },
-}))``;
+}))`
+  &:after {
+    content: '$17B';
+  }
+`;
 const VideoPillar = styled(Pillar).attrs(props => ({
   style: {
     transform: `scaleY(${Math.max(0, Math.min(1, (props.scroll + 25) / 50))})`,
   },
-}))``;
+}))`
+  &:after {
+    content: '$41B';
+  }
+`;
 
 const GreenPillar = styled(Pillar).attrs(props => ({
   style: {
@@ -141,6 +165,10 @@ const GreenPillar = styled(Pillar).attrs(props => ({
   },
 }))`
   background: #07fe7f;
+  &:after {
+    content: '$116';
+    font-weight: bold;
+  }
 `;
 const Indexes = styled.div`
   align-items: center;
@@ -168,9 +196,7 @@ const Indexes = styled.div`
   }
 
   &.top {
-    p {
-      margin-top: 0px;
-    }
+    visibility: hidden;
   }
 `;
 

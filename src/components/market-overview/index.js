@@ -49,16 +49,26 @@ export default ({ scroll: parentScroll }) => {
         <PillarContainer>
           <PillarInner>
             <Indexes className="top">
-              <p className={topPercentage > 5 ? 'show' : 'false'}>$17B</p>
-              <p className={topPercentage > 25 ? 'show' : 'false'}>$41B</p>
-              <p className={topPercentage > 50 ? 'show' : 'false'} style={{ fontWeight: 'bold' }}>
-                $116B
-              </p>
+              <p>$17B</p>
+              <p>$41B</p>
+              <p>$116B</p>
             </Indexes>
             <Pillars>
-              <MusicPillar scroll={scroll.topPercentage} height="4vh" />
-              <VideoPillar scroll={scroll.topPercentage} height="15vh" />
-              <GreenPillar scroll={scroll.topPercentage} height="30vh" />
+              <MusicPillar
+                className={topPercentage > 5 ? 'show' : 'false'}
+                scroll={scroll.topPercentage}
+                height="4vh"
+              />
+              <VideoPillar
+                className={topPercentage > 25 ? 'show' : 'false'}
+                scroll={scroll.topPercentage}
+                height="15vh"
+              />
+              <GreenPillar
+                className={topPercentage > 50 ? 'show' : 'false'}
+                scroll={scroll.topPercentage}
+                height="30vh"
+              />
             </Pillars>
             <Fade>
               <Indexes>

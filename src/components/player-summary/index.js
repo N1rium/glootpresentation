@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import Fade from 'react-reveal/Fade';
-import useTimeout from 'use-timeout';
 import styled from 'styled-components';
 
 const PlayerSummary = styled.div`
@@ -8,6 +7,9 @@ const PlayerSummary = styled.div`
   margin: 200px 0px;
   padding: 0px 125px;
   margin-top: 250px;
+  @media only screen and (max-width: 768px) {
+    padding: 0px 25px;
+  }
 `;
 
 const VideoContainer = styled.div`
@@ -39,6 +41,10 @@ const TopSegment = styled.div`
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
+  @media only screen and (max-width: 768px) {
+    text-align: left;
+    margin-bottom: 25px;
+  }
 `;
 
 const Title = styled.h2`
@@ -49,11 +55,18 @@ const Title = styled.h2`
 
 const Sums = styled.div`
   display: flex;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+  }
 `;
 
 const Sum = styled.div`
   color: rgb(114, 114, 114);
   margin-left: 80px;
+  @media only screen and (max-width: 768px) {
+    margin-left: 0px;
+  }
   h2 {
     color: #5753ff;
     font-weight: 900;

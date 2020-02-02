@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const OfflineEvents = styled.div`
   color: #000;
-  padding: 100px 0px;
   min-height: 100vh;
   justify-content: center;
   display: flex;
@@ -11,6 +10,9 @@ const OfflineEvents = styled.div`
   margin-bottom: 200px;
   footer {
     font-size: 0.8em;
+  }
+  @media only screen and (max-width: 768px) {
+    padding: 0px;
   }
 `;
 
@@ -65,6 +67,9 @@ const Sticky = styled.div`
   padding: 20px;
   padding-bottom: 100px;
   z-index: 1;
+  @media only screen and (max-width: 768px) {
+    padding: 40px;
+  }
 `;
 
 export { OfflineEvents, Content, LeftSegment, RightSegment, Sticky };

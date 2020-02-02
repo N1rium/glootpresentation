@@ -8,7 +8,7 @@ const Balls = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 200px;
+  padding-left: 7.5vw;
   @media (orientation: portrait) {
     flex-direction: column;
     padding-left: 0;
@@ -120,6 +120,8 @@ const Appendixes = styled.div`
   margin-bottom: -200px;
 
   @media (orientation: portrait) {
+    display: none;
+    margin-bottom: 0px;
     flex-direction: column;
     align-items: flex-start;
     & > * {
