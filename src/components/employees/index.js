@@ -63,13 +63,13 @@ export default ({}) => {
         <Fade>
           <div>
             <Number>40</Number>
-            <p>January 2018</p>
+            <p>January 2019</p>
           </div>
         </Fade>
         <Fade delay={500}>
           <div>
             <Number>+120</Number>
-            <p>January 2019</p>
+            <p>January 2020</p>
           </div>
         </Fade>
       </NumberContainer>

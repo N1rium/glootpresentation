@@ -18,6 +18,18 @@ const Balls = styled.div`
 const Ball = styled.div`
   border-radius: 50%;
   background: #5753ff;
+  position: relative;
+  div {
+    position: absolute;
+    bottom: 0;
+    color: #000;
+    font-weight: bold;
+    left: 0;
+    right: 0;
+    text-align: center;
+    transform: translateY(150%);
+    font-size: 1.25em;
+  }
 `;
 
 const BlackBall = styled(Ball)`
@@ -105,6 +117,7 @@ const Appendixes = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: -200px;
 
   @media (orientation: portrait) {
     flex-direction: column;
@@ -187,20 +200,26 @@ export default () => {
       <Balls>
         <Fade bottom>
           <SmallContainer>
-            <SmallBlueBall />
+            <SmallBlueBall>
+              <div>Today</div>
+            </SmallBlueBall>
             <SmallBlackBall />
           </SmallContainer>
         </Fade>
         <Fade bottom>
           <MediumContainer>
-            <MediumBlueBall />
+            <MediumBlueBall>
+              <div>2021</div>
+            </MediumBlueBall>
             <MediumTitle>$100M+</MediumTitle>
             <MediumBlackBall />
           </MediumContainer>
         </Fade>
         <Fade bottom>
           <BigContainer>
-            <BigBlueBall />
+            <BigBlueBall>
+              <div>2023</div>
+            </BigBlueBall>
             <BigTitle>$1.2B+</BigTitle>
             <BigBlackBall />
           </BigContainer>
