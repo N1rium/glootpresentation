@@ -26,7 +26,7 @@ const Title = styled.h3`
 `;
 
 const Online = styled.span`
-  color: #8df98e;
+  color: #07fe7f;
 `;
 
 const Logo = styled.img.attrs({ src: GlootLogo })`

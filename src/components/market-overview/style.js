@@ -140,7 +140,7 @@ const GreenPillar = styled(Pillar).attrs(props => ({
     transform: `scaleY(${Math.max(0, Math.min(1, props.scroll / 50))})`,
   },
 }))`
-  background: #8dfa87;
+  background: #07fe7f;
 `;
 const Indexes = styled.div`
   align-items: center;

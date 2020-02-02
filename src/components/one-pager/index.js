@@ -64,7 +64,7 @@ const Divider = styled.div`
   width: 100%;
   height: 4px;
   margin: 20px 0px;
-  background: #a5f08e;
+  background: #07fe7f;
 `;
 
 export default () => {
