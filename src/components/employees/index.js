@@ -43,7 +43,7 @@ const Title = styled.h2``;
 const Number = styled.div`
   font-size: 4em;
   font-weight: 900;
-  color: #8efa87;
+  color: #07fe7f;
 `;
 
 const TitleContainer = styled.div`
