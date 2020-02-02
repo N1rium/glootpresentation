@@ -218,7 +218,7 @@ export default () => {
         <Fade bottom>
           <BigContainer>
             <BigBlueBall>
-              <div>2023</div>
+              <div>2024</div>
             </BigBlueBall>
             <BigTitle>$1.2B+</BigTitle>
             <BigBlackBall />
