@@ -126,7 +126,7 @@ export default ({ scroll: parentScroll }) => {
         <div className="ball-container">
           <TextSegmentRight scroll={topPercentage}>
             <h2>Opportunity</h2>
-            <p>Top 300 esports professionals earn more than the rest of the 2.3 billion players combined.</p>
+            <p>Top 300 esports professionals earn more than the rest of the 2.6 billion players combined.</p>
           </TextSegmentRight>
           <Balls scroll={topPercentage}>
             <BlueBall scroll={topPercentage} />
@@ -141,12 +141,3 @@ export default ({ scroll: parentScroll }) => {
     </Wrapper>
   );
 };
-// <TextSegment className={topPercentage > 50 ? 'hide' : 'show'}>
-//   <h2>Opportunity</h2>
-//   <p>Top 300 esports professionals earn more than the rest of the 2.3 billion players combined.</p>
-// </TextSegment>
-
-/* <TextSegment className={topPercentage <= 50 ? 'hide' : 'show'}>
-    <h2>Opportunity</h2>
-    <p>Top 300 esports professionals earn more than the rest of the 2.3 billion players combined.</p>
-  </TextSegment> */

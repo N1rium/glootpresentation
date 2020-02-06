@@ -70,7 +70,7 @@ export default () => {
       <div className="opportunity">
         <div>
           <h2>Opportunity</h2>
-          <p>Top 300 esports professionals earn more than the rest of the 2.3 billion players combined.</p>
+          <p>Top 300 esports professionals earn more than the rest of the 2.6 billion players combined.</p>
         </div>
         <div className="ball-container right">
           <BlueBall />

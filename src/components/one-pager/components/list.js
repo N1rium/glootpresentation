@@ -18,7 +18,7 @@ export default () => {
         <li>UNIQUE TECH - CAN ADD ANY GAME IN THE WORLD TO THE PLATFORM WITHOUT API/ INTEGRATION</li>
       </Fade>
       <Fade>
-        <li>MASSIVE 2.3B PLAYER MARKET - LIVE IN 85% OF THE WORLD</li>
+        <li>MASSIVE 2.6B PLAYER MARKET - LIVE IN 85% OF THE WORLD</li>
       </Fade>
       <Fade>
         <li>REVENUE FROM THE PLAYERS</li>
