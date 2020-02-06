@@ -73,7 +73,7 @@ export default () => {
           <img src={PlayersIcon} />
         </Fade>
         <Fade>
-          <h2>2.3B</h2>
+          <h2>2.6B</h2>
         </Fade>
         <Fade>
           <p>Players</p>
