@@ -41,7 +41,7 @@ const TopSegment = styled.div`
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 666px) {
     text-align: left;
     margin-bottom: 25px;
   }
@@ -55,7 +55,7 @@ const Title = styled.h2`
 
 const Sums = styled.div`
   display: flex;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 666px) {
     width: 100%;
     flex-direction: column;
   }
@@ -64,7 +64,7 @@ const Sums = styled.div`
 const Sum = styled.div`
   color: rgb(114, 114, 114);
   margin-left: 80px;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 666px) {
     margin-left: 0px;
   }
   h2 {
@@ -90,12 +90,12 @@ export default ({}) => {
     <PlayerSummary>
       <TopSegment>
         <Fade bottom>
-          <Title>December player summary</Title>
+          <Title>G-Loot January summary</Title>
         </Fade>
         <Sums>
           <Fade bottom>
             <Sum>
-              <h2>69,872,451</h2>
+              <h2>103,287,079</h2>
               <p className="bold">Game events</p>
             </Sum>
           </Fade>

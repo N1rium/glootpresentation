@@ -64,11 +64,15 @@ const Sticky = styled.div`
   position: sticky;
   top: 0;
   background: #fff;
-  padding: 20px;
+  padding: 20px 0px;
   padding-bottom: 100px;
   z-index: 1;
   @media only screen and (max-width: 768px) {
     padding: 40px;
+  }
+  padding-top: 60px !important;
+  @media only screen and (min-width: 1024px) {
+    padding-top: 84px !important;
   }
 `;
 

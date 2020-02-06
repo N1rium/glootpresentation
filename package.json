@@ -17,6 +17,7 @@
     "@fortawesome/react-fontawesome": "^0.1.8",
     "@n8tb1t/use-scroll-position": "^1.0.43",
     "babel-polyfill": "^6.26.0",
+    "beautiful-react-hooks": "^0.20.0",
     "file-loader": "^5.0.2",
     "html-loader": "^0.5.5",
     "react": "16.8.6",
