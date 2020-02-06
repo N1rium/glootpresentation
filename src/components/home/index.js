@@ -138,14 +138,14 @@ export default ({}) => {
         <div ref={ballsRef} className="balls">
           <Balls />
         </div>
-        <div style={{ background: '#000' }}>
-          <AnyGameInTheWorld scroll={scroll} />
-          <RevenueDrivers />
-          {/* <RevenueModel /> */}
-          <OnePager />
-          <Employees />
-          <Footer />
-        </div>
+      </div>
+      <div style={{ background: '#000' }}>
+        <AnyGameInTheWorld scroll={scroll} />
+        <RevenueDrivers />
+        {/* <RevenueModel /> */}
+        <OnePager />
+        <Employees />
+        <Footer />
       </div>
     </div>
   );
