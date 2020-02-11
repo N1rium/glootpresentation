@@ -67,10 +67,11 @@ const Sticky = styled.div`
   padding: 20px 0px;
   padding-bottom: 100px;
   z-index: 1;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 812px) {
     padding: 40px;
+    padding-bottom: 25px;
   }
-  padding-top: 60px !important;
+
   @media only screen and (min-width: 1024px) {
     padding-top: 84px !important;
   }
