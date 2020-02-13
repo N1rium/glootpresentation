@@ -101,7 +101,7 @@ export default ({}) => {
           </Fade>
           <Fade bottom>
             <Sum>
-              <h2>4,971,255</h2>
+              <h2>5,191,152</h2>
               <p className="bold">Matches played</p>
               <div>(2 matches per second)</div>
             </Sum>

@@ -49,9 +49,9 @@ export default ({ scroll: parentScroll }) => {
         <PillarContainer>
           <PillarInner>
             <Indexes className="top">
-              <p>$17B</p>
-              <p>$41B</p>
-              <p>$116B</p>
+              <p>$19B</p>
+              <p>$45B</p>
+              <p>$161B</p>
             </Indexes>
             <Pillars>
               <MusicPillar
