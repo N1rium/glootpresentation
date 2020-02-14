@@ -71,11 +71,13 @@ export default ({}) => {
   const offlineOnlineRef = useRef(null);
   const marketOverviewRef = useRef(null);
   const playerSummaryRef = useRef(null);
+  const onePagerRef = useRef(null);
   const ballsRef = useRef(null);
   const showNavbar = useViewportSpy(navbarContentRef);
   const offlineOnline = useViewportSpy(offlineOnlineRef);
   const marketOverview = useViewportSpy(marketOverviewRef);
   const playerSummary = useViewportSpy(playerSummaryRef);
+  const onePager = useViewportSpy(onePagerRef);
   const balls = useViewportSpy(ballsRef);
   const [scroll, setScroll] = useState(0);
   const [indexes, setIndexes] = useState([false, false]);
@@ -90,25 +92,53 @@ export default ({}) => {
     const newIndexes = [...indexes];
     newIndexes[0] = marketOverview;
     setIndexes(newIndexes);
+    if (showNavbar && marketOverview) {
+      analytics.track('Market Overview Viewed', {
+        product_type: 'G-Loot Teaser',
+      });
+    }
   }, [marketOverview]);
 
   useEffect(() => {
     const newIndexes = [...indexes];
     newIndexes[1] = offlineOnline;
     setIndexes(newIndexes);
+    if (showNavbar && offlineOnline) {
+      analytics.track('Offline Goes Online Viewed', {
+        product_type: 'G-Loot Teaser',
+      });
+    }
   }, [offlineOnline]);
 
   useEffect(() => {
     const newIndexes = [...indexes];
     newIndexes[2] = playerSummary;
     setIndexes(newIndexes);
+    if (showNavbar && playerSummary) {
+      analytics.track('Estimated Revenue Viewed', {
+        product_type: 'G-Loot Teaser',
+      });
+    }
   }, [playerSummary]);
 
   useEffect(() => {
     const newIndexes = [...indexes];
     newIndexes[3] = balls;
     setIndexes(newIndexes);
+    if (showNavbar && balls) {
+      analytics.track('Platform Activity Viewed', {
+        product_type: 'G-Loot Teaser',
+      });
+    }
   }, [balls]);
+
+  useEffect(() => {
+    if (onePager) {
+      analytics.track('Summary Viewed', {
+        product_type: 'G-Loot Teaser',
+      });
+    }
+  }, [onePager]);
 
   return (
     <div id="app-content" onScroll={onScroll}>
@@ -143,7 +173,9 @@ export default ({}) => {
         <AnyGameInTheWorld scroll={scroll} />
         <RevenueDrivers />
         {/* <RevenueModel /> */}
-        <OnePager />
+        <div ref={onePagerRef}>
+          <OnePager />
+        </div>
         <Employees />
         <Footer />
       </div>
