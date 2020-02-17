@@ -213,7 +213,7 @@ export default () => {
             <MediumBlueBall>
               <div>2021</div>
             </MediumBlueBall>
-            <MediumTitle>$300+</MediumTitle>
+            <MediumTitle>$300M+</MediumTitle>
             <MediumBlackBall />
           </MediumContainer>
         </Fade>
