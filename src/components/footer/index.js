@@ -30,6 +30,10 @@ const Texts = styled.div`
   }
 `;
 
+const Phone = styled.a.attrs({ href: 'tel:0046739632175' })`
+  color: gray;
+`;
+
 const Contacts = styled.div`
   display: flex;
   justify-content: space-evenly;
@@ -70,24 +74,17 @@ export default () => {
   const email = email => {
     window.location.href = `mailto:${email}`;
   };
+
   return (
     <Footer>
       <Texts>
         <Contacts>
           <Fade>
             <Contact>
-              <h3>Goldman Sachs</h3>
-              <div>Joel Mossberg</div>
-              <div>+46 76 800 81 09</div>
-              <Email onClick={() => email('joel.mossberg@gs.com')}>joel.mossberg@gs.com</Email>
-            </Contact>
-          </Fade>
-          <Fade>
-            <Contact>
-              <h3>Carnegie</h3>
-              <div>Thomas Baekkevold</div>
-              <div>+46 73 417 87 17</div>
-              <Email onClick={() => email('tomas.baekkevold@carnegie.se')}>tomas.baekkevold@carnegie.se</Email>
+              <h3>Contact</h3>
+              <div>Patrik Nybladh</div>
+              <Phone>+46 (0)739 63 21 75</Phone>
+              <Email onClick={() => email('partrik@gloot.com')}>patrik@gloot.com</Email>
             </Contact>
           </Fade>
         </Contacts>
