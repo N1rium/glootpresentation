@@ -45,7 +45,6 @@ const ContactContainer = styled.div`
 `;
 const Image = styled.img.attrs({ src: Patrik })`
   max-width: 300px;
-  border: 4px solid #000;
   margin: 20px 0px;
 `;
 const Name = styled.div`
