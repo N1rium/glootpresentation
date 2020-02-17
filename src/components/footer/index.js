@@ -16,7 +16,7 @@ const Footer = styled.div`
   justify-content: space-evenly;
   border-top: 15px solid rgb(17, 17, 17);
   background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
-    url(https://res.cloudinary.com/gloot/image/upload/v1578925078/gloot%20presentation/employees.png);
+    url(https://res.cloudinary.com/gloot/image/upload/q_30/v1581974163/gloot%20presentation/employees_1.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
