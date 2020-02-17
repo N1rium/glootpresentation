@@ -96,7 +96,7 @@ export default ({}) => {
           <Fade bottom>
             <Sum>
               <h2>103,287,079</h2>
-              <p className="bold">Game events</p>
+              <p className="bold">Tracked game events</p>
             </Sum>
           </Fade>
           <Fade bottom>

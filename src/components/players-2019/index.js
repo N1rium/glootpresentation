@@ -12,8 +12,14 @@ const Players = styled.div`
   justify-content: center;
   h2 {
     font-weight: 900;
+  }
+  .title {
     margin-bottom: 100px;
   }
+`;
+
+const Description = styled.p`
+  color: rgb(114, 114, 114);
 `;
 
 const PlayersContainer = styled.div`
@@ -66,7 +72,10 @@ export default () => {
   return (
     <Players>
       <Fade>
-        <h2>Active players worldwide 2019</h2>
+        <div className="title">
+          <h2>Active players worldwide 2019</h2>
+          <Description>Across all platforms (mobile, PC & console)</Description>
+        </div>
       </Fade>
       <PlayersContainer>
         <Fade>

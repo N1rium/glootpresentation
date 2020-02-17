@@ -19,7 +19,10 @@ export default () => {
   return (
     <RevenueDrivers>
       <Fade bottom>
-        <h2>Multiple revenue drivers</h2>
+        <div className="title">
+          <h2>Multiple revenue drivers</h2>
+          <h3>Focus on revenue from the players</h3>
+        </div>
       </Fade>
       <Fade bottom>
         <Drivers>

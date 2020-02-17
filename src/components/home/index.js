@@ -176,7 +176,7 @@ export default ({}) => {
         <div ref={onePagerRef}>
           <OnePager />
         </div>
-        <Employees />
+        {/* <Employees /> */}
         <Footer />
       </div>
     </div>

@@ -42,8 +42,8 @@ export default ({ scroll: parentScroll }) => {
         </Title>
         <Slide bottom>
           <Description style={isMobile ? {} : { marginBottom: '80px' }}>
-            The gaming industry generates double
-            <br /> the revenue than music & film do combined.
+            The gaming sector is 2x revenue
+            <br /> of music and film combined.
           </Description>
         </Slide>
         <PillarContainer>

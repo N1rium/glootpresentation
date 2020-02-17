@@ -82,11 +82,11 @@ export default () => {
             <Divider />
             <GameCards />
           </SelectedGames>
-          <Monetization>
+          {/* <Monetization>
             <p className="header">MONETIZATION</p>
             <Divider />
             <MonetisationModel />
-          </Monetization>
+          </Monetization> */}
         </RightContainer>
       </Container>
     </OnePager>
