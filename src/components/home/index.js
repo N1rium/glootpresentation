@@ -17,6 +17,7 @@ import PlayerSummary from '../player-summary';
 import OnePager from '../one-pager';
 import Employees from '../employees';
 import Footer from '../footer';
+import Disclaimer from '../disclaimer';
 
 import GlootLogo from '../../assets/gloot-logo.svg';
 import marketOverview from '../market-overview';
@@ -178,6 +179,7 @@ export default ({}) => {
         </div>
         {/* <Employees /> */}
         <Footer />
+        <Disclaimer />
       </div>
     </div>
   );
