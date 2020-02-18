@@ -14,7 +14,7 @@ module.exports = args => {
   let plugins = [htmlPlugin, copyPlugin];
 
   return {
-    devtool: env === 'prod' ? false : 'source-map',
+    devtool: false,
     module: {
       rules: [
         {
