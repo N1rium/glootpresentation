@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import GlootLogo from '../../assets/gloot-logo.svg';
 import history from '../../history';
@@ -75,13 +75,17 @@ export default () => {
     history.push('/');
   };
 
+  useEffect(() => {
+    document.getElementById('password-field').focus();
+  }, []);
+
   return (
     <Login>
       <Container>
         <Logo />
         <Title>G-Loot Teaser</Title>
         <Form>
-          <Input value={password} onChange={e => setPassword(e.target.value)} />
+          <Input id="password-field" value={password} onChange={e => setPassword(e.target.value)} />
           <Button onClick={login}>Enter</Button>
         </Form>
       </Container>
