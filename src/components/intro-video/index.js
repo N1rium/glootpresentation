@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 import GlootLogo from '../../assets/gloot-logo.svg';
 
 const IntroVideo = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -16,13 +17,9 @@ const IntroVideo = styled.div`
 `;
 
 const Title = styled.h3`
-  position: absolute;
-  top: 100vh;
-  transform: translateY(calc(-100% - 13vh));
-  left: 0;
-  right: 0;
   margin: 0 auto;
   text-align: center;
+  margin-top: 40px;
 `;
 
 const Online = styled.span`
@@ -36,10 +33,18 @@ const Logo = styled.img.attrs({ src: GlootLogo })`
   }
 `;
 
+const signOut = () => {
+  localStorage.removeItem('token');
+  window.location.reload();
+};
+
 export default () => {
+  const [logoClicks, setLogoClicks] = useState(0);
   return (
     <IntroVideo>
-      <Logo />
+      <Fade top>
+        <Logo onClick={() => (logoClicks >= 4 ? signOut() : setLogoClicks(logoClicks + 1))} />
+      </Fade>
       <Title>
         <Fade bottom>
           <div>

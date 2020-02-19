@@ -108,7 +108,7 @@ export default ({}) => {
           <Image />
           <ContactInfo>
             <Name>Patrik Nybladh</Name>
-            <JobTitle>Chief Executive Officer</JobTitle>
+            <JobTitle>CEO & Founder</JobTitle>
             <Phone>+46 (0)739 63 21 75</Phone>
             <Email onClick={() => email('partrik@gloot.com')}>patrik@gloot.com</Email>
             <SocialLinkedIn onClick={linkedIn} />

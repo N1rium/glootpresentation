@@ -16,6 +16,8 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "@n8tb1t/use-scroll-position": "^1.0.43",
+    "@segment/consent-manager": "^4.3.0",
+    "@segment/in-eu": "^0.3.0",
     "babel-polyfill": "^6.26.0",
     "beautiful-react-hooks": "^0.20.0",
     "file-loader": "^5.0.2",
