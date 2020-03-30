@@ -222,7 +222,7 @@ export default () => {
             <BigBlueBall>
               <div>2024</div>
             </BigBlueBall>
-            <BigTitle>$1.2B+</BigTitle>
+            <BigTitle>$1.1B+</BigTitle>
             <BigBlackBall />
           </BigContainer>
         </Fade>
