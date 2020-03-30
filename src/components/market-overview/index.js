@@ -38,20 +38,21 @@ export default ({ scroll: parentScroll }) => {
     <MarketOverview ref={ref}>
       <InnerContainer>
         <Title>
-          <Fade bottom>Market overview</Fade>
+          <Fade bottom>Global Gaming Market Size</Fade>
         </Title>
         <Slide bottom>
           <Description style={isMobile ? {} : { marginBottom: '80px' }}>
-            The gaming sector is 2x revenue
-            <br /> of music and film combined.
+            The gaming sector revenue was 2x
+            <br />
+            of music and film box office combined in 2019
           </Description>
         </Slide>
         <PillarContainer>
           <PillarInner>
             <Indexes className="top">
               <p>$19B</p>
-              <p>$45B</p>
-              <p>$161B</p>
+              <p>$42B</p>
+              <p>$149B</p>
             </Indexes>
             <Pillars>
               <MusicPillar

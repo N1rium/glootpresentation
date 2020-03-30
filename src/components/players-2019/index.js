@@ -73,8 +73,8 @@ export default () => {
     <Players>
       <Fade>
         <div className="title">
-          <h2>Active players worldwide 2019</h2>
-          <Description>Across all platforms (mobile, PC & console)</Description>
+          <h2>Global Active Players</h2>
+          <Description>Across all platforms (mobile, PC & console) in 2019</Description>
         </div>
       </Fade>
       <PlayersContainer>

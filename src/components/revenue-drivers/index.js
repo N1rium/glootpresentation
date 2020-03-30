@@ -27,7 +27,7 @@ export default () => {
       <Fade bottom>
         <Drivers>
           <Driver icon={PayToEnterIcon} header="Pay to enter" desc="10% service fee & surplus from contests" />
-          <Driver icon={SubscriptionIcon} header="Subscription" desc="$10 / month in advance" />
+          <Driver icon={SubscriptionIcon} header="Premium Service" desc="$10 / month in advance" />
           <Driver icon={B2BIcon} header="Broadcasting, Ads, Sponsorships & Publisher revenues" />
         </Drivers>
       </Fade>

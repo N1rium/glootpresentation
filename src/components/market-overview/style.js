@@ -155,7 +155,7 @@ const VideoPillar = styled(Pillar).attrs(props => ({
   },
 }))`
   &:after {
-    content: '$45B';
+    content: '$42B';
   }
 `;
 
@@ -166,7 +166,7 @@ const GreenPillar = styled(Pillar).attrs(props => ({
 }))`
   background: #07fe7f;
   &:after {
-    content: '$161';
+    content: '$149';
     font-weight: bold;
   }
 `;
