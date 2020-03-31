@@ -190,6 +190,13 @@ export default () => {
           <div>
             <Terms>Terms & Conditions</Terms>
             <Paragraph>
+              By accessing this Teaser (as defined below), you shall be deemed to have confirmed and represented to the
+              Company that you are either (i) within EEA or UK or (ii) you being a “qualified institutional buyer”
+              within the meaning of Rule 144A under the Securities Act, and agree to be bound by the foregoing
+              limitations, the below disclaimer and to maintain absolute confidentiality regarding the information
+              disclosed in this Teaser.
+            </Paragraph>
+            <Paragraph>
               This webpage which contains a teaser is confidential and is being provided only to such addressed
               recipients that have received a password to this webpage directly from a representative of G-Loot Global
               Esports AB (publ) (the “Company”), Goldman Sachs International (“GSI”) or Carnegie Investment Bank AB
@@ -201,7 +208,7 @@ export default () => {
               Company or Goldman Sachs International (“GSI”) or Carnegie Investment Bank AB (publ) (“Carnegie”) have
               provided the link to the webpage and password. For the purposes of this disclaimer, “Teaser” means this
               webpage, its contents or any part of it, any oral information provided, any questions or answers and any
-              written or oral materials discussed or distributed prior, during or after the sharing of this Teaseror at
+              written or oral materials discussed or distributed prior, during or after the sharing of this Teaser or at
               any meeting.
             </Paragraph>
             <Paragraph>
@@ -223,11 +230,11 @@ export default () => {
               any securities in the United States. To the extent any securities are described herein such have not been,
               and will not be, registered under the U.S. Securities Act of 1933, as amended (the “Securities Act”), and
               may not be offered or sold in or into the United States except pursuant to an exemption from, or in a
-              transaction not subject to, the registration requirements of the Securities Act. Within the European
-              Economic Area, this Teaser is being made, and is directed only, to persons who are “qualified investors”
-              as defined in the Prospectus Regulation (EU) 2017/1129, as implemented in member states of the European
-              Economic Area (“Qualified Investors”). These materials do not constitute a prospectus within the meaning
-              of the Prospectus Regulation and do not constitute an offer to acquire securities.
+              transaction not subject to, the registration requirements of the Securities Act. Within the United Kingdom
+              and the European Economic Area, this Teaser is being made, and is directed only, to persons who are
+              “qualified investors” as defined in the Prospectus Regulation (EU) 2017/1129 (“Qualified Investors”).
+              These materials do not constitute a prospectus within the meaning of the Prospectus Regulation and do not
+              constitute an offer to acquire securities.
             </Paragraph>
             <Paragraph>
               This Teaser and any materials distributed in connection with this Teaser do not constitute an offering
@@ -271,16 +278,17 @@ export default () => {
               of the Company or its industry or other trend projections, constitute forward-looking statements. Forward-
               looking statements can be identified by the use of words such as “believes,” “expects,” “may,” “will,”
               “should,” “seeks,” “approximately,” “intends,” “plans,” “estimates” and “anticipates” or the negative
-              terms or other comparable words, or by discussions of strategy, plans or intentions. By their nature,
-              forward-looking statements involve known and unknown risks, uncertainties, assumptions and other factors
-              because they relate to events and depend on circumstances that will occur in the future whether or not
-              outside the control of the Company. Such factors may cause actual results, performance or developments to
-              differ materially from those expressed or implied by such forward-looking statements. Accordingly, no
-              assurance is given that such forward-looking statements will prove to have been correct. Past performance
-              does not guarantee or predict future performance. This Teaser should not be relied on as a promise or
-              representation as to the future and does not purport to contain all of the information that may be
-              required to evaluate any potential transaction and should thus not be relied on in connection with any
-              such potential transaction.
+              terms or other comparable words, or by discussions of strategy, plans or intentions. Examples of
+              forward-looking statements are statements that concern the Company’s future plans, strategies, revenues,
+              costs, projections and liquidity. By their nature, forward-looking statements involve known and unknown
+              risks, uncertainties, assumptions and other factors because they relate to events and depend on
+              circumstances that will occur in the future whether or not outside the control of the Company. Such
+              factors may cause actual results, performance or developments to differ materially from those expressed or
+              implied by such forward-looking statements. Accordingly, no assurance is given that such forward-looking
+              statements will prove to have been correct. Past performance does not guarantee or predict future
+              performance. This Teaser should not be relied on as a promise or representation as to the future and does
+              not purport to contain all of the information that may be required to evaluate any potential transaction
+              and should thus not be relied on in connection with any such potential transaction.
             </Paragraph>
             <Paragraph>
               Neither GSI, Carnegie the Company or the Company’s shareholders, nor their respective affiliates and their
