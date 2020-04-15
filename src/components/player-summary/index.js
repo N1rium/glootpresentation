@@ -27,7 +27,7 @@ const Overlay = styled.div`
   background: linear-gradient(rgba(0, 0, 0, 0) 70%, #fff);
 `;
 
-const Video = styled.video.attrs(props => ({
+const Video = styled.video.attrs((props) => ({
   src: 'https://res.cloudinary.com/gloot/video/upload/v1580318586/gloot%20presentation/matchesplayed2.mp4',
 }))`
   width: 100%;
@@ -90,20 +90,20 @@ export default ({}) => {
     <PlayerSummary>
       <TopSegment>
         <Fade bottom>
-          <Title>G-Loot January summary</Title>
+          <Title>G-Loot March summary</Title>
         </Fade>
         <Sums>
           <Fade bottom>
             <Sum>
-              <h2>103,287,079</h2>
+              <h2>571,940,966</h2>
               <p className="bold">Tracked game events</p>
             </Sum>
           </Fade>
           <Fade bottom>
             <Sum>
-              <h2>5,191,152</h2>
+              <h2>3,231,751</h2>
               <p className="bold">Matches played</p>
-              <div>(2 matches per second)</div>
+              <div>(1 match per second)</div>
             </Sum>
           </Fade>
         </Sums>
