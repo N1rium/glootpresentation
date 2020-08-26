@@ -47,18 +47,18 @@ const Wrapper = styled.div`
 
 const Ball = styled.div`
   border-radius: 50%;
-  width: ${props => (props.small ? '16px' : '200px')};
-  height: ${props => (props.small ? '16px' : '200px')};
-  z-index: ${props => (props.small ? '1' : '0')};
+  width: ${(props) => (props.small ? '16px' : '200px')};
+  height: ${(props) => (props.small ? '16px' : '200px')};
+  z-index: ${(props) => (props.small ? '1' : '0')};
 `;
 
 const BlueBall = styled(Ball)`
   background: #5753ff;
-  margin-right: ${props => (props.small ? '-8px' : '0px')};
+  margin-right: ${(props) => (props.small ? '-8px' : '0px')};
 `;
 
 const BlackBall = styled(Ball)`
-  margin-left: ${props => (props.small ? '-8px' : '0px')};
+  margin-left: ${(props) => (props.small ? '-8px' : '0px')};
   background: url(../src/assets/glootboll.svg);
   background-size: cover;
   background-position: center;
@@ -70,7 +70,7 @@ export default () => {
       <div className="opportunity">
         <div>
           <h2>Opportunity</h2>
-          <p>Top 300 esports professionals earn more than the rest of the 2.6 billion players combined.</p>
+          <p>Top 600 esports professionals earn more than the rest of the 2.6 billion players combined.</p>
         </div>
         <div className="ball-container right">
           <BlueBall />
@@ -80,7 +80,10 @@ export default () => {
       <div className="missing">
         <div>
           <h2>G-Loot is the missing component</h2>
-          <p>Anyone, anywhere in the world can now earn money from playing the games they already play & love.</p>
+          <p>
+            Anyone, anywhere in the world can now earn money from playing and competing in the games they already play &
+            love.
+          </p>
         </div>
         <div className="ball-container">
           <BlueBall small />

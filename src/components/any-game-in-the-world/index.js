@@ -2,6 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import Fade from 'react-reveal/Fade';
 
+import Tencent from '../../assets/tencent.png';
+import PUBG from '../../assets/pubg.png';
+import Valve from '../../assets/valve.png';
+
 const AnyGameInTheWorld = styled.div`
   width: 100vw;
   height: 300vh;
@@ -27,7 +31,7 @@ const Image = styled.div`
   z-index: 1;
 `;
 
-const Video = styled.video.attrs(props => ({
+const Video = styled.video.attrs((props) => ({
   src: 'https://res.cloudinary.com/gloot/video/upload/v1578937065/gloot%20presentation/videoloop-1.mp4',
 }))`
   width: 100%;
@@ -72,10 +76,13 @@ const Partners = styled.div`
   margin-top: 40px;
 `;
 
-const Partner = styled.img.attrs(props => ({ src: props.src }))`
+const Partner = styled.img.attrs((props) => ({ src: props.src }))`
   width: 100%;
-  max-width: 25%;
-  margin-left: 40px;
+  max-width: 20%;
+  margin-left: 20px;
+  @media only screen and (min-width: 769px) {
+    margin-left: 40px;
+  }
 `;
 
 export default () => {
@@ -99,8 +106,9 @@ export default () => {
           <h3>Official esports partner for world leading game developers</h3>
           <Fade>
             <Partners>
-              {/* <Partner src="https://res.cloudinary.com/gloot/image/upload/v1578668075/gloot%20presentation/partner-activision.png" /> */}
-              <Partner src="https://res.cloudinary.com/gloot/image/upload/v1578668075/gloot%20presentation/partner-pubg.png" />
+              <Partner src={Valve} />
+              <Partner src={PUBG} />
+              <Partner src={Tencent} />
               <Partner src="https://res.cloudinary.com/gloot/image/upload/v1578668075/gloot%20presentation/partner-ea.png" />
             </Partners>
           </Fade>

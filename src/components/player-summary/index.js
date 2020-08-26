@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import Fade from 'react-reveal/Fade';
 import styled from 'styled-components';
+
+import { useFetch } from '../../hooks/fetch';
 
 const PlayerSummary = styled.div`
   position: relative;
@@ -28,7 +30,7 @@ const Overlay = styled.div`
 `;
 
 const Video = styled.video.attrs((props) => ({
-  src: 'https://res.cloudinary.com/gloot/video/upload/v1580318586/gloot%20presentation/matchesplayed2.mp4',
+  src: 'https://res.cloudinary.com/gloot/video/upload/v1598457620/gloot%20presentation/fundslocked_final_1.mov',
 }))`
   width: 100%;
   height: 100%;
@@ -86,24 +88,61 @@ const Sum = styled.div`
 `;
 
 export default ({}) => {
+  const biRef = useRef(null);
+
+  const getNumMatches = (numMatches, startDate, endDate) => {
+    const progress = (Date.now() - startDate) / (endDate - startDate);
+    const amount = Math.round(progress * numMatches).toFixed(0);
+    const beutifyAmount = new Intl.NumberFormat().format(amount);
+    return beutifyAmount;
+  };
+
+  const fetchStats = async () => {
+    const resp = await fetch('https://edge.gloot.com/gnog-nest/client-stats');
+    const data = await resp.json();
+    setBiData(data);
+    biRef.current = data;
+    console.warn(getNumMatches(data.matches, data.startDate, data.endDate));
+  };
+
+  const [biData, setBiData] = useState({ matches: 0, events: 0, startDate: 0, endDate: 0 });
+  const [matches, setMatches] = useState(0);
+  const [events, setEvents] = useState(0);
+
+  useEffect(() => {
+    fetchStats();
+
+    const interval = setInterval(() => {
+      const ref = biRef.current;
+      console.log(ref);
+      setMatches(getNumMatches(ref.matches, ref.startDate, ref.endDate));
+      setEvents(getNumMatches(ref.events, ref.startDate, ref.endDate));
+    }, Math.random() * 1500);
+
+    return () => {
+      clearInterval(interval);
+      interval = null;
+    };
+  }, []);
+
   return (
     <PlayerSummary>
       <TopSegment>
         <Fade bottom>
-          <Title>G-Loot March summary</Title>
+          <Title>G-Loot August summary</Title>
         </Fade>
         <Sums>
           <Fade bottom>
             <Sum>
-              <h2>571,940,966</h2>
+              <h2>{events}</h2>
               <p className="bold">Tracked game events</p>
             </Sum>
           </Fade>
           <Fade bottom>
             <Sum>
-              <h2>3,231,751</h2>
+              <h2>{matches}</h2>
               <p className="bold">Matches played</p>
-              <div>(1 match per second)</div>
+              <div>(~2 matches per second)</div>
             </Sum>
           </Fade>
         </Sums>

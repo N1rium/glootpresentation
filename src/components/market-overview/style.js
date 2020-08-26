@@ -110,7 +110,7 @@ const Pillar = styled.div`
   width: 140px;
   max-width: 140px;
   margin: 0px 20px;
-  height: ${props => props.height};
+  height: ${(props) => props.height};
   background: #7752f8;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -140,7 +140,7 @@ const Pillar = styled.div`
   }
 `;
 
-const MusicPillar = styled(Pillar).attrs(props => ({
+const MusicPillar = styled(Pillar).attrs((props) => ({
   style: {
     transform: `scaleY(${Math.max(0, Math.min(1, (props.scroll + 50) / 50))})`,
   },
@@ -149,7 +149,7 @@ const MusicPillar = styled(Pillar).attrs(props => ({
     content: '$19B';
   }
 `;
-const VideoPillar = styled(Pillar).attrs(props => ({
+const VideoPillar = styled(Pillar).attrs((props) => ({
   style: {
     transform: `scaleY(${Math.max(0, Math.min(1, (props.scroll + 25) / 50))})`,
   },
@@ -159,14 +159,14 @@ const VideoPillar = styled(Pillar).attrs(props => ({
   }
 `;
 
-const GreenPillar = styled(Pillar).attrs(props => ({
+const GreenPillar = styled(Pillar).attrs((props) => ({
   style: {
     transform: `scaleY(${Math.max(0, Math.min(1, props.scroll / 50))})`,
   },
 }))`
   background: #07fe7f;
   &:after {
-    content: '$149';
+    content: '$149B';
     font-weight: bold;
   }
 `;
