@@ -102,28 +102,26 @@ export default ({}) => {
     const data = await resp.json();
     setBiData(data);
     biRef.current = data;
-    console.warn(getNumMatches(data.matches, data.startDate, data.endDate));
   };
 
   const [biData, setBiData] = useState({ matches: 0, events: 0, startDate: 0, endDate: 0 });
-  const [matches, setMatches] = useState(0);
-  const [events, setEvents] = useState(0);
+  const [matches, setMatches] = useState('2,830,225');
+  const [events, setEvents] = useState('6,595,094,369');
 
-  useEffect(() => {
-    fetchStats();
+  // useEffect(() => {
+  //   fetchStats();
 
-    const interval = setInterval(() => {
-      const ref = biRef.current;
-      console.log(ref);
-      setMatches(getNumMatches(ref.matches, ref.startDate, ref.endDate));
-      setEvents(getNumMatches(ref.events, ref.startDate, ref.endDate));
-    }, Math.random() * 1500);
+  //   const interval = setInterval(() => {
+  //     const ref = biRef.current;
+  //     setMatches(getNumMatches(ref.matches, ref.startDate, ref.endDate));
+  //     setEvents(getNumMatches(ref.events, ref.startDate, ref.endDate));
+  //   }, Math.random() * 1500);
 
-    return () => {
-      clearInterval(interval);
-      interval = null;
-    };
-  }, []);
+  //   return () => {
+  //     clearInterval(interval);
+  //     interval = null;
+  //   };
+  // }, []);
 
   return (
     <PlayerSummary>
